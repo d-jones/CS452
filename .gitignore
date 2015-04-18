@@ -1,0 +1,8 @@
+# Directories #
+.metadata/
+.settings/
+
+# Files #
+*.classpath
+*.project
+*.DS_STORE
