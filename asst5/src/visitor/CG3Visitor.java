@@ -36,10 +36,27 @@ public class CG3Visitor extends ASTvisitor {
 	}
 	
 	
+	
+	
+	
 	/*
 	 * (non-Javadoc)
-	 * @see visitor.InhVisitor#visitIntegerLiteral(syntaxtree.IntegerLiteral)
+	 * @see visitor.InhVisitor#visitAnd(syntaxtree.And)
 	 */
+	@Override
+	public Object visitAnd(And a){
+		a.left.accept(this);
+		code.emit(a, "lw $t0, ($sp)");
+		code.emit(a, "beq $t0, $zero, skip_" + a.uniqueId);
+		code.emit(a, "addu $sp, $sp, 4");
+		stackHeight -= 4;
+		a.right.accept(this);
+		code.emit(a,  "skip_" + a.uniqueId + ":");
+		
+		return null;
+	}
+	
+	
 	/*
 	 * (non-Javadoc)
 	 * @see visitor.InhVisitor#visitThis(syntaxtree.This)
@@ -68,6 +85,21 @@ public class CG3Visitor extends ASTvisitor {
 		else{
 			stackHeight = sHeight + 4;
 		}
+		
+		return null;
+	}
+	
+	
+	/*
+	 * (non-Javadoc)
+	 * @see visitor.InhVisitor#visitDivide(syntaxtree.Divide)
+	 */
+	@Override
+	public Object visitDivide(Divide d){
+		d.left.accept(this);
+		d.right.accept(this);
+		code.emit(d, "jal divide");
+		stackHeight -= 8;
 		
 		return null;
 	}
@@ -195,6 +227,21 @@ public class CG3Visitor extends ASTvisitor {
 	
 	/*
 	 * (non-Javadoc)
+	 * @see visitor.InhVisitor#visitNot(syntaxtree.Not)
+	 */
+	@Override
+	public Object visitNot(Not n){
+		n.exp.accept(this);
+		code.emit(n, "lw $t0, ($sp)");
+		code.emit(n, "xor $t0, $t0, 1");
+		code.emit(n, "sw $t0, ($sp)");
+		
+		return null;
+	}
+	
+	
+	/*
+	 * (non-Javadoc)
 	 * @see visitor.InhVisitor#visitPlus(syntaxtree.Plus)
 	 */
 	@Override
@@ -238,6 +285,21 @@ public class CG3Visitor extends ASTvisitor {
 		
 		return null;
 	}
+	
+	
+	/*
+	 * (non-Javadoc)
+	 * @see visitor.InhVisitor#visitRemainder(syntaxtree.Remainder)
+	 */
+	@Override
+	public Object visitRemainder(Remainder r){
+		r.left.accept(this);
+		r.right.accept(this);
+		code.emit(r, "jal remainder");
+		stackHeight -= 8;
+		
+		return null;
+	}
 
 	
 	@Override
@@ -273,6 +335,26 @@ public class CG3Visitor extends ASTvisitor {
 		code.emit(t, "subu $sp, $sp, 4");
 		stackHeight += 4;
 		code.emit(t, "sw $s2, ($sp)");
+		
+		return null;
+	}
+	
+	
+	/*
+	 * (non-Javadoc)
+	 * @see visitor.InhVisitor#visitTimes(syntaxtree.Times)
+	 */
+	@Override
+	public Object visitTimes(Times t){
+		t.left.accept(this);
+		t.right.accept(this);
+		code.emit(t, "lw $t0, ($sp)");
+		code.emit(t, "lw $t1, 8($sp)");
+		code.emit(t, "mult $t0, $t1");
+		code.emit(t, "mflo $t0");
+		code.emit(t, "addu $sp, $sp, 8");
+		stackHeight -= 8;
+		code.emit(t, "sw $t0, ($sp)");
 		
 		return null;
 	}
