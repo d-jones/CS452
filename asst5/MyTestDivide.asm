@@ -1,41 +1,505 @@
- .data # Program at 1.1		
-CLASS_Object: # Program at 1.1 		
-CLASS_String: # Program at 1.1   
+ .data # Program at 1.1 	
+  .byte 10 # StringLiteral at 19.18	
+  .byte 0 # StringLiteral at 19.18 	 
+  .byte 0 # StringLiteral at 19.18 		
+  .byte 0 # StringLiteral at 19.18	 	
+  .word CLASS_String # StringLiteral at 19.18		
+  .word 2 # StringLiteral at 19.18 
+  .word -1 # StringLiteral at 19.18	 	
+strLit_89: # StringLiteral at 19.18 
+  .byte 10 # StringLiteral at 21.18 		
+  .byte 0 # StringLiteral at 21.18 	 
+  .byte 0 # StringLiteral at 21.18	  
+  .byte 0 # StringLiteral at 21.18	
+  .word CLASS_String # StringLiteral at 21.18  	
+  .word 2 # StringLiteral at 21.18	
+  .word -1 # StringLiteral at 21.18			
+strLit_97: # StringLiteral at 21.18  
+  .byte 10 # StringLiteral at 23.18 	
+  .byte 0 # StringLiteral at 23.18	  
+  .byte 0 # StringLiteral at 23.18  	
+  .byte 0 # StringLiteral at 23.18		
+  .word CLASS_String # StringLiteral at 23.18 	
+  .word 2 # StringLiteral at 23.18	 	
+  .word -1 # StringLiteral at 23.18	 
+strLit_105: # StringLiteral at 23.18 	
+  .byte 10 # StringLiteral at 25.18 		
+  .byte 0 # StringLiteral at 25.18 
+  .byte 0 # StringLiteral at 25.18	
+  .byte 0 # StringLiteral at 25.18 
+  .word CLASS_String # StringLiteral at 25.18   
+  .word 2 # StringLiteral at 25.18			
+  .word -1 # StringLiteral at 25.18 
+strLit_113: # StringLiteral at 25.18  	
+  .byte 10 # StringLiteral at 27.18	
+  .byte 0 # StringLiteral at 27.18   
+  .byte 0 # StringLiteral at 27.18		 
+  .byte 0 # StringLiteral at 27.18  
+  .word CLASS_String # StringLiteral at 27.18			
+  .word 2 # StringLiteral at 27.18 		
+  .word -1 # StringLiteral at 27.18  	
+strLit_121: # StringLiteral at 27.18			
+  .byte 10 # StringLiteral at 29.18	 
+  .byte 0 # StringLiteral at 29.18	  
+  .byte 0 # StringLiteral at 29.18  	
+  .byte 0 # StringLiteral at 29.18	
+  .word CLASS_String # StringLiteral at 29.18  
+  .word 2 # StringLiteral at 29.18	  
+  .word -1 # StringLiteral at 29.18 
+strLit_129: # StringLiteral at 29.18	 	
+  .byte 10 # StringLiteral at 31.18	  
+  .byte 0 # StringLiteral at 31.18	 
+  .byte 0 # StringLiteral at 31.18	
+  .byte 0 # StringLiteral at 31.18 
+  .word CLASS_String # StringLiteral at 31.18	
+  .word 2 # StringLiteral at 31.18	 	
+  .word -1 # StringLiteral at 31.18			
+strLit_137: # StringLiteral at 31.18	
+  .byte 10 # StringLiteral at 33.18			
+  .byte 0 # StringLiteral at 33.18		
+  .byte 0 # StringLiteral at 33.18	 
+  .byte 0 # StringLiteral at 33.18	
+  .word CLASS_String # StringLiteral at 33.18			
+  .word 2 # StringLiteral at 33.18  	
+  .word -1 # StringLiteral at 33.18   
+strLit_145: # StringLiteral at 33.18 	
+  .byte 10 # StringLiteral at 35.18	 
+  .byte 0 # StringLiteral at 35.18		
+  .byte 0 # StringLiteral at 35.18	 
+  .byte 0 # StringLiteral at 35.18 		
+  .word CLASS_String # StringLiteral at 35.18   
+  .word 2 # StringLiteral at 35.18	  
+  .word -1 # StringLiteral at 35.18	  
+strLit_153: # StringLiteral at 35.18  
+  .byte 10 # StringLiteral at 37.18	 	
+  .byte 0 # StringLiteral at 37.18	 	
+  .byte 0 # StringLiteral at 37.18 	
+  .byte 0 # StringLiteral at 37.18  
+  .word CLASS_String # StringLiteral at 37.18		
+  .word 2 # StringLiteral at 37.18			
+  .word -1 # StringLiteral at 37.18 	
+strLit_161: # StringLiteral at 37.18	 	
+  .byte 10 # StringLiteral at 39.18 	
+  .byte 0 # StringLiteral at 39.18			
+  .byte 0 # StringLiteral at 39.18	  
+  .byte 0 # StringLiteral at 39.18	 
+  .word CLASS_String # StringLiteral at 39.18		
+  .word 2 # StringLiteral at 39.18		
+  .word -1 # StringLiteral at 39.18 	
+strLit_169: # StringLiteral at 39.18			
+  .byte 10 # StringLiteral at 41.18	 
+  .byte 0 # StringLiteral at 41.18	
+  .byte 0 # StringLiteral at 41.18	 
+  .byte 0 # StringLiteral at 41.18	 	
+  .word CLASS_String # StringLiteral at 41.18   
+  .word 2 # StringLiteral at 41.18	 
+  .word -1 # StringLiteral at 41.18	  
+strLit_177: # StringLiteral at 41.18	
+  .byte 10 # StringLiteral at 43.18	
+  .byte 0 # StringLiteral at 43.18	 	
+  .byte 0 # StringLiteral at 43.18	  
+  .byte 0 # StringLiteral at 43.18  
+  .word CLASS_String # StringLiteral at 43.18			
+  .word 2 # StringLiteral at 43.18  	
+  .word -1 # StringLiteral at 43.18 
+strLit_185: # StringLiteral at 43.18  	
+CLASS_Object: # Program at 1.1 
+CLASS_String: # Program at 1.1 		
 .text # Program at 1.1 
-.global main # Program at 1.1 
-main: # Program at 1.1  	
-jal vm_init # Program at 1.1			
-subu $sp, $sp, 4 # NewObject at 0.0  
-sw $zero, ($sp) # NewObject at 0.0	  
-jal fcn_9_main # Call at 0.0	 
-li $v0, 10 # Program at 1.1	 	
-syscall # Program at 1.1 
-.globl fcn_9_main # MethodDeclVoid at 2.14   
-fcn_9_main: # MethodDeclVoid at 2.14  	
-subu $sp, $sp, 8 # MethodDeclVoid at 2.14			
-sw $ra, 4($sp) # MethodDeclVoid at 2.14  	
+.global main # Program at 1.1 	
+main: # Program at 1.1	
+jal vm_init # Program at 1.1  
+subu $sp, $sp, 4 # NewObject at 0.0 
+sw $zero, ($sp) # NewObject at 0.0			
+jal fcn_189_main # Call at 0.0			
+li $v0, 10 # Program at 1.1	  
+syscall # Program at 1.1 		
+.globl fcn_189_main # MethodDeclVoid at 2.14 		
+fcn_189_main: # MethodDeclVoid at 2.14		 
+subu $sp, $sp, 8 # MethodDeclVoid at 2.14		 
+sw $ra, 4($sp) # MethodDeclVoid at 2.14   
 sw $s2, ($sp) # MethodDeclVoid at 2.14 
-lw $s2, 4($sp) # MethodDeclVoid at 2.14  
-subu $sp, $sp, 8 # IntegerLiteral at 3.11	 	
+lw $s2, 4($sp) # MethodDeclVoid at 2.14	
+subu $sp, $sp, 8 # IntegerLiteral at 3.11	 
 sw $s5, 4($sp) # IntegerLiteral at 3.11 	 
-li $t0, 18 # IntegerLiteral at 3.11  
-sw $t0, ($sp) # IntegerLiteral at 3.11			
-subu $sp, $sp, 8 # IntegerLiteral at 3.16 
-sw $s5, 4($sp) # IntegerLiteral at 3.16		 
-li $t0, 2 # IntegerLiteral at 3.16  	
-sw $t0, ($sp) # IntegerLiteral at 3.16	 	
-jal divide # Divide at 3.14	  
-subu $sp, $sp, 4 # Super at 4.9		 
-sw $s2, ($sp) # Super at 4.9  	
-lw $t0, 4($sp) # IdentifierExp at 4.18   
-subu $sp, $sp, 8 # IdentifierExp at 4.18 
-sw $s5, 4($sp) # IdentifierExp at 4.18   
-sw $t0, ($sp) # IdentifierExp at 4.18	 
-jal printInt # Call at 4.9	  
-lw $ra, 12($sp) # MethodDeclVoid at 2.14			
-lw $s2, 4($sp) # MethodDeclVoid at 2.14		 
-addu $sp, $sp, 20 # MethodDeclVoid at 2.14			
-jr $ra # MethodDeclVoid at 2.14 
+li $t0, 20 # IntegerLiteral at 3.11		 
+sw $t0, ($sp) # IntegerLiteral at 3.11	
+subu $sp, $sp, 8 # IntegerLiteral at 3.15 		
+sw $s5, 4($sp) # IntegerLiteral at 3.15	
+li $t0, 2 # IntegerLiteral at 3.15 	
+sw $t0, ($sp) # IntegerLiteral at 3.15 	 
+jal divide # Divide at 3.13	
+subu $sp, $sp, 8 # IntegerLiteral at 4.11	
+sw $s5, 4($sp) # IntegerLiteral at 4.11   
+li $t0, 20 # IntegerLiteral at 4.11	  
+sw $t0, ($sp) # IntegerLiteral at 4.11  	
+subu $sp, $sp, 8 # IntegerLiteral at 4.16  	
+sw $s5, 4($sp) # IntegerLiteral at 4.16 		
+li $t0, 0 # IntegerLiteral at 4.16			
+sw $t0, ($sp) # IntegerLiteral at 4.16	  
+subu $sp, $sp, 8 # IntegerLiteral at 4.17	  
+sw $s5, 4($sp) # IntegerLiteral at 4.17 	
+li $t0, 2 # IntegerLiteral at 4.17 	 
+sw $t0, ($sp) # IntegerLiteral at 4.17		
+lw $t0, ($sp) # Minus at 4.16		
+lw $t1, 8($sp) # Minus at 4.16	
+subu $t0, $t1, $t0 # Minus at 4.16		
+addu $sp, $sp, 8 # Minus at 4.16			
+sw $t0, ($sp) # Minus at 4.16	  
+jal divide # Divide at 4.14		
+subu $sp, $sp, 8 # IntegerLiteral at 5.11		 
+sw $s5, 4($sp) # IntegerLiteral at 5.11	
+li $t0, 0 # IntegerLiteral at 5.11  
+sw $t0, ($sp) # IntegerLiteral at 5.11	 
+subu $sp, $sp, 8 # IntegerLiteral at 5.12 	 
+sw $s5, 4($sp) # IntegerLiteral at 5.12 		
+li $t0, 40 # IntegerLiteral at 5.12		 
+sw $t0, ($sp) # IntegerLiteral at 5.12 
+lw $t0, ($sp) # Minus at 5.11  	
+lw $t1, 8($sp) # Minus at 5.11  	
+subu $t0, $t1, $t0 # Minus at 5.11   
+addu $sp, $sp, 8 # Minus at 5.11	 
+sw $t0, ($sp) # Minus at 5.11	 
+subu $sp, $sp, 8 # IntegerLiteral at 5.17	 	
+sw $s5, 4($sp) # IntegerLiteral at 5.17 	
+li $t0, 2 # IntegerLiteral at 5.17		
+sw $t0, ($sp) # IntegerLiteral at 5.17 
+jal divide # Divide at 5.15	  
+subu $sp, $sp, 8 # IntegerLiteral at 6.11	
+sw $s5, 4($sp) # IntegerLiteral at 6.11	 
+li $t0, 0 # IntegerLiteral at 6.11	 	
+sw $t0, ($sp) # IntegerLiteral at 6.11		
+subu $sp, $sp, 8 # IntegerLiteral at 6.12	  
+sw $s5, 4($sp) # IntegerLiteral at 6.12  
+li $t0, 40 # IntegerLiteral at 6.12 		
+sw $t0, ($sp) # IntegerLiteral at 6.12			
+lw $t0, ($sp) # Minus at 6.11		 
+lw $t1, 8($sp) # Minus at 6.11   
+subu $t0, $t1, $t0 # Minus at 6.11  	
+addu $sp, $sp, 8 # Minus at 6.11 	
+sw $t0, ($sp) # Minus at 6.11  
+subu $sp, $sp, 8 # IntegerLiteral at 6.17 		
+sw $s5, 4($sp) # IntegerLiteral at 6.17	  
+li $t0, 0 # IntegerLiteral at 6.17 		
+sw $t0, ($sp) # IntegerLiteral at 6.17		 
+subu $sp, $sp, 8 # IntegerLiteral at 6.18	
+sw $s5, 4($sp) # IntegerLiteral at 6.18   
+li $t0, 2 # IntegerLiteral at 6.18   
+sw $t0, ($sp) # IntegerLiteral at 6.18 
+lw $t0, ($sp) # Minus at 6.17 	 
+lw $t1, 8($sp) # Minus at 6.17 	
+subu $t0, $t1, $t0 # Minus at 6.17  	
+addu $sp, $sp, 8 # Minus at 6.17  
+sw $t0, ($sp) # Minus at 6.17	
+jal divide # Divide at 6.15   
+lw $t0, 24($sp) # IdentifierExp at 8.11 
+subu $sp, $sp, 8 # IdentifierExp at 8.11	  
+sw $s5, 4($sp) # IdentifierExp at 8.11	 
+sw $t0, ($sp) # IdentifierExp at 8.11 	 
+subu $sp, $sp, 8 # IntegerLiteral at 8.15			
+sw $s5, 4($sp) # IntegerLiteral at 8.15 	
+li $t0, 5 # IntegerLiteral at 8.15			
+sw $t0, ($sp) # IntegerLiteral at 8.15 	 
+jal divide # Divide at 8.13 	
+subu $sp, $sp, 8 # IntegerLiteral at 9.11 	
+sw $s5, 4($sp) # IntegerLiteral at 9.11 
+li $t0, 20 # IntegerLiteral at 9.11 	
+sw $t0, ($sp) # IntegerLiteral at 9.11  
+lw $t0, 40($sp) # IdentifierExp at 9.16		 
+subu $sp, $sp, 8 # IdentifierExp at 9.16		
+sw $s5, 4($sp) # IdentifierExp at 9.16			
+sw $t0, ($sp) # IdentifierExp at 9.16	 	
+jal divide # Divide at 9.14	  
+subu $sp, $sp, 8 # IntegerLiteral at 10.11	  
+sw $s5, 4($sp) # IntegerLiteral at 10.11			
+li $t0, 0 # IntegerLiteral at 10.11 		
+sw $t0, ($sp) # IntegerLiteral at 10.11 		
+lw $t0, 48($sp) # IdentifierExp at 10.12  
+subu $sp, $sp, 8 # IdentifierExp at 10.12	 
+sw $s5, 4($sp) # IdentifierExp at 10.12	 
+sw $t0, ($sp) # IdentifierExp at 10.12 	 
+lw $t0, ($sp) # Minus at 10.11	  
+lw $t1, 8($sp) # Minus at 10.11	  
+subu $t0, $t1, $t0 # Minus at 10.11	 
+addu $sp, $sp, 8 # Minus at 10.11		
+sw $t0, ($sp) # Minus at 10.11 
+subu $sp, $sp, 8 # IntegerLiteral at 10.16 	
+sw $s5, 4($sp) # IntegerLiteral at 10.16	 	
+li $t0, 5 # IntegerLiteral at 10.16			
+sw $t0, ($sp) # IntegerLiteral at 10.16		 
+jal divide # Divide at 10.14	
+subu $sp, $sp, 8 # IntegerLiteral at 11.11	
+sw $s5, 4($sp) # IntegerLiteral at 11.11	
+li $t0, 20 # IntegerLiteral at 11.11	 
+sw $t0, ($sp) # IntegerLiteral at 11.11 		
+subu $sp, $sp, 8 # IntegerLiteral at 11.16 
+sw $s5, 4($sp) # IntegerLiteral at 11.16 	 
+li $t0, 0 # IntegerLiteral at 11.16		 
+sw $t0, ($sp) # IntegerLiteral at 11.16   
+lw $t0, 64($sp) # IdentifierExp at 11.17	 
+subu $sp, $sp, 8 # IdentifierExp at 11.17   
+sw $s5, 4($sp) # IdentifierExp at 11.17			
+sw $t0, ($sp) # IdentifierExp at 11.17   
+lw $t0, ($sp) # Minus at 11.16		 
+lw $t1, 8($sp) # Minus at 11.16   
+subu $t0, $t1, $t0 # Minus at 11.16			
+addu $sp, $sp, 8 # Minus at 11.16  
+sw $t0, ($sp) # Minus at 11.16 	 
+jal divide # Divide at 11.14  
+lw $t0, 40($sp) # IdentifierExp at 12.11 	 
+subu $sp, $sp, 8 # IdentifierExp at 12.11  	
+sw $s5, 4($sp) # IdentifierExp at 12.11 		
+sw $t0, ($sp) # IdentifierExp at 12.11 	
+lw $t0, 64($sp) # IdentifierExp at 12.15	
+subu $sp, $sp, 8 # IdentifierExp at 12.15 
+sw $s5, 4($sp) # IdentifierExp at 12.15 	 
+sw $t0, ($sp) # IdentifierExp at 12.15		 
+jal divide # Divide at 12.13 	 
+lw $t0, 40($sp) # IdentifierExp at 13.11  	
+subu $sp, $sp, 8 # IdentifierExp at 13.11  	
+sw $s5, 4($sp) # IdentifierExp at 13.11  	
+sw $t0, ($sp) # IdentifierExp at 13.11	  
+lw $t0, 72($sp) # IdentifierExp at 13.15 
+subu $sp, $sp, 8 # IdentifierExp at 13.15  	
+sw $s5, 4($sp) # IdentifierExp at 13.15	 
+sw $t0, ($sp) # IdentifierExp at 13.15		
+jal divide # Divide at 13.13 
+subu $sp, $sp, 8 # IntegerLiteral at 14.11			
+sw $s5, 4($sp) # IntegerLiteral at 14.11			
+li $t0, 0 # IntegerLiteral at 14.11 
+sw $t0, ($sp) # IntegerLiteral at 14.11  	
+lw $t0, 64($sp) # IdentifierExp at 14.12 	
+subu $sp, $sp, 8 # IdentifierExp at 14.12	  
+sw $s5, 4($sp) # IdentifierExp at 14.12   
+sw $t0, ($sp) # IdentifierExp at 14.12 
+lw $t0, ($sp) # Minus at 14.11 	
+lw $t1, 8($sp) # Minus at 14.11		 
+subu $t0, $t1, $t0 # Minus at 14.11 		
+addu $sp, $sp, 8 # Minus at 14.11	 	
+sw $t0, ($sp) # Minus at 14.11   
+lw $t0, 80($sp) # IdentifierExp at 14.16		
+subu $sp, $sp, 8 # IdentifierExp at 14.16	  
+sw $s5, 4($sp) # IdentifierExp at 14.16		
+sw $t0, ($sp) # IdentifierExp at 14.16	
+jal divide # Divide at 14.14	 
+lw $t0, 64($sp) # IdentifierExp at 15.11   
+subu $sp, $sp, 8 # IdentifierExp at 15.11  
+sw $s5, 4($sp) # IdentifierExp at 15.11  	
+sw $t0, ($sp) # IdentifierExp at 15.11 	 
+subu $sp, $sp, 8 # IntegerLiteral at 15.15 	
+sw $s5, 4($sp) # IntegerLiteral at 15.15	  
+li $t0, 0 # IntegerLiteral at 15.15			
+sw $t0, ($sp) # IntegerLiteral at 15.15	  
+lw $t0, 96($sp) # IdentifierExp at 15.16	 	
+subu $sp, $sp, 8 # IdentifierExp at 15.16	 	
+sw $s5, 4($sp) # IdentifierExp at 15.16	 	
+sw $t0, ($sp) # IdentifierExp at 15.16 	 
+lw $t0, ($sp) # Minus at 15.15	
+lw $t1, 8($sp) # Minus at 15.15	
+subu $t0, $t1, $t0 # Minus at 15.15	 	
+addu $sp, $sp, 8 # Minus at 15.15		
+sw $t0, ($sp) # Minus at 15.15		
+jal divide # Divide at 15.13		
+subu $sp, $sp, 8 # IntegerLiteral at 16.11  	
+sw $s5, 4($sp) # IntegerLiteral at 16.11		
+li $t0, 0 # IntegerLiteral at 16.11	  
+sw $t0, ($sp) # IntegerLiteral at 16.11	 
+lw $t0, 72($sp) # IdentifierExp at 16.12 		
+subu $sp, $sp, 8 # IdentifierExp at 16.12			
+sw $s5, 4($sp) # IdentifierExp at 16.12 		
+sw $t0, ($sp) # IdentifierExp at 16.12   
+lw $t0, ($sp) # Minus at 16.11			
+lw $t1, 8($sp) # Minus at 16.11		
+subu $t0, $t1, $t0 # Minus at 16.11	 
+addu $sp, $sp, 8 # Minus at 16.11   
+sw $t0, ($sp) # Minus at 16.11  	
+subu $sp, $sp, 8 # IntegerLiteral at 16.16  	
+sw $s5, 4($sp) # IntegerLiteral at 16.16		
+li $t0, 0 # IntegerLiteral at 16.16 	 
+sw $t0, ($sp) # IntegerLiteral at 16.16 	 
+lw $t0, 104($sp) # IdentifierExp at 16.17	 
+subu $sp, $sp, 8 # IdentifierExp at 16.17  
+sw $s5, 4($sp) # IdentifierExp at 16.17	 
+sw $t0, ($sp) # IdentifierExp at 16.17 	
+lw $t0, ($sp) # Minus at 16.16 		
+lw $t1, 8($sp) # Minus at 16.16	 	
+subu $t0, $t1, $t0 # Minus at 16.16 
+addu $sp, $sp, 8 # Minus at 16.16		 
+sw $t0, ($sp) # Minus at 16.16	 	
+jal divide # Divide at 16.14  
+subu $sp, $sp, 4 # Super at 18.9 	 
+sw $s2, ($sp) # Super at 18.9	 
+lw $t0, 100($sp) # IdentifierExp at 18.18 		
+subu $sp, $sp, 8 # IdentifierExp at 18.18   
+sw $s5, 4($sp) # IdentifierExp at 18.18		 
+sw $t0, ($sp) # IdentifierExp at 18.18		 
+jal printInt # Call at 18.9 	 
+subu $sp, $sp, 4 # Super at 19.9 	 
+sw $s2, ($sp) # Super at 19.9  	
+subu $sp, $sp, 4 # StringLiteral at 19.18 	 
+la $t0, strLit_89 # StringLiteral at 19.18	  
+sw $t0, ($sp) # StringLiteral at 19.18	 
+jal printStr # Call at 19.9 	
+subu $sp, $sp, 4 # Super at 20.9		
+sw $s2, ($sp) # Super at 20.9			
+lw $t0, 92($sp) # IdentifierExp at 20.18 
+subu $sp, $sp, 8 # IdentifierExp at 20.18		 
+sw $s5, 4($sp) # IdentifierExp at 20.18 		
+sw $t0, ($sp) # IdentifierExp at 20.18		
+jal printInt # Call at 20.9	  
+subu $sp, $sp, 4 # Super at 21.9 	
+sw $s2, ($sp) # Super at 21.9		
+subu $sp, $sp, 4 # StringLiteral at 21.18	  
+la $t0, strLit_97 # StringLiteral at 21.18		 
+sw $t0, ($sp) # StringLiteral at 21.18   
+jal printStr # Call at 21.9	 
+subu $sp, $sp, 4 # Super at 22.9	
+sw $s2, ($sp) # Super at 22.9	 	
+lw $t0, 84($sp) # IdentifierExp at 22.18	 	
+subu $sp, $sp, 8 # IdentifierExp at 22.18  
+sw $s5, 4($sp) # IdentifierExp at 22.18	
+sw $t0, ($sp) # IdentifierExp at 22.18 	
+jal printInt # Call at 22.9	 	
+subu $sp, $sp, 4 # Super at 23.9 	 
+sw $s2, ($sp) # Super at 23.9  
+subu $sp, $sp, 4 # StringLiteral at 23.18			
+la $t0, strLit_105 # StringLiteral at 23.18 	
+sw $t0, ($sp) # StringLiteral at 23.18  	
+jal printStr # Call at 23.9 
+subu $sp, $sp, 4 # Super at 24.9			
+sw $s2, ($sp) # Super at 24.9 		
+lw $t0, 76($sp) # IdentifierExp at 24.18			
+subu $sp, $sp, 8 # IdentifierExp at 24.18	
+sw $s5, 4($sp) # IdentifierExp at 24.18	
+sw $t0, ($sp) # IdentifierExp at 24.18  	
+jal printInt # Call at 24.9   
+subu $sp, $sp, 4 # Super at 25.9	
+sw $s2, ($sp) # Super at 25.9  
+subu $sp, $sp, 4 # StringLiteral at 25.18	  
+la $t0, strLit_113 # StringLiteral at 25.18 
+sw $t0, ($sp) # StringLiteral at 25.18   
+jal printStr # Call at 25.9		
+subu $sp, $sp, 4 # Super at 26.9	 	
+sw $s2, ($sp) # Super at 26.9	 	
+lw $t0, 68($sp) # IdentifierExp at 26.18 	 
+subu $sp, $sp, 8 # IdentifierExp at 26.18   
+sw $s5, 4($sp) # IdentifierExp at 26.18  	
+sw $t0, ($sp) # IdentifierExp at 26.18   
+jal printInt # Call at 26.9			
+subu $sp, $sp, 4 # Super at 27.9 	
+sw $s2, ($sp) # Super at 27.9	
+subu $sp, $sp, 4 # StringLiteral at 27.18	
+la $t0, strLit_121 # StringLiteral at 27.18 	 
+sw $t0, ($sp) # StringLiteral at 27.18 
+jal printStr # Call at 27.9	
+subu $sp, $sp, 4 # Super at 28.9 		
+sw $s2, ($sp) # Super at 28.9	
+lw $t0, 60($sp) # IdentifierExp at 28.18 		
+subu $sp, $sp, 8 # IdentifierExp at 28.18	  
+sw $s5, 4($sp) # IdentifierExp at 28.18			
+sw $t0, ($sp) # IdentifierExp at 28.18	 
+jal printInt # Call at 28.9	 	
+subu $sp, $sp, 4 # Super at 29.9  
+sw $s2, ($sp) # Super at 29.9	 	
+subu $sp, $sp, 4 # StringLiteral at 29.18 	 
+la $t0, strLit_129 # StringLiteral at 29.18		 
+sw $t0, ($sp) # StringLiteral at 29.18	  
+jal printStr # Call at 29.9		
+subu $sp, $sp, 4 # Super at 30.9	  
+sw $s2, ($sp) # Super at 30.9	  
+lw $t0, 52($sp) # IdentifierExp at 30.18 		
+subu $sp, $sp, 8 # IdentifierExp at 30.18 	 
+sw $s5, 4($sp) # IdentifierExp at 30.18	  
+sw $t0, ($sp) # IdentifierExp at 30.18	 	
+jal printInt # Call at 30.9 
+subu $sp, $sp, 4 # Super at 31.9 	 
+sw $s2, ($sp) # Super at 31.9			
+subu $sp, $sp, 4 # StringLiteral at 31.18  	
+la $t0, strLit_137 # StringLiteral at 31.18 	
+sw $t0, ($sp) # StringLiteral at 31.18	
+jal printStr # Call at 31.9	  
+subu $sp, $sp, 4 # Super at 32.9		 
+sw $s2, ($sp) # Super at 32.9  
+lw $t0, 44($sp) # IdentifierExp at 32.18			
+subu $sp, $sp, 8 # IdentifierExp at 32.18 	
+sw $s5, 4($sp) # IdentifierExp at 32.18  
+sw $t0, ($sp) # IdentifierExp at 32.18  	
+jal printInt # Call at 32.9	 	
+subu $sp, $sp, 4 # Super at 33.9	  
+sw $s2, ($sp) # Super at 33.9	
+subu $sp, $sp, 4 # StringLiteral at 33.18	
+la $t0, strLit_145 # StringLiteral at 33.18   
+sw $t0, ($sp) # StringLiteral at 33.18	 
+jal printStr # Call at 33.9	 	
+subu $sp, $sp, 4 # Super at 34.9 	
+sw $s2, ($sp) # Super at 34.9		
+lw $t0, 36($sp) # IdentifierExp at 34.18		 
+subu $sp, $sp, 8 # IdentifierExp at 34.18			
+sw $s5, 4($sp) # IdentifierExp at 34.18			
+sw $t0, ($sp) # IdentifierExp at 34.18  
+jal printInt # Call at 34.9 	 
+subu $sp, $sp, 4 # Super at 35.9		
+sw $s2, ($sp) # Super at 35.9		
+subu $sp, $sp, 4 # StringLiteral at 35.18  	
+la $t0, strLit_153 # StringLiteral at 35.18			
+sw $t0, ($sp) # StringLiteral at 35.18  	
+jal printStr # Call at 35.9			
+subu $sp, $sp, 4 # Super at 36.9 
+sw $s2, ($sp) # Super at 36.9  
+lw $t0, 28($sp) # IdentifierExp at 36.18 
+subu $sp, $sp, 8 # IdentifierExp at 36.18  	
+sw $s5, 4($sp) # IdentifierExp at 36.18 
+sw $t0, ($sp) # IdentifierExp at 36.18 		
+jal printInt # Call at 36.9 	 
+subu $sp, $sp, 4 # Super at 37.9		
+sw $s2, ($sp) # Super at 37.9	  
+subu $sp, $sp, 4 # StringLiteral at 37.18	 
+la $t0, strLit_161 # StringLiteral at 37.18	 	
+sw $t0, ($sp) # StringLiteral at 37.18 
+jal printStr # Call at 37.9	  
+subu $sp, $sp, 4 # Super at 38.9	 
+sw $s2, ($sp) # Super at 38.9	
+lw $t0, 20($sp) # IdentifierExp at 38.18	 
+subu $sp, $sp, 8 # IdentifierExp at 38.18	 	
+sw $s5, 4($sp) # IdentifierExp at 38.18		
+sw $t0, ($sp) # IdentifierExp at 38.18	 	
+jal printInt # Call at 38.9			
+subu $sp, $sp, 4 # Super at 39.9 
+sw $s2, ($sp) # Super at 39.9			
+subu $sp, $sp, 4 # StringLiteral at 39.18	 	
+la $t0, strLit_169 # StringLiteral at 39.18  	
+sw $t0, ($sp) # StringLiteral at 39.18		
+jal printStr # Call at 39.9	
+subu $sp, $sp, 4 # Super at 40.9			
+sw $s2, ($sp) # Super at 40.9		
+lw $t0, 12($sp) # IdentifierExp at 40.18	 
+subu $sp, $sp, 8 # IdentifierExp at 40.18 		
+sw $s5, 4($sp) # IdentifierExp at 40.18 	
+sw $t0, ($sp) # IdentifierExp at 40.18			
+jal printInt # Call at 40.9 		
+subu $sp, $sp, 4 # Super at 41.9		 
+sw $s2, ($sp) # Super at 41.9		 
+subu $sp, $sp, 4 # StringLiteral at 41.18	 
+la $t0, strLit_177 # StringLiteral at 41.18 	 
+sw $t0, ($sp) # StringLiteral at 41.18 		
+jal printStr # Call at 41.9	 	
+subu $sp, $sp, 4 # Super at 42.9   
+sw $s2, ($sp) # Super at 42.9   
+lw $t0, 4($sp) # IdentifierExp at 42.18	 
+subu $sp, $sp, 8 # IdentifierExp at 42.18	 	
+sw $s5, 4($sp) # IdentifierExp at 42.18 	
+sw $t0, ($sp) # IdentifierExp at 42.18 	 
+jal printInt # Call at 42.9	 	
+subu $sp, $sp, 4 # Super at 43.9	
+sw $s2, ($sp) # Super at 43.9  	
+subu $sp, $sp, 4 # StringLiteral at 43.18  	
+la $t0, strLit_185 # StringLiteral at 43.18		 
+sw $t0, ($sp) # StringLiteral at 43.18 	 
+jal printStr # Call at 43.9		 
+lw $ra, 108($sp) # MethodDeclVoid at 2.14	
+lw $s2, 4($sp) # MethodDeclVoid at 2.14	
+addu $sp, $sp, 116 # MethodDeclVoid at 2.14	  
+jr $ra # MethodDeclVoid at 2.14	  
 ###############################################################
 # MiniJava/UP library for MIPS/Spim -- version that assumes
 #    one-word boolean on stack

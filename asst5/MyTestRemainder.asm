@@ -1,41 +1,123 @@
- .data # Program at 1.1	 
+ .data # Program at 1.1		
 CLASS_Object: # Program at 1.1	
-CLASS_String: # Program at 1.1			
-.text # Program at 1.1   
+CLASS_String: # Program at 1.1 	 
+.text # Program at 1.1			
 .global main # Program at 1.1		 
-main: # Program at 1.1	 
-jal vm_init # Program at 1.1 	
-subu $sp, $sp, 4 # NewObject at 0.0		 
-sw $zero, ($sp) # NewObject at 0.0  	
-jal fcn_9_main # Call at 0.0		 
-li $v0, 10 # Program at 1.1   
+main: # Program at 1.1 	
+jal vm_init # Program at 1.1 	 
+subu $sp, $sp, 4 # NewObject at 0.0  	
+sw $zero, ($sp) # NewObject at 0.0   
+jal fcn_49_main # Call at 0.0	
+li $v0, 10 # Program at 1.1	
 syscall # Program at 1.1			
-.globl fcn_9_main # MethodDeclVoid at 2.14	 
-fcn_9_main: # MethodDeclVoid at 2.14			
-subu $sp, $sp, 8 # MethodDeclVoid at 2.14	  
-sw $ra, 4($sp) # MethodDeclVoid at 2.14	 
-sw $s2, ($sp) # MethodDeclVoid at 2.14  	
-lw $s2, 4($sp) # MethodDeclVoid at 2.14	
-subu $sp, $sp, 8 # IntegerLiteral at 3.11	
-sw $s5, 4($sp) # IntegerLiteral at 3.11  	
-li $t0, 10 # IntegerLiteral at 3.11 		
-sw $t0, ($sp) # IntegerLiteral at 3.11	
-subu $sp, $sp, 8 # IntegerLiteral at 3.16 	
-sw $s5, 4($sp) # IntegerLiteral at 3.16 
-li $t0, 5 # IntegerLiteral at 3.16  	
-sw $t0, ($sp) # IntegerLiteral at 3.16	  
+.globl fcn_49_main # MethodDeclVoid at 2.14 
+fcn_49_main: # MethodDeclVoid at 2.14	 	
+subu $sp, $sp, 8 # MethodDeclVoid at 2.14	 	
+sw $ra, 4($sp) # MethodDeclVoid at 2.14  
+sw $s2, ($sp) # MethodDeclVoid at 2.14	
+lw $s2, 4($sp) # MethodDeclVoid at 2.14	 	
+subu $sp, $sp, 8 # IntegerLiteral at 3.11  
+sw $s5, 4($sp) # IntegerLiteral at 3.11	 
+li $t0, 10 # IntegerLiteral at 3.11	 	
+sw $t0, ($sp) # IntegerLiteral at 3.11 	 
+subu $sp, $sp, 8 # IntegerLiteral at 3.16	
+sw $s5, 4($sp) # IntegerLiteral at 3.16	 
+li $t0, 5 # IntegerLiteral at 3.16 
+sw $t0, ($sp) # IntegerLiteral at 3.16	 
 jal remainder # Remainder at 3.14		 
-subu $sp, $sp, 4 # Super at 5.9	
-sw $s2, ($sp) # Super at 5.9 	
-lw $t0, 4($sp) # IdentifierExp at 5.18  	
-subu $sp, $sp, 8 # IdentifierExp at 5.18	 	
-sw $s5, 4($sp) # IdentifierExp at 5.18	  
-sw $t0, ($sp) # IdentifierExp at 5.18  	
-jal printInt # Call at 5.9	 
-lw $ra, 12($sp) # MethodDeclVoid at 2.14 	
-lw $s2, 4($sp) # MethodDeclVoid at 2.14	 
-addu $sp, $sp, 20 # MethodDeclVoid at 2.14	 
-jr $ra # MethodDeclVoid at 2.14   
+subu $sp, $sp, 8 # IntegerLiteral at 4.11 		
+sw $s5, 4($sp) # IntegerLiteral at 4.11		
+li $t0, 10 # IntegerLiteral at 4.11   
+sw $t0, ($sp) # IntegerLiteral at 4.11  	
+subu $sp, $sp, 8 # IntegerLiteral at 4.16		
+sw $s5, 4($sp) # IntegerLiteral at 4.16		
+li $t0, 3 # IntegerLiteral at 4.16 
+sw $t0, ($sp) # IntegerLiteral at 4.16		 
+jal remainder # Remainder at 4.14 		
+subu $sp, $sp, 8 # IntegerLiteral at 5.11 	 
+sw $s5, 4($sp) # IntegerLiteral at 5.11			
+li $t0, 10 # IntegerLiteral at 5.11 		
+sw $t0, ($sp) # IntegerLiteral at 5.11   
+subu $sp, $sp, 8 # IntegerLiteral at 5.15			
+sw $s5, 4($sp) # IntegerLiteral at 5.15   
+li $t0, 0 # IntegerLiteral at 5.15	  
+sw $t0, ($sp) # IntegerLiteral at 5.15 		
+subu $sp, $sp, 8 # IntegerLiteral at 5.16		 
+sw $s5, 4($sp) # IntegerLiteral at 5.16 	 
+li $t0, 3 # IntegerLiteral at 5.16   
+sw $t0, ($sp) # IntegerLiteral at 5.16 	 
+lw $t0, ($sp) # Minus at 5.15  
+lw $t1, 8($sp) # Minus at 5.15 	
+subu $t0, $t1, $t0 # Minus at 5.15  
+addu $sp, $sp, 8 # Minus at 5.15 	
+sw $t0, ($sp) # Minus at 5.15	 
+jal remainder # Remainder at 5.14	
+subu $sp, $sp, 8 # IntegerLiteral at 6.11	
+sw $s5, 4($sp) # IntegerLiteral at 6.11	 
+li $t0, 5 # IntegerLiteral at 6.11		
+sw $t0, ($sp) # IntegerLiteral at 6.11		 
+subu $sp, $sp, 8 # IntegerLiteral at 6.15		
+sw $s5, 4($sp) # IntegerLiteral at 6.15  	
+li $t0, 10 # IntegerLiteral at 6.15	  
+sw $t0, ($sp) # IntegerLiteral at 6.15  
+jal remainder # Remainder at 6.13	
+subu $sp, $sp, 8 # IntegerLiteral at 7.11 		
+sw $s5, 4($sp) # IntegerLiteral at 7.11 	 
+li $t0, 0 # IntegerLiteral at 7.11			
+sw $t0, ($sp) # IntegerLiteral at 7.11			
+subu $sp, $sp, 8 # IntegerLiteral at 7.12 	
+sw $s5, 4($sp) # IntegerLiteral at 7.12		 
+li $t0, 5 # IntegerLiteral at 7.12  	
+sw $t0, ($sp) # IntegerLiteral at 7.12 		
+lw $t0, ($sp) # Minus at 7.11 	 
+lw $t1, 8($sp) # Minus at 7.11		 
+subu $t0, $t1, $t0 # Minus at 7.11			
+addu $sp, $sp, 8 # Minus at 7.11		
+sw $t0, ($sp) # Minus at 7.11	 	
+subu $sp, $sp, 8 # IntegerLiteral at 7.16		
+sw $s5, 4($sp) # IntegerLiteral at 7.16  
+li $t0, 10 # IntegerLiteral at 7.16		
+sw $t0, ($sp) # IntegerLiteral at 7.16	 	
+jal remainder # Remainder at 7.14 	
+subu $sp, $sp, 4 # Super at 10.9 	
+sw $s2, ($sp) # Super at 10.9	  
+lw $t0, 36($sp) # IdentifierExp at 10.18	
+subu $sp, $sp, 8 # IdentifierExp at 10.18		
+sw $s5, 4($sp) # IdentifierExp at 10.18 	 
+sw $t0, ($sp) # IdentifierExp at 10.18 
+jal printInt # Call at 10.9	  
+subu $sp, $sp, 4 # Super at 11.9	  
+sw $s2, ($sp) # Super at 11.9	 	
+lw $t0, 28($sp) # IdentifierExp at 11.18 
+subu $sp, $sp, 8 # IdentifierExp at 11.18 	
+sw $s5, 4($sp) # IdentifierExp at 11.18	
+sw $t0, ($sp) # IdentifierExp at 11.18  
+jal printInt # Call at 11.9	
+subu $sp, $sp, 4 # Super at 12.9 
+sw $s2, ($sp) # Super at 12.9	  
+lw $t0, 20($sp) # IdentifierExp at 12.18 	
+subu $sp, $sp, 8 # IdentifierExp at 12.18		 
+sw $s5, 4($sp) # IdentifierExp at 12.18	 
+sw $t0, ($sp) # IdentifierExp at 12.18 
+jal printInt # Call at 12.9   
+subu $sp, $sp, 4 # Super at 13.9 		
+sw $s2, ($sp) # Super at 13.9	  
+lw $t0, 12($sp) # IdentifierExp at 13.18		
+subu $sp, $sp, 8 # IdentifierExp at 13.18		
+sw $s5, 4($sp) # IdentifierExp at 13.18	 	
+sw $t0, ($sp) # IdentifierExp at 13.18	 	
+jal printInt # Call at 13.9	 	
+subu $sp, $sp, 4 # Super at 14.9	  
+sw $s2, ($sp) # Super at 14.9 	
+lw $t0, 4($sp) # IdentifierExp at 14.18	 	
+subu $sp, $sp, 8 # IdentifierExp at 14.18	 
+sw $s5, 4($sp) # IdentifierExp at 14.18		 
+sw $t0, ($sp) # IdentifierExp at 14.18 	 
+jal printInt # Call at 14.9 		
+lw $ra, 44($sp) # MethodDeclVoid at 2.14		 
+lw $s2, 4($sp) # MethodDeclVoid at 2.14   
+addu $sp, $sp, 52 # MethodDeclVoid at 2.14			
+jr $ra # MethodDeclVoid at 2.14			
 ###############################################################
 # MiniJava/UP library for MIPS/Spim -- version that assumes
 #    one-word boolean on stack
