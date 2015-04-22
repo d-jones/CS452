@@ -107,6 +107,88 @@ public class CG3Visitor extends ASTvisitor {
 	
 	/*
 	 * (non-Javadoc)
+	 * @see visitor.InhVisitor#visitEquals(syntaxtree.Equals)
+	 */
+	@Override
+	public Object visitEquals(Equals eq){
+		eq.left.accept(this);
+		eq.right.accept(this);
+		if(eq.left.type instanceof IntegerType && eq.right.type instanceof IntegerType){
+			code.emit(eq, "lw $t0, ($sp)");
+			code.emit(eq, "lw $t1, 8($sp)");
+			code.emit(eq, "seq $t0, $t0, $t1");
+			code.emit(eq, "addu $sp, $sp, 12");
+			stackHeight -= 12;
+			code.emit(eq, "sw $t0, ($sp)");
+		}
+		else{
+			code.emit(eq, "lw $t0, ($sp)");
+			code.emit(eq, "lw $t1, 4($sp)");
+			code.emit(eq, "seq $t0, $t0, $t1");
+			code.emit(eq, "addu $sp, $sp, 4");
+			stackHeight -= 4;
+			code.emit(eq, "sw $t0, ($sp)");
+		}
+		
+		return null;
+	}
+	
+	
+	/*
+	 * (non-Javadoc)
+	 * @see visitor.ASTvisitor#visitExpStatement(syntaxtree.ExpStatement)
+	 */
+	@Override
+	public Object visitExpStatement(ExpStatement exp){
+		exp.exp.accept(this);
+		if(exp.exp.type instanceof IntegerType){
+			code.emit(exp, "addu $sp, $sp, 8");
+			stackHeight -= 8;
+		}
+		else if(!(exp.exp.type instanceof VoidType)){
+			code.emit(exp, "addu $sp, $sp, 4");
+			stackHeight -= 4;
+		}
+		
+		return null;
+	}
+	
+	
+	/*
+	 * (non-Javadoc)
+	 * @see visitor.InhVisitor#visitFalse(syntaxtree.False)
+	 */
+	@Override
+	public Object visitFalse(False f){
+		code.emit(f, "subu $sp, $sp, 4");
+		stackHeight += 4;
+		code.emit(f, "sw $zero, ($sp)");
+		
+		return null;
+	}
+	
+	
+	/*
+	 * (non-Javadoc)
+	 * @see visitor.InhVisitor#visitGreaterThan(syntaxtree.GreaterThan)
+	 */
+	@Override
+	public Object visitGreaterThan(GreaterThan gt){
+		gt.left.accept(this);
+		gt.right.accept(this);
+		code.emit(gt, "lw $t0, ($sp)");
+		code.emit(gt, "lw $t1, 8($sp)");
+		code.emit(gt, "sgt $t0, $t1, $t0");
+		code.emit(gt, "addu $sp, $sp, 12");
+		stackHeight -= 12;
+		code.emit(gt, "sw $t0, ($sp)");
+		
+		return null;
+	}
+	
+	
+	/*
+	 * (non-Javadoc)
 	 * @see visitor.InhVisitor#visitIdentifierExp(syntaxtree.IdentifierExp)
 	 */
 	@Override
@@ -115,23 +197,57 @@ public class CG3Visitor extends ASTvisitor {
 		if(iExp.link instanceof LocalVarDecl){
 			int sDepth = stackHeight + iExp.link.offset;
 			code.emit(iExp, "lw $t0, " + sDepth + "($sp)");
-			if(iExp.link.type instanceof IntegerType){
-				code.emit(iExp, "subu $sp, $sp, 8");
-				stackHeight += 8;
-				code.emit(iExp,  "sw $s5, 4($sp)");
-				code.emit(iExp,  "sw $t0, ($sp)");
-			}
-			else{
-				code.emit(iExp, "subu $sp, $sp, 4");
-				stackHeight += 4;
-				code.emit(iExp,  "sw $t0, ($sp)");
-			}
+		}
+		//the variable is an InstVarDecl
+		else{
+			int NNN = iExp.link.offset;
+			code.emit(iExp, "lw $t0, " + NNN + "($s2)");
+		}
+		
+		//the variable is an integer
+		if(iExp.link.type instanceof IntegerType){
+			code.emit(iExp, "subu $sp, $sp, 8");
+			stackHeight += 8;
+			code.emit(iExp,  "sw $s5, 4($sp)");
+			code.emit(iExp,  "sw $t0, ($sp)");
+		}
+		else if(!(iExp.link.type instanceof VoidType)){
+			code.emit(iExp, "subu $sp, $sp, 4");
+			stackHeight += 4;
+			code.emit(iExp,  "sw $t0, ($sp)");
 		}
 		
 		return null;
 	}
 	
+	
+	/*
+	 * (non-Javadoc)
+	 * @see visitor.ASTvisitor#visitIf(syntaxtree.If)
+	 */
+	@Override
+	public Object visitIf(If i){
+		i.exp.accept(this);
+		code.emit(i, "lw $t0, ($sp)");
+		code.emit(i, "addu $sp, $sp, 4");
+		stackHeight -= 4;
+		code.emit(i, "beq $t0, $zero, if_else_" + i.uniqueId);
+		
+		i.trueStmt.accept(this);
+		code.emit(i, "j if_done_" + i.uniqueId);
+		code.emit(i, "if_else_" + i.uniqueId + ":");
+		
+		i.falseStmt.accept(this);
+		code.emit(i, "if_done_" + i.uniqueId + ":");
+		
+		return null;
+	}
+	
 
+	/*
+	 * (non-Javadoc)
+	 * @see visitor.InhVisitor#visitIntegerLiteral(syntaxtree.IntegerLiteral)
+	 */
 	@Override
 	public Object visitIntegerLiteral(IntegerLiteral intLit){
 		code.emit(intLit, "subu $sp, $sp, 8");
@@ -142,6 +258,26 @@ public class CG3Visitor extends ASTvisitor {
 		
 		return null;
 	}
+	
+	
+	/*
+	 * (non-Javadoc)
+	 * @see visitor.InhVisitor#visitLessThan(syntaxtree.LessThan)
+	 */
+	@Override
+	public Object visitLessThan(LessThan lt){
+		lt.left.accept(this);
+		lt.right.accept(this);
+		code.emit(lt, "lw $t0, ($sp)");
+		code.emit(lt, "lw $t1, 8($sp)");
+		code.emit(lt, "slt $t0, $t1, $t0");
+		code.emit(lt, "addu $sp, $sp, 12");
+		stackHeight -= 12;
+		code.emit(lt, "sw $t0, ($sp)");
+		
+		return null;
+	}
+	
 
 	/*
 	 * (non-Javadoc)
@@ -356,6 +492,20 @@ public class CG3Visitor extends ASTvisitor {
 		stackHeight -= 8;
 		code.emit(t, "sw $t0, ($sp)");
 		
+		return null;
+	}
+	
+	
+	/*
+	 * (non-Javadoc)
+	 * @see visitor.InhVisitor#visitTrue(syntaxtree.True)
+	 */
+	@Override
+	public Object visitTrue(True t){
+		code.emit(t, "subu $sp, $sp, 4");
+		stackHeight += 4;
+		code.emit(t, "li $t0, 1");
+		code.emit(t, "sw $t0, ($sp)");
 		return null;
 	}
 }

@@ -10,4 +10,7 @@
 *.classpath
 *.project
 *.DS_STORE
+
+# Other Files #
 *.pdf
+*.zip
