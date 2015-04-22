@@ -20,49 +20,93 @@ class Main extends Lib{
 
 		if(1 == 1){ //true
 			super.printStr("1 == 1 ==> PASS\n");
-			
+		}
+		else{
+			super.printStr("1 == 1 ==> FAILED\n");
 		}
 		if(1 != 2){ //true
 			super.printStr("1 != 2 ==> PASS\n");
 		}
+		else{
+			super.printStr("1 != 2 ==> FAILED\n");
+		}
 		if(b1 == true){ //true
 			super.printStr("b1 == true ==> PASS\n");
+		}
+		else{
+			super.printStr("b1 == true ==> FAILED\n");
 		}
 		if(b2 == false){ //true
 			super.printStr("b2 == false ==> PASS\n");
 		}
+		else{
+			super.printStr("b2 == false ==> FAILED\n");
+		}
 		if(b3 == true){ //true
 			super.printStr("b3 == true ==> PASS\n");
+		}
+		else{
+			super.printStr("b3 == true ==> FAILED\n");
 		}
 		if(b4 == true){ //true
 			super.printStr("b4 == true ==> PASS\n");
 		}
+		else{
+			super.printStr("b4 == true ==> FAILED\n");
+		}
 		if(b5 == true){ //
 			super.printStr("b5 == true ==> PASS\n");
+		}
+		else{
+			super.printStr("b5 == true ==> FAILED\n");
 		}
 		if(b6 == true){ //
 			super.printStr("b6 == true ==> PASS\n");
 		}
+		else{
+			super.printStr("b6 == true ==> FAILED\n");
+		}
 		if(b7 == true){
 			super.printStr("b7 == true ==> PASS\n");
+		}
+		else{
+			super.printStr("b7 == true ==> FAILED\n");
 		}
 		if(b8 == true){
 			super.printStr("b8 == tru ==> PASS\n");
 		}
+		else{
+			super.printStr("b8 == true ==> FAILED\n");
+		}
 		if(b9 == true){
 			super.printStr("b9 == true ==> PASS\n");
+		}
+		else{
+			super.printStr("b9 == true ==> FAILED\n");
 		}
 		if(b10 == true){
 			super.printStr("b10 == true ==> PASS\n");
 		}
+		else{
+			super.printStr("b10 == true ==> FAILED\n");
+		}
 		if(b11 == true){
 			super.printStr("b11 == true ==> PASS\n");
+		}
+		else{
+			super.printStr("b11 == true ==> FAILED\n");
 		}
 		if(b12 == true){
 			super.printStr("b12 == true ==> PASS\n");
 		}
+		else{
+			super.printStr("b12 == true ==> FAILED\n");
+		}
 		if(b13 == true){
 			super.printStr("b13 == true ==> PASS\n");
+		}
+		else{
+			super.printStr("b13 == true ==> FAILED\n");
 		}
 		
 		/////////////////////////////////////////////////////////////
@@ -72,41 +116,80 @@ class Main extends Lib{
 		if(b1 != false){ //true
 			super.printStr("b1 != false ==> PASS\n");
 		}
+		else{
+			super.printStr("b1 != false ==> FAILED\n");
+		}
 		if(b2 != true){ //true
 			super.printStr("b2 != true ==> PASS\n");
+		}
+		else{
+			super.printStr("b2 != true ==> FAILED\n");
 		}
 		if(b3 != false){ //true
 			super.printStr("b3 != false ==> PASS\n");
 		}
+		else{
+			super.printStr("b3 != false ==> FAILED\n");
+		}
 		if(b4 != false){ //true
 			super.printStr("b4 != false ==> PASS\n");
+		}
+		else{
+			super.printStr("b4 != false ==> FAILED\n");
 		}
 		if(b5 != false){ //
 			super.printStr("b5 != false ==> PASS\n");
 		}
+		else{
+			super.printStr("b5 != false ==> FAILED\n");
+		}
 		if(b6 != false){ //
 			super.printStr("b6 != false ==> PASS\n");
+		}
+		else{
+			super.printStr("b6 != false ==> FAILED\n");
 		}
 		if(b7 != false){
 			super.printStr("b7 != false ==> PASS\n");
 		}
+		else{
+			super.printStr("b7 != false ==> FAILED\n");
+		}
 		if(b8 != false){
 			super.printStr("b8 != false ==> PASS\n");
+		}
+		else{
+			super.printStr("b8 != false ==> FAILED\n");
 		}
 		if(b9 != false){
 			super.printStr("b9 != false ==> PASS\n");
 		}
+		else{
+			super.printStr("b9 != false ==> FAILED\n");
+		}
 		if(b10 != false){
 			super.printStr("b10 != false ==> PASS\n");
+		}
+		else{
+			super.printStr("b10 != false ==> FAILED\n");
 		}
 		if(b11 != false){
 			super.printStr("b11 != false ==> PASS\n");
 		}
+		else{
+			super.printStr("b11 != false ==> FAILED\n");
+		}
 		if(b12 != false){
 			super.printStr("b12 != false ==> PASS\n");
 		}
+		else{
+			super.printStr("b12 != false ==> FAILED\n");
+		}
 		if(b13 != false){
 			super.printStr("b13 != false ==> PASS\n");
+		}
+		else{
+			super.printStr("b13 != false ==> FAILED\n");
 		}
 		
 		/////////////////////////////////////////////////////////////
@@ -116,11 +199,36 @@ class Main extends Lib{
 		if(!(1 == 2)){ //true
 			super.printStr("!(1 == 2) ==> PASS\n");
 		}
+		else{
+			super.printStr("!(1 == 2) ==> FAILED\n");
+		}
 		if(!(!(!(1 == 2)))){ //true
 			super.printStr("!(!(!(1 == 2))) ==> PASS\n");
 		}
+		else{
+			super.printStr("!(!(!(1 == 2))) ==> FAILED\n");
+		}
 		if(!(!(!(!(1 == 1))))){ //true
 			super.printStr("!(!(!(!(1 == 1)))) ==> PASS\n");
+		}
+		else{
+			super.printStr("!(!(!(!(1 == 1)))) ==> FAILED\n");
+		}
+		
+		/////////////////////////////////////////////////////////////
+		super.printStr("****************************\n");
+		/////////////////////////////////////////////////////////////
+		if(b1 && b3){ //true
+			super.printStr("b1 && b3 ==> PASS\n");
+		}
+		else{
+			super.printStr("b1 && b3 ==> FAILED\n");
+		}
+		if(!(!(b1 && b3))){ //true
+			super.printStr("!(!(b1 && b3)) ==> PASS\n");
+		}
+		else{
+			super.printStr("!(!(b1 && b3)) ==> FAILED\n");
 		}
 	}
 }
