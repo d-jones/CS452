@@ -129,6 +129,22 @@ public class CG3Visitor extends ASTvisitor {
 	
 	/*
 	 * (non-Javadoc)
+	 * @see visitor.InhVisitor#visitBreak(syntaxtree.Break)
+	 */
+	@Override
+	public Object visitBreak(Break b){
+		int NNN = stackHeight - b.breakLink.stackHeight;
+		if(NNN != 0){
+			code.emit(b, "addu $sp, " + NNN);
+		}
+		code.emit(b, "j while_exit_" + b.breakLink.uniqueId);
+		
+		return null;
+	}
+	
+	
+	/*
+	 * (non-Javadoc)
 	 * @see visitor.InhVisitor#visitThis(syntaxtree.This)
 	 */
 	@Override
