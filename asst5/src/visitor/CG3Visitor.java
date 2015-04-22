@@ -78,6 +78,57 @@ public class CG3Visitor extends ASTvisitor {
 	
 	/*
 	 * (non-Javadoc)
+	 * @see visitor.ASTvisitor#visitAssign(syntaxtree.Assign)
+	 */
+	@Override
+	public Object visitAssign(Assign a){
+		if(a.lhs instanceof IdentifierExp){
+			a.rhs.accept(this);
+			code.emit(a, "lw $t0, ($sp)");
+			VarDecl var = ((IdentifierExp)a.lhs).link;
+			
+			if(var instanceof InstVarDecl){
+				int NNN = var.offset;
+				code.emit(a, "sw $t0, " + NNN + "($s2)");
+			}
+			else if(var instanceof LocalVarDecl || var instanceof FormalDecl){
+				int MMM = stackHeight + var.offset;
+				code.emit(a, "sw $t0, " + MMM + "($sp)");
+			}
+			
+			if(var.type instanceof IntegerType){
+				code.emit(a, "addu $sp, $sp, 8");
+				stackHeight -= 8;
+			}
+			else if(var.type instanceof Object || var.type instanceof ArrayType || var.type instanceof BooleanType){
+				code.emit(a, "addu $sp, $sp, 4");
+				stackHeight -= 4;
+			}	
+		}
+		
+		return null;
+	}
+	
+	
+	/*
+	 * 
+	 */
+	@Override
+	public Object visitBlock(Block b){
+		int sHeight = stackHeight;
+		b.stmts.accept(this);
+		if(sHeight - stackHeight != 0){
+			int DDD = stackHeight - sHeight;
+			code.emit(b, "addu $sp, " + DDD);
+		}
+		stackHeight = sHeight;
+		
+		return null;
+	}
+	
+	
+	/*
+	 * (non-Javadoc)
 	 * @see visitor.InhVisitor#visitThis(syntaxtree.This)
 	 */
 	@Override
@@ -412,30 +463,25 @@ public class CG3Visitor extends ASTvisitor {
 		return null;
 	}
 	
-	
 	/*
-	 * (non-Javadoc)
-	 * @see visitor.InhVisitor#visitStringLiteral(syntaxtree.StringLiteral)
-	 */
-	/*
-	 * (non-Javadoc)
+	 *  (non-Javadoc)
 	 * @see visitor.ASTvisitor#visitNewObject(syntaxtree.NewObject)
 	 */
 	@Override
 	public Object visitNewObject(NewObject no){
-		int NNN = no.objType.link.numObjInstVars;
+/*		int NNN = no.objType.link.numObjInstVars;
 		int MMM = no.objType.link.numDataInstVars + 1;
 		code.emit(no, "li $s6, " + MMM);
 		code.emit(no, "li $s7, " + NNN);
 		code.emit(no, "jal newObject");
 		stackHeight += 4;
 		code.emit(no, "la $t0, CLASS_" + no.objType.link.name);
-		code.emit(no, "sw $t0, -12($s7)");
+		code.emit(no, "sw $t0, -12($s7)");*/
 		
 		
-/*		code.emit(no, "subu $sp, $sp, 4");
+		code.emit(no, "subu $sp, $sp, 4");
 		stackHeight += 4;
-		code.emit(no, "sw $zero, ($sp)");*/
+		code.emit(no, "sw $zero, ($sp)");
 		
 		return null;
 	}
@@ -492,7 +538,7 @@ public class CG3Visitor extends ASTvisitor {
 		return null;
 	}
 	
-	
+
 	/*
 	 * (non-Javadoc)
 	 * @see visitor.ASTvisitor#visitProgram(syntaxtree.Program)
@@ -606,7 +652,26 @@ public class CG3Visitor extends ASTvisitor {
 		code.emit(t, "sw $t0, ($sp)");
 		return null;
 	}
-}
-
-
 	
+	
+	/*
+	 * (non-Javadoc)
+	 * @see visitor.ASTvisitor#visitWhile(syntaxtree.While)
+	 */
+	@Override
+	public Object visitWhile(While w){
+		w.stackHeight = stackHeight;
+		code.emit(w, "j while_enter_" + w.uniqueId);
+		code.emit(w, "while_top_" + w.uniqueId + ":");
+		w.body.accept(this);
+		code.emit(w, "while_enter_" + w.uniqueId + ":");
+		w.exp.accept(this);
+		code.emit(w, "lw $t0, ($sp)");
+		code.emit(w, "addu $sp, $sp, 4");
+		stackHeight -= 4;
+		code.emit(w, "bne $t0, $zero, while_top_" + w.uniqueId);
+		code.emit(w, "while_exit_" + w.uniqueId + ":");
+		
+		return null;
+	}
+}

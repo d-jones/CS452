@@ -1,595 +1,115 @@
  .data # Program at 1.1 		
-  .byte 10 # StringLiteral at 10.18 
-  .byte 0 # StringLiteral at 10.18  	
-  .byte 0 # StringLiteral at 10.18	  
+  .byte 105 # StringLiteral at 4.18   
+  .byte 32 # StringLiteral at 4.18 	 
+  .byte 61 # StringLiteral at 4.18		
+  .byte 32 # StringLiteral at 4.18 	 
+  .word CLASS_String # StringLiteral at 4.18			
+  .word 2 # StringLiteral at 4.18	
+  .word -4 # StringLiteral at 4.18			
+strLit_3: # StringLiteral at 4.18 	 
+  .byte 10 # StringLiteral at 6.18 
+  .byte 0 # StringLiteral at 6.18	  
+  .byte 0 # StringLiteral at 6.18 		
+  .byte 0 # StringLiteral at 6.18	 	
+  .word CLASS_String # StringLiteral at 6.18  	
+  .word 2 # StringLiteral at 6.18		
+  .word -1 # StringLiteral at 6.18		
+strLit_11: # StringLiteral at 6.18 	 
+  .byte 105 # StringLiteral at 8.18			
+  .byte 32 # StringLiteral at 8.18		 
+  .byte 61 # StringLiteral at 8.18	 
+  .byte 32 # StringLiteral at 8.18	 	
+  .word CLASS_String # StringLiteral at 8.18		 
+  .word 2 # StringLiteral at 8.18  
+  .word -4 # StringLiteral at 8.18	 	
+strLit_20: # StringLiteral at 8.18 
+  .byte 10 # StringLiteral at 10.18	 
+  .byte 0 # StringLiteral at 10.18			
+  .byte 0 # StringLiteral at 10.18 		
   .byte 0 # StringLiteral at 10.18 	
-  .word CLASS_String # StringLiteral at 10.18   
-  .word 2 # StringLiteral at 10.18	 	
-  .word -1 # StringLiteral at 10.18   
-strLit_20: # StringLiteral at 10.18	
-  .byte 10 # StringLiteral at 13.18		
-  .byte 0 # StringLiteral at 13.18  	
-  .byte 0 # StringLiteral at 13.18	 	
-  .byte 0 # StringLiteral at 13.18  	
-  .word CLASS_String # StringLiteral at 13.18		 
-  .word 2 # StringLiteral at 13.18			
-  .word -1 # StringLiteral at 13.18   
-strLit_33: # StringLiteral at 13.18 	
-  .byte 116 # StringLiteral at 15.15	 
-  .byte 101 # StringLiteral at 15.15 	 
-  .byte 115 # StringLiteral at 15.15		
-  .byte 116 # StringLiteral at 15.15  	
-  .byte 32 # StringLiteral at 15.15			
-  .byte 115 # StringLiteral at 15.15  
-  .byte 116 # StringLiteral at 15.15	 
-  .byte 114 # StringLiteral at 15.15 	 
-  .byte 105 # StringLiteral at 15.15		 
-  .byte 110 # StringLiteral at 15.15 
-  .byte 103 # StringLiteral at 15.15 	
-  .byte 0 # StringLiteral at 15.15  	
-  .word CLASS_String # StringLiteral at 15.15			
-  .word 4 # StringLiteral at 15.15   
-  .word -11 # StringLiteral at 15.15	 
-strLit_38: # StringLiteral at 15.15   
-  .byte 10 # StringLiteral at 18.18 
-  .byte 0 # StringLiteral at 18.18  
-  .byte 0 # StringLiteral at 18.18 		
-  .byte 0 # StringLiteral at 18.18   
-  .word CLASS_String # StringLiteral at 18.18	 
-  .word 2 # StringLiteral at 18.18	  
-  .word -1 # StringLiteral at 18.18	 	
-strLit_44: # StringLiteral at 18.18  	
-  .byte 10 # StringLiteral at 20.18		
-  .byte 0 # StringLiteral at 20.18	
-  .byte 0 # StringLiteral at 20.18   
-  .byte 0 # StringLiteral at 20.18	 	
-  .word CLASS_String # StringLiteral at 20.18	  
-  .word 2 # StringLiteral at 20.18			
-  .word -1 # StringLiteral at 20.18		 
-strLit_52: # StringLiteral at 20.18	
-  .byte 10 # StringLiteral at 22.18	 	
-  .byte 0 # StringLiteral at 22.18	
-  .byte 0 # StringLiteral at 22.18 	
-  .byte 0 # StringLiteral at 22.18		 
-  .word CLASS_String # StringLiteral at 22.18  
-  .word 2 # StringLiteral at 22.18 	 
-  .word -1 # StringLiteral at 22.18   
-strLit_60: # StringLiteral at 22.18 	 
-  .byte 10 # StringLiteral at 24.18	 	
-  .byte 0 # StringLiteral at 24.18 
-  .byte 0 # StringLiteral at 24.18  	
-  .byte 0 # StringLiteral at 24.18 	 
-  .word CLASS_String # StringLiteral at 24.18		 
-  .word 2 # StringLiteral at 24.18	  
-  .word -1 # StringLiteral at 24.18  
-strLit_68: # StringLiteral at 24.18  	
-  .byte 10 # StringLiteral at 26.18 	
-  .byte 0 # StringLiteral at 26.18 	
-  .byte 0 # StringLiteral at 26.18 	
-  .byte 0 # StringLiteral at 26.18			
-  .word CLASS_String # StringLiteral at 26.18  	
-  .word 2 # StringLiteral at 26.18		
-  .word -1 # StringLiteral at 26.18  
-strLit_76: # StringLiteral at 26.18	
-  .byte 10 # StringLiteral at 28.18 		
-  .byte 0 # StringLiteral at 28.18 
-  .byte 0 # StringLiteral at 28.18	 
-  .byte 0 # StringLiteral at 28.18 	
-  .word CLASS_String # StringLiteral at 28.18	 
-  .word 2 # StringLiteral at 28.18		 
-  .word -1 # StringLiteral at 28.18	 
-strLit_84: # StringLiteral at 28.18	
-  .byte 10 # StringLiteral at 30.18   
-  .byte 0 # StringLiteral at 30.18	 	
-  .byte 0 # StringLiteral at 30.18	 	
-  .byte 0 # StringLiteral at 30.18 		
-  .word CLASS_String # StringLiteral at 30.18 		
-  .word 2 # StringLiteral at 30.18 	 
-  .word -1 # StringLiteral at 30.18   
-strLit_92: # StringLiteral at 30.18	  
-  .byte 10 # StringLiteral at 32.18  	
-  .byte 0 # StringLiteral at 32.18			
-  .byte 0 # StringLiteral at 32.18	
-  .byte 0 # StringLiteral at 32.18	  
-  .word CLASS_String # StringLiteral at 32.18	 
-  .word 2 # StringLiteral at 32.18   
-  .word -1 # StringLiteral at 32.18	 
-strLit_100: # StringLiteral at 32.18	  
-  .byte 10 # StringLiteral at 34.18	
-  .byte 0 # StringLiteral at 34.18 	
-  .byte 0 # StringLiteral at 34.18	 	
-  .byte 0 # StringLiteral at 34.18 		
-  .word CLASS_String # StringLiteral at 34.18	 
-  .word 2 # StringLiteral at 34.18	
-  .word -1 # StringLiteral at 34.18	 
-strLit_108: # StringLiteral at 34.18	  
-  .byte 10 # StringLiteral at 36.18 
-  .byte 0 # StringLiteral at 36.18	
-  .byte 0 # StringLiteral at 36.18	
-  .byte 0 # StringLiteral at 36.18   
-  .word CLASS_String # StringLiteral at 36.18  
-  .word 2 # StringLiteral at 36.18		
-  .word -1 # StringLiteral at 36.18			
-strLit_118: # StringLiteral at 36.18 	 
-  .byte 10 # StringLiteral at 38.18 		
-  .byte 0 # StringLiteral at 38.18   
-  .byte 0 # StringLiteral at 38.18		
-  .byte 0 # StringLiteral at 38.18 		
-  .word CLASS_String # StringLiteral at 38.18			
-  .word 2 # StringLiteral at 38.18 	 
-  .word -1 # StringLiteral at 38.18 	 
-strLit_128: # StringLiteral at 38.18		
-  .byte 10 # StringLiteral at 40.18		
-  .byte 0 # StringLiteral at 40.18 	
-  .byte 0 # StringLiteral at 40.18		 
-  .byte 0 # StringLiteral at 40.18  	
-  .word CLASS_String # StringLiteral at 40.18  
-  .word 2 # StringLiteral at 40.18 	
-  .word -1 # StringLiteral at 40.18 	
-strLit_138: # StringLiteral at 40.18 	 
-  .byte 10 # StringLiteral at 42.18 	
-  .byte 0 # StringLiteral at 42.18 	 
-  .byte 0 # StringLiteral at 42.18	  
-  .byte 0 # StringLiteral at 42.18	 
-  .word CLASS_String # StringLiteral at 42.18		 
-  .word 2 # StringLiteral at 42.18 	 
-  .word -1 # StringLiteral at 42.18	 
-strLit_148: # StringLiteral at 42.18		 
-  .byte 10 # StringLiteral at 44.18   
-  .byte 0 # StringLiteral at 44.18 
-  .byte 0 # StringLiteral at 44.18		 
-  .byte 0 # StringLiteral at 44.18	 
-  .word CLASS_String # StringLiteral at 44.18	 	
-  .word 2 # StringLiteral at 44.18		
-  .word -1 # StringLiteral at 44.18 
-strLit_160: # StringLiteral at 44.18 		
-  .byte 10 # StringLiteral at 46.18  	
-  .byte 0 # StringLiteral at 46.18  
-  .byte 0 # StringLiteral at 46.18 		
-  .byte 0 # StringLiteral at 46.18		
-  .word CLASS_String # StringLiteral at 46.18			
-  .word 2 # StringLiteral at 46.18	 	
-  .word -1 # StringLiteral at 46.18	
-strLit_172: # StringLiteral at 46.18  	
-  .byte 10 # StringLiteral at 49.18			
-  .byte 0 # StringLiteral at 49.18 	
-  .byte 0 # StringLiteral at 49.18		
-  .byte 0 # StringLiteral at 49.18   
-  .word CLASS_String # StringLiteral at 49.18  	
-  .word 2 # StringLiteral at 49.18	  
-  .word -1 # StringLiteral at 49.18 
-strLit_180: # StringLiteral at 49.18  	
-  .byte 73 # StringLiteral at 50.18	
-  .byte 32 # StringLiteral at 50.18   
-  .byte 84 # StringLiteral at 50.18			
-  .byte 72 # StringLiteral at 50.18		
-  .byte 73 # StringLiteral at 50.18	 
-  .byte 78 # StringLiteral at 50.18	 
-  .byte 75 # StringLiteral at 50.18 		
-  .byte 32 # StringLiteral at 50.18	 	
-  .byte 84 # StringLiteral at 50.18		
-  .byte 72 # StringLiteral at 50.18	  
-  .byte 73 # StringLiteral at 50.18			
-  .byte 83 # StringLiteral at 50.18 
-  .byte 32 # StringLiteral at 50.18		 
-  .byte 73 # StringLiteral at 50.18 	 
-  .byte 83 # StringLiteral at 50.18	 
-  .byte 32 # StringLiteral at 50.18  
-  .byte 87 # StringLiteral at 50.18		
-  .byte 79 # StringLiteral at 50.18  
-  .byte 82 # StringLiteral at 50.18   
-  .byte 75 # StringLiteral at 50.18	  
-  .byte 73 # StringLiteral at 50.18 		
-  .byte 78 # StringLiteral at 50.18		 
-  .byte 71 # StringLiteral at 50.18 	 
-  .byte 33 # StringLiteral at 50.18	
-  .byte 33 # StringLiteral at 50.18			
-  .byte 33 # StringLiteral at 50.18 
-  .byte 0 # StringLiteral at 50.18 	
-  .byte 0 # StringLiteral at 50.18 	 
-  .word CLASS_String # StringLiteral at 50.18	 	
-  .word 8 # StringLiteral at 50.18  
-  .word -26 # StringLiteral at 50.18  
-strLit_184: # StringLiteral at 50.18		 
-  .byte 10 # StringLiteral at 51.18   
-  .byte 0 # StringLiteral at 51.18	 
-  .byte 0 # StringLiteral at 51.18  
-  .byte 0 # StringLiteral at 51.18 	 
-  .word CLASS_String # StringLiteral at 51.18	  
-  .word 2 # StringLiteral at 51.18		 
-  .word -1 # StringLiteral at 51.18			
-strLit_188: # StringLiteral at 51.18 	
-CLASS_Object: # Program at 1.1  	
+  .word CLASS_String # StringLiteral at 10.18			
+  .word 2 # StringLiteral at 10.18 	 
+  .word -1 # StringLiteral at 10.18 	
+strLit_28: # StringLiteral at 10.18 	
+CLASS_Object: # Program at 1.1			
 CLASS_String: # Program at 1.1  	
-.text # Program at 1.1	 
-.global main # Program at 1.1		
-main: # Program at 1.1 		
-jal vm_init # Program at 1.1	  
-subu $sp, $sp, 4 # NewObject at 0.0		 
+.text # Program at 1.1		
+.global main # Program at 1.1	 
+main: # Program at 1.1 
+jal vm_init # Program at 1.1 
+subu $sp, $sp, 4 # NewObject at 0.0		
 sw $zero, ($sp) # NewObject at 0.0	
-jal fcn_192_main # Call at 0.0 	 
-li $v0, 10 # Program at 1.1	 	
-syscall # Program at 1.1	
-.globl fcn_192_main # MethodDeclVoid at 3.14 
-fcn_192_main: # MethodDeclVoid at 3.14			
-subu $sp, $sp, 8 # MethodDeclVoid at 3.14		
-sw $ra, 4($sp) # MethodDeclVoid at 3.14		
-sw $s2, ($sp) # MethodDeclVoid at 3.14	  
-lw $s2, 4($sp) # MethodDeclVoid at 3.14   
-subu $sp, $sp, 8 # IntegerLiteral at 4.11			
-sw $s5, 4($sp) # IntegerLiteral at 4.11	
-li $t0, 9 # IntegerLiteral at 4.11  	
-sw $t0, ($sp) # IntegerLiteral at 4.11  	
-lw $t0, 0($sp) # IdentifierExp at 5.11		 
-subu $sp, $sp, 8 # IdentifierExp at 5.11		 
-sw $s5, 4($sp) # IdentifierExp at 5.11	  
-sw $t0, ($sp) # IdentifierExp at 5.11			
-subu $sp, $sp, 8 # IntegerLiteral at 5.15   
-sw $s5, 4($sp) # IntegerLiteral at 5.15	 	
-li $t0, 2 # IntegerLiteral at 5.15 	 
-sw $t0, ($sp) # IntegerLiteral at 5.15 	 
-lw $t0, ($sp) # Plus at 5.13	
-lw $t1, 8($sp) # Plus at 5.13 
-addu $t0, $t0, $t1 # Plus at 5.13   
-addu $sp, $sp, 8 # Plus at 5.13  
-sw $t0, ($sp) # Plus at 5.13 	 
-lw $t0, 0($sp) # IdentifierExp at 6.11   
-subu $sp, $sp, 8 # IdentifierExp at 6.11 	
-sw $s5, 4($sp) # IdentifierExp at 6.11  	
-sw $t0, ($sp) # IdentifierExp at 6.11 	 
-subu $sp, $sp, 8 # IntegerLiteral at 6.15 
-sw $s5, 4($sp) # IntegerLiteral at 6.15	 
-li $t0, 2 # IntegerLiteral at 6.15	  
-sw $t0, ($sp) # IntegerLiteral at 6.15 	
-lw $t0, ($sp) # Minus at 6.13	 	
-lw $t1, 8($sp) # Minus at 6.13 	
-subu $t0, $t1, $t0 # Minus at 6.13 	
-addu $sp, $sp, 8 # Minus at 6.13 
-sw $t0, ($sp) # Minus at 6.13  	
-subu $sp, $sp, 8 # IntegerLiteral at 8.11		 
-sw $s5, 4($sp) # IntegerLiteral at 8.11	
-li $t0, 1 # IntegerLiteral at 8.11	
-sw $t0, ($sp) # IntegerLiteral at 8.11			
-subu $sp, $sp, 4 # Super at 9.9	
-sw $s2, ($sp) # Super at 9.9			
-lw $t0, 4($sp) # IdentifierExp at 9.18	
-subu $sp, $sp, 8 # IdentifierExp at 9.18  
-sw $s5, 4($sp) # IdentifierExp at 9.18   
-sw $t0, ($sp) # IdentifierExp at 9.18   
-jal printInt # Call at 9.9  	
-subu $sp, $sp, 4 # Super at 10.9	 
-sw $s2, ($sp) # Super at 10.9 
-subu $sp, $sp, 4 # StringLiteral at 10.18		
-la $t0, strLit_20 # StringLiteral at 10.18 	
-sw $t0, ($sp) # StringLiteral at 10.18 	 
-jal printStr # Call at 10.9	  
-lw $t0, 0($sp) # IdentifierExp at 11.7	 	
-subu $sp, $sp, 8 # IdentifierExp at 11.7 	 
-sw $s5, 4($sp) # IdentifierExp at 11.7		 
-sw $t0, ($sp) # IdentifierExp at 11.7	
-subu $sp, $sp, 8 # IntegerLiteral at 11.11 
-sw $s5, 4($sp) # IntegerLiteral at 11.11		
-li $t0, 1 # IntegerLiteral at 11.11 		
-sw $t0, ($sp) # IntegerLiteral at 11.11   
-lw $t0, ($sp) # Plus at 11.9			
-lw $t1, 8($sp) # Plus at 11.9	 	
-addu $t0, $t0, $t1 # Plus at 11.9	 
-addu $sp, $sp, 8 # Plus at 11.9	  
-sw $t0, ($sp) # Plus at 11.9	 
-lw $t0, ($sp) # Assign at 11.5		 
-sw $t0, 8($sp) # Assign at 11.5		 
-addu $sp, $sp, 8 # Assign at 11.5	 	
-subu $sp, $sp, 4 # Super at 12.9 
-sw $s2, ($sp) # Super at 12.9 	 
-lw $t0, 4($sp) # IdentifierExp at 12.18 		
-subu $sp, $sp, 8 # IdentifierExp at 12.18	 
-sw $s5, 4($sp) # IdentifierExp at 12.18	
-sw $t0, ($sp) # IdentifierExp at 12.18			
-jal printInt # Call at 12.9 	
-subu $sp, $sp, 4 # Super at 13.9 
-sw $s2, ($sp) # Super at 13.9	 
-subu $sp, $sp, 4 # StringLiteral at 13.18	
-la $t0, strLit_33 # StringLiteral at 13.18		 
-sw $t0, ($sp) # StringLiteral at 13.18		
-jal printStr # Call at 13.9  	
-subu $sp, $sp, 4 # StringLiteral at 15.15 
-la $t0, strLit_38 # StringLiteral at 15.15		 
-sw $t0, ($sp) # StringLiteral at 15.15   
-subu $sp, $sp, 4 # Super at 17.9	 	
-sw $s2, ($sp) # Super at 17.9	 
-lw $t0, 32($sp) # IdentifierExp at 17.18  	
-subu $sp, $sp, 8 # IdentifierExp at 17.18 	 
-sw $s5, 4($sp) # IdentifierExp at 17.18  
-sw $t0, ($sp) # IdentifierExp at 17.18		 
-jal printInt # Call at 17.9 		
-subu $sp, $sp, 4 # Super at 18.9			
-sw $s2, ($sp) # Super at 18.9		
-subu $sp, $sp, 4 # StringLiteral at 18.18	 	
-la $t0, strLit_44 # StringLiteral at 18.18	 	
-sw $t0, ($sp) # StringLiteral at 18.18	
-jal printStr # Call at 18.9	 
-subu $sp, $sp, 4 # Super at 19.9	 	
-sw $s2, ($sp) # Super at 19.9	 
-lw $t0, 32($sp) # IdentifierExp at 19.18	
-subu $sp, $sp, 8 # IdentifierExp at 19.18 		
-sw $s5, 4($sp) # IdentifierExp at 19.18	 
-sw $t0, ($sp) # IdentifierExp at 19.18	 	
-jal printInt # Call at 19.9   
-subu $sp, $sp, 4 # Super at 20.9		
-sw $s2, ($sp) # Super at 20.9  
-subu $sp, $sp, 4 # StringLiteral at 20.18			
-la $t0, strLit_52 # StringLiteral at 20.18 		
-sw $t0, ($sp) # StringLiteral at 20.18 		
-jal printStr # Call at 20.9 		
-subu $sp, $sp, 4 # Super at 21.9	  
-sw $s2, ($sp) # Super at 21.9			
-lw $t0, 32($sp) # IdentifierExp at 21.18		
-subu $sp, $sp, 8 # IdentifierExp at 21.18	  
-sw $s5, 4($sp) # IdentifierExp at 21.18	  
-sw $t0, ($sp) # IdentifierExp at 21.18			
-jal printInt # Call at 21.9		
-subu $sp, $sp, 4 # Super at 22.9 	
-sw $s2, ($sp) # Super at 22.9		 
-subu $sp, $sp, 4 # StringLiteral at 22.18 
-la $t0, strLit_60 # StringLiteral at 22.18	 	
-sw $t0, ($sp) # StringLiteral at 22.18 		
-jal printStr # Call at 22.9	 	
-subu $sp, $sp, 4 # Super at 23.9 	 
-sw $s2, ($sp) # Super at 23.9	 
-lw $t0, 24($sp) # IdentifierExp at 23.18	  
-subu $sp, $sp, 8 # IdentifierExp at 23.18  
-sw $s5, 4($sp) # IdentifierExp at 23.18		 
-sw $t0, ($sp) # IdentifierExp at 23.18 		
-jal printInt # Call at 23.9   
-subu $sp, $sp, 4 # Super at 24.9   
-sw $s2, ($sp) # Super at 24.9 	 
-subu $sp, $sp, 4 # StringLiteral at 24.18		 
-la $t0, strLit_68 # StringLiteral at 24.18	  
-sw $t0, ($sp) # StringLiteral at 24.18		
-jal printStr # Call at 24.9  	
-subu $sp, $sp, 4 # Super at 25.9	 	
-sw $s2, ($sp) # Super at 25.9			
-lw $t0, 24($sp) # IdentifierExp at 25.18 
-subu $sp, $sp, 8 # IdentifierExp at 25.18	 
-sw $s5, 4($sp) # IdentifierExp at 25.18 	 
-sw $t0, ($sp) # IdentifierExp at 25.18	
-jal printInt # Call at 25.9 	
-subu $sp, $sp, 4 # Super at 26.9		 
-sw $s2, ($sp) # Super at 26.9		 
-subu $sp, $sp, 4 # StringLiteral at 26.18 		
-la $t0, strLit_76 # StringLiteral at 26.18   
-sw $t0, ($sp) # StringLiteral at 26.18	
-jal printStr # Call at 26.9	 
-subu $sp, $sp, 4 # Super at 27.9 		
-sw $s2, ($sp) # Super at 27.9	  
-lw $t0, 24($sp) # IdentifierExp at 27.18 	 
-subu $sp, $sp, 8 # IdentifierExp at 27.18	
-sw $s5, 4($sp) # IdentifierExp at 27.18			
-sw $t0, ($sp) # IdentifierExp at 27.18		 
-jal printInt # Call at 27.9	
-subu $sp, $sp, 4 # Super at 28.9 
-sw $s2, ($sp) # Super at 28.9	 	
-subu $sp, $sp, 4 # StringLiteral at 28.18  
-la $t0, strLit_84 # StringLiteral at 28.18	 
-sw $t0, ($sp) # StringLiteral at 28.18 	
-jal printStr # Call at 28.9 
-subu $sp, $sp, 4 # Super at 29.9	 
-sw $s2, ($sp) # Super at 29.9	
-lw $t0, 16($sp) # IdentifierExp at 29.18 	
-subu $sp, $sp, 8 # IdentifierExp at 29.18	 
-sw $s5, 4($sp) # IdentifierExp at 29.18  
-sw $t0, ($sp) # IdentifierExp at 29.18 		
-jal printInt # Call at 29.9	
-subu $sp, $sp, 4 # Super at 30.9  	
-sw $s2, ($sp) # Super at 30.9		 
-subu $sp, $sp, 4 # StringLiteral at 30.18  	
-la $t0, strLit_92 # StringLiteral at 30.18	
-sw $t0, ($sp) # StringLiteral at 30.18	  
-jal printStr # Call at 30.9  	
-subu $sp, $sp, 4 # Super at 31.9 		
-sw $s2, ($sp) # Super at 31.9	 	
-lw $t0, 16($sp) # IdentifierExp at 31.18	 	
-subu $sp, $sp, 8 # IdentifierExp at 31.18  	
-sw $s5, 4($sp) # IdentifierExp at 31.18 		
-sw $t0, ($sp) # IdentifierExp at 31.18	  
-jal printInt # Call at 31.9	
-subu $sp, $sp, 4 # Super at 32.9  
-sw $s2, ($sp) # Super at 32.9   
-subu $sp, $sp, 4 # StringLiteral at 32.18 
-la $t0, strLit_100 # StringLiteral at 32.18 		
-sw $t0, ($sp) # StringLiteral at 32.18 		
-jal printStr # Call at 32.9	
-subu $sp, $sp, 4 # Super at 33.9  
-sw $s2, ($sp) # Super at 33.9  
-lw $t0, 16($sp) # IdentifierExp at 33.18 	 
-subu $sp, $sp, 8 # IdentifierExp at 33.18  	
-sw $s5, 4($sp) # IdentifierExp at 33.18   
-sw $t0, ($sp) # IdentifierExp at 33.18   
-jal printInt # Call at 33.9 		
-subu $sp, $sp, 4 # Super at 34.9 	 
-sw $s2, ($sp) # Super at 34.9	
-subu $sp, $sp, 4 # StringLiteral at 34.18   
-la $t0, strLit_108 # StringLiteral at 34.18		
-sw $t0, ($sp) # StringLiteral at 34.18  
-jal printStr # Call at 34.9  	
-subu $sp, $sp, 4 # Super at 35.9	  
-sw $s2, ($sp) # Super at 35.9		
-lw $t0, 32($sp) # IdentifierExp at 35.18  
-subu $sp, $sp, 8 # IdentifierExp at 35.18 
-sw $s5, 4($sp) # IdentifierExp at 35.18   
-sw $t0, ($sp) # IdentifierExp at 35.18 	
-lw $t0, 32($sp) # IdentifierExp at 35.22			
-subu $sp, $sp, 8 # IdentifierExp at 35.22			
-sw $s5, 4($sp) # IdentifierExp at 35.22   
-sw $t0, ($sp) # IdentifierExp at 35.22  	
-lw $t0, ($sp) # Minus at 35.20   
-lw $t1, 8($sp) # Minus at 35.20 		
-subu $t0, $t1, $t0 # Minus at 35.20 	 
-addu $sp, $sp, 8 # Minus at 35.20		
-sw $t0, ($sp) # Minus at 35.20	 
-jal printInt # Call at 35.9	  
-subu $sp, $sp, 4 # Super at 36.9   
-sw $s2, ($sp) # Super at 36.9 	 
-subu $sp, $sp, 4 # StringLiteral at 36.18	
-la $t0, strLit_118 # StringLiteral at 36.18   
-sw $t0, ($sp) # StringLiteral at 36.18 
-jal printStr # Call at 36.9	  
-subu $sp, $sp, 4 # Super at 37.9	  
-sw $s2, ($sp) # Super at 37.9 		
-lw $t0, 32($sp) # IdentifierExp at 37.18		
-subu $sp, $sp, 8 # IdentifierExp at 37.18 
-sw $s5, 4($sp) # IdentifierExp at 37.18 
-sw $t0, ($sp) # IdentifierExp at 37.18			
-lw $t0, 32($sp) # IdentifierExp at 37.22	 	
-subu $sp, $sp, 8 # IdentifierExp at 37.22  
-sw $s5, 4($sp) # IdentifierExp at 37.22 		
-sw $t0, ($sp) # IdentifierExp at 37.22 	
-lw $t0, ($sp) # Minus at 37.20	  
-lw $t1, 8($sp) # Minus at 37.20	
-subu $t0, $t1, $t0 # Minus at 37.20	
-addu $sp, $sp, 8 # Minus at 37.20  
-sw $t0, ($sp) # Minus at 37.20  	
-jal printInt # Call at 37.9 		
-subu $sp, $sp, 4 # Super at 38.9 	
-sw $s2, ($sp) # Super at 38.9	
-subu $sp, $sp, 4 # StringLiteral at 38.18 		
-la $t0, strLit_128 # StringLiteral at 38.18   
-sw $t0, ($sp) # StringLiteral at 38.18 
-jal printStr # Call at 38.9 		
-subu $sp, $sp, 4 # Super at 39.9		 
-sw $s2, ($sp) # Super at 39.9 	
-lw $t0, 24($sp) # IdentifierExp at 39.18	 
-subu $sp, $sp, 8 # IdentifierExp at 39.18			
-sw $s5, 4($sp) # IdentifierExp at 39.18 	
-sw $t0, ($sp) # IdentifierExp at 39.18 		
-lw $t0, 40($sp) # IdentifierExp at 39.22	
-subu $sp, $sp, 8 # IdentifierExp at 39.22   
-sw $s5, 4($sp) # IdentifierExp at 39.22	  
-sw $t0, ($sp) # IdentifierExp at 39.22	 	
-lw $t0, ($sp) # Minus at 39.20	  
-lw $t1, 8($sp) # Minus at 39.20 	
-subu $t0, $t1, $t0 # Minus at 39.20   
-addu $sp, $sp, 8 # Minus at 39.20  	
-sw $t0, ($sp) # Minus at 39.20   
-jal printInt # Call at 39.9	
-subu $sp, $sp, 4 # Super at 40.9 	 
-sw $s2, ($sp) # Super at 40.9	  
-subu $sp, $sp, 4 # StringLiteral at 40.18   
-la $t0, strLit_138 # StringLiteral at 40.18  
-sw $t0, ($sp) # StringLiteral at 40.18 
-jal printStr # Call at 40.9 	 
-subu $sp, $sp, 4 # Super at 41.9		
-sw $s2, ($sp) # Super at 41.9		 
-lw $t0, 24($sp) # IdentifierExp at 41.18		 
-subu $sp, $sp, 8 # IdentifierExp at 41.18 
-sw $s5, 4($sp) # IdentifierExp at 41.18		
-sw $t0, ($sp) # IdentifierExp at 41.18 	 
-lw $t0, 40($sp) # IdentifierExp at 41.22  	
-subu $sp, $sp, 8 # IdentifierExp at 41.22	  
-sw $s5, 4($sp) # IdentifierExp at 41.22 	
-sw $t0, ($sp) # IdentifierExp at 41.22	
-lw $t0, ($sp) # Minus at 41.20	 	
-lw $t1, 8($sp) # Minus at 41.20		 
-subu $t0, $t1, $t0 # Minus at 41.20 		
-addu $sp, $sp, 8 # Minus at 41.20	  
-sw $t0, ($sp) # Minus at 41.20	 	
-jal printInt # Call at 41.9  
-subu $sp, $sp, 4 # Super at 42.9	
-sw $s2, ($sp) # Super at 42.9	 	
-subu $sp, $sp, 4 # StringLiteral at 42.18  
-la $t0, strLit_148 # StringLiteral at 42.18 	
-sw $t0, ($sp) # StringLiteral at 42.18		 
-jal printStr # Call at 42.9 	
-subu $sp, $sp, 4 # Super at 43.9  	
-sw $s2, ($sp) # Super at 43.9 		
-lw $t0, 16($sp) # IdentifierExp at 43.18	  
-subu $sp, $sp, 8 # IdentifierExp at 43.18	  
-sw $s5, 4($sp) # IdentifierExp at 43.18  
-sw $t0, ($sp) # IdentifierExp at 43.18 	 
-lw $t0, 40($sp) # IdentifierExp at 43.22		 
-subu $sp, $sp, 8 # IdentifierExp at 43.22	 
-sw $s5, 4($sp) # IdentifierExp at 43.22 
-sw $t0, ($sp) # IdentifierExp at 43.22 
-lw $t0, ($sp) # Plus at 43.20	 
-lw $t1, 8($sp) # Plus at 43.20	  
-addu $t0, $t0, $t1 # Plus at 43.20		
-addu $sp, $sp, 8 # Plus at 43.20		 
-sw $t0, ($sp) # Plus at 43.20  	
-lw $t0, 32($sp) # IdentifierExp at 43.26 		
-subu $sp, $sp, 8 # IdentifierExp at 43.26	 	
-sw $s5, 4($sp) # IdentifierExp at 43.26			
-sw $t0, ($sp) # IdentifierExp at 43.26		 
-lw $t0, ($sp) # Minus at 43.24	  
-lw $t1, 8($sp) # Minus at 43.24  	
-subu $t0, $t1, $t0 # Minus at 43.24  	
-addu $sp, $sp, 8 # Minus at 43.24 	
-sw $t0, ($sp) # Minus at 43.24 	
-jal printInt # Call at 43.9			
-subu $sp, $sp, 4 # Super at 44.9  
-sw $s2, ($sp) # Super at 44.9 	
-subu $sp, $sp, 4 # StringLiteral at 44.18	 
-la $t0, strLit_160 # StringLiteral at 44.18 
-sw $t0, ($sp) # StringLiteral at 44.18		
-jal printStr # Call at 44.9  
-subu $sp, $sp, 4 # Super at 45.9			
-sw $s2, ($sp) # Super at 45.9			
-lw $t0, 24($sp) # IdentifierExp at 45.18	 
-subu $sp, $sp, 8 # IdentifierExp at 45.18  
-sw $s5, 4($sp) # IdentifierExp at 45.18	 	
-sw $t0, ($sp) # IdentifierExp at 45.18	 
-lw $t0, 40($sp) # IdentifierExp at 45.22		 
-subu $sp, $sp, 8 # IdentifierExp at 45.22  	
-sw $s5, 4($sp) # IdentifierExp at 45.22  
-sw $t0, ($sp) # IdentifierExp at 45.22		
-lw $t0, ($sp) # Minus at 45.20 	
-lw $t1, 8($sp) # Minus at 45.20 
-subu $t0, $t1, $t0 # Minus at 45.20 		
-addu $sp, $sp, 8 # Minus at 45.20		 
-sw $t0, ($sp) # Minus at 45.20	 
-lw $t0, 24($sp) # IdentifierExp at 45.26  	
-subu $sp, $sp, 8 # IdentifierExp at 45.26 	 
-sw $s5, 4($sp) # IdentifierExp at 45.26 		
-sw $t0, ($sp) # IdentifierExp at 45.26 
-lw $t0, ($sp) # Plus at 45.24		
-lw $t1, 8($sp) # Plus at 45.24	  
-addu $t0, $t0, $t1 # Plus at 45.24	
-addu $sp, $sp, 8 # Plus at 45.24  	
-sw $t0, ($sp) # Plus at 45.24		 
-jal printInt # Call at 45.9 	
-subu $sp, $sp, 4 # Super at 46.9		
-sw $s2, ($sp) # Super at 46.9	
-subu $sp, $sp, 4 # StringLiteral at 46.18   
-la $t0, strLit_172 # StringLiteral at 46.18		 
-sw $t0, ($sp) # StringLiteral at 46.18 	
-jal printStr # Call at 46.9 		
-subu $sp, $sp, 4 # Super at 48.9	
-sw $s2, ($sp) # Super at 48.9  
-lw $t0, 4($sp) # IdentifierExp at 48.18			
-subu $sp, $sp, 4 # IdentifierExp at 48.18	
-sw $t0, ($sp) # IdentifierExp at 48.18 
-jal printStr # Call at 48.9	  
-subu $sp, $sp, 4 # Super at 49.9 		
-sw $s2, ($sp) # Super at 49.9   
-subu $sp, $sp, 4 # StringLiteral at 49.18	 
-la $t0, strLit_180 # StringLiteral at 49.18	
-sw $t0, ($sp) # StringLiteral at 49.18		 
-jal printStr # Call at 49.9	 	
-subu $sp, $sp, 4 # Super at 50.9  	
-sw $s2, ($sp) # Super at 50.9	 	
-subu $sp, $sp, 4 # StringLiteral at 50.18	
-la $t0, strLit_184 # StringLiteral at 50.18		
-sw $t0, ($sp) # StringLiteral at 50.18 
-jal printStr # Call at 50.9 	 
-subu $sp, $sp, 4 # Super at 51.9 	
-sw $s2, ($sp) # Super at 51.9			
-subu $sp, $sp, 4 # StringLiteral at 51.18  
-la $t0, strLit_188 # StringLiteral at 51.18		
-sw $t0, ($sp) # StringLiteral at 51.18			
-jal printStr # Call at 51.9			
-lw $ra, 40($sp) # MethodDeclVoid at 3.14		
-lw $s2, 4($sp) # MethodDeclVoid at 3.14 
-addu $sp, $sp, 48 # MethodDeclVoid at 3.14 		
-jr $ra # MethodDeclVoid at 3.14  
+jal fcn_32_main # Call at 0.0			
+li $v0, 10 # Program at 1.1			
+syscall # Program at 1.1 	
+.globl fcn_32_main # MethodDeclVoid at 2.14	 
+fcn_32_main: # MethodDeclVoid at 2.14 	 
+subu $sp, $sp, 8 # MethodDeclVoid at 2.14  
+sw $ra, 4($sp) # MethodDeclVoid at 2.14			
+sw $s2, ($sp) # MethodDeclVoid at 2.14   
+lw $s2, 4($sp) # MethodDeclVoid at 2.14 
+subu $sp, $sp, 8 # IntegerLiteral at 3.11	 	
+sw $s5, 4($sp) # IntegerLiteral at 3.11		
+li $t0, 0 # IntegerLiteral at 3.11 	 
+sw $t0, ($sp) # IntegerLiteral at 3.11   
+subu $sp, $sp, 4 # Super at 4.9		 
+sw $s2, ($sp) # Super at 4.9  
+subu $sp, $sp, 4 # StringLiteral at 4.18 	
+la $t0, strLit_3 # StringLiteral at 4.18		 
+sw $t0, ($sp) # StringLiteral at 4.18	  
+jal printStr # Call at 4.9  
+subu $sp, $sp, 4 # Super at 5.9  
+sw $s2, ($sp) # Super at 5.9  
+lw $t0, 4($sp) # IdentifierExp at 5.18		
+subu $sp, $sp, 8 # IdentifierExp at 5.18	
+sw $s5, 4($sp) # IdentifierExp at 5.18   
+sw $t0, ($sp) # IdentifierExp at 5.18 	 
+jal printInt # Call at 5.9		
+subu $sp, $sp, 4 # Super at 6.9   
+sw $s2, ($sp) # Super at 6.9			
+subu $sp, $sp, 4 # StringLiteral at 6.18 
+la $t0, strLit_11 # StringLiteral at 6.18			
+sw $t0, ($sp) # StringLiteral at 6.18  
+jal printStr # Call at 6.9  	
+lw $t0, 0($sp) # IdentifierExp at 7.7   
+subu $sp, $sp, 8 # IdentifierExp at 7.7 
+sw $s5, 4($sp) # IdentifierExp at 7.7  
+sw $t0, ($sp) # IdentifierExp at 7.7 		
+subu $sp, $sp, 8 # IntegerLiteral at 7.11 	
+sw $s5, 4($sp) # IntegerLiteral at 7.11		
+li $t0, 1 # IntegerLiteral at 7.11	 	
+sw $t0, ($sp) # IntegerLiteral at 7.11   
+lw $t0, ($sp) # Plus at 7.9 	 
+lw $t1, 8($sp) # Plus at 7.9  
+addu $t0, $t0, $t1 # Plus at 7.9		 
+addu $sp, $sp, 8 # Plus at 7.9		 
+sw $t0, ($sp) # Plus at 7.9	
+lw $t0, ($sp) # Assign at 7.5 		
+sw $t0, 8($sp) # Assign at 7.5	  
+addu $sp, $sp, 8 # Assign at 7.5 		
+subu $sp, $sp, 4 # Super at 8.9	 
+sw $s2, ($sp) # Super at 8.9	 
+subu $sp, $sp, 4 # StringLiteral at 8.18 
+la $t0, strLit_20 # StringLiteral at 8.18 		
+sw $t0, ($sp) # StringLiteral at 8.18	 
+jal printStr # Call at 8.9	  
+subu $sp, $sp, 4 # Super at 9.9	 	
+sw $s2, ($sp) # Super at 9.9  
+lw $t0, 4($sp) # IdentifierExp at 9.18	  
+subu $sp, $sp, 8 # IdentifierExp at 9.18	 
+sw $s5, 4($sp) # IdentifierExp at 9.18			
+sw $t0, ($sp) # IdentifierExp at 9.18			
+jal printInt # Call at 9.9	  
+subu $sp, $sp, 4 # Super at 10.9	 	
+sw $s2, ($sp) # Super at 10.9		
+subu $sp, $sp, 4 # StringLiteral at 10.18	 	
+la $t0, strLit_28 # StringLiteral at 10.18	 
+sw $t0, ($sp) # StringLiteral at 10.18	  
+jal printStr # Call at 10.9	 	
+lw $ra, 12($sp) # MethodDeclVoid at 2.14			
+lw $s2, 4($sp) # MethodDeclVoid at 2.14		 
+addu $sp, $sp, 20 # MethodDeclVoid at 2.14 	
+jr $ra # MethodDeclVoid at 2.14	
 ###############################################################
 # MiniJava/UP library for MIPS/Spim -- version that assumes
 #    one-word boolean on stack

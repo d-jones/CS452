@@ -5,6 +5,13 @@ class Main extends Lib{
 		int b = a + 2; //b = 11
 		int c = b - 2; //c = 9
 		
+		int d = 1;
+		super.printInt(d);
+		super.printStr("\n");
+		d = d + 1;
+		super.printInt(d);
+		super.printStr("\n");
+		
 		String s1 = "test string";
 		
 		super.printInt(a); //9
