@@ -423,9 +423,19 @@ public class CG3Visitor extends ASTvisitor {
 	 */
 	@Override
 	public Object visitNewObject(NewObject no){
-		code.emit(no, "subu $sp, $sp, 4");
+		int NNN = no.objType.link.numObjInstVars;
+		int MMM = no.objType.link.numDataInstVars + 1;
+		code.emit(no, "li $s6, " + MMM);
+		code.emit(no, "li $s7, " + NNN);
+		code.emit(no, "jal newObject");
 		stackHeight += 4;
-		code.emit(no, "sw $zero, ($sp)");
+		code.emit(no, "la $t0, CLASS_" + no.objType.link.name);
+		code.emit(no, "sw $t0, -12($s7)");
+		
+		
+/*		code.emit(no, "subu $sp, $sp, 4");
+		stackHeight += 4;
+		code.emit(no, "sw $zero, ($sp)");*/
 		
 		return null;
 	}
