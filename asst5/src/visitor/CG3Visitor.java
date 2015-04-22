@@ -59,6 +59,25 @@ public class CG3Visitor extends ASTvisitor {
 	
 	/*
 	 * (non-Javadoc)
+	 * @see visitor.InhVisitor#visitArrayLength(syntaxtree.ArrayLength)
+	 */
+	@Override
+	public Object visitArrayLength(ArrayLength al){
+		al.exp.accept(this);
+		code.emit(al, "lw $t0, ($sp)");
+		code.emit(al, "beq $t0, $zero, nullPtrException");
+		code.emit(al, "lw $t0, -4($t0)"); //-4($t0)...
+		code.emit(al, "sw $s5, ($sp)");
+		code.emit(al, "subu $sp, $sp, 4");
+		stackHeight += 4;
+		code.emit(al, "sw $t0, ($sp)");
+		
+		return null;
+	}
+	
+	
+	/*
+	 * (non-Javadoc)
 	 * @see visitor.InhVisitor#visitThis(syntaxtree.This)
 	 */
 	@Override
@@ -262,6 +281,32 @@ public class CG3Visitor extends ASTvisitor {
 	
 	/*
 	 * (non-Javadoc)
+	 * @see visitor.ASTvisitor#visitInstVarAccess(syntaxtree.InstVarAccess)
+	 */
+	@Override
+	public Object visitInstVarAccess(InstVarAccess iva){
+		iva.exp.accept(this);
+		int NNN = iva.varDec.offset;
+		code.emit(iva, "lw $t0, ($sp)");
+		code.emit(iva, "beq $t0, $zero, nullPtrException");
+		code.emit(iva, "lw $t0, " + NNN + "($t0)"); //NNN($sp)?????
+		
+		if(iva.varDec.type instanceof IntegerType){
+			code.emit(iva, "subu $sp, $sp, 4"); //is this supposed to be 8???
+			stackHeight += 4; //Is this the correct placement???????????
+			code.emit(iva, "sw $s5, 4($sp)");
+			code.emit(iva, "$t0, ($sp)");
+		}
+		else if(!(iva.varDec.type instanceof VoidType)){
+			code.emit(iva, "sw $t0, ($sp)");
+		}
+		
+		return null;
+	}
+	
+	
+	/*
+	 * (non-Javadoc)
 	 * @see visitor.InhVisitor#visitLessThan(syntaxtree.LessThan)
 	 */
 	@Override
@@ -345,6 +390,31 @@ public class CG3Visitor extends ASTvisitor {
 	
 	/*
 	 * (non-Javadoc)
+	 * @see visitor.ASTvisitor#visitNewArray(syntaxtree.NewArray)
+	 */
+	@Override
+	public Object visitNewArray(NewArray arr){
+		arr.sizeExp.accept(this);
+		code.emit(arr, "lw $s7, ($sp)");
+		code.emit(arr, "addu $sp, $sp, 8");
+		stackHeight -= 8;
+		
+		if(arr.type instanceof IntegerType || arr.type instanceof BooleanType){
+			code.emit(arr, "li $s6, -1");
+		}
+		else if(!(arr.type instanceof VoidType)){
+			code.emit(arr, "li $s6, 0");
+		}
+		
+		code.emit(arr,  "jal newObject");
+		stackHeight += 4;
+		
+		return null;
+	}
+	
+	
+	/*
+	 * (non-Javadoc)
 	 * @see visitor.InhVisitor#visitStringLiteral(syntaxtree.StringLiteral)
 	 */
 	/*
@@ -371,6 +441,24 @@ public class CG3Visitor extends ASTvisitor {
 		code.emit(n, "lw $t0, ($sp)");
 		code.emit(n, "xor $t0, $t0, 1");
 		code.emit(n, "sw $t0, ($sp)");
+		
+		return null;
+	}
+	
+	
+	/*
+	 * (non-Javadoc)
+	 * @see visitor.InhVisitor#visitOr(syntaxtree.Or)
+	 */
+	@Override
+	public Object visitOr(Or o){
+		o.left.accept(this);
+		code.emit(o, "lw $t0, ($sp)");
+		code.emit(o, "bne $t0, $zero, skip_" + o.uniqueId);
+		code.emit(o, "addu $sp, $sp, 4");
+		stackHeight -= 4;
+		o.right.accept(this);
+		code.emit(o, "skip_" + o.uniqueId + ":");
 		
 		return null;
 	}

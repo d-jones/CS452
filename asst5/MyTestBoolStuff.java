@@ -230,5 +230,40 @@ class Main extends Lib{
 		else{
 			super.printStr("!(!(b1 && b3)) ==> FAILED\n");
 		}
+		
+		/////////////////////////////////////////////////////////////
+		super.printStr("****************************\n");
+		/////////////////////////////////////////////////////////////
+		
+		if(true || false){ //true
+			super.printStr("true || false ==> PASS\n");
+		}
+		else{
+			super.printStr("true || false ==> FAILED\n");
+		}
+		if(b1 || b2){ //true
+			super.printStr("b1 || b2 ==> PASS\n");
+		}
+		else{
+			super.printStr("b1 || b2 ==> FAILED\n");
+		}
+		if(b2 || b1){ //true
+			super.printStr("b2 || b1 ==> PASS\n");
+		}
+		else{
+			super.printStr("b2 || b1 ==> FAILED\n");
+		}
+		if(false || false){ //false
+			super.printStr("false || false ==> FAILED\n");
+		}
+		else{ //
+			super.printStr("false || false ==> PASS\n");
+		}
+		if(b2 || b2){ //false
+			super.printStr("b2 || b2 ==> FAILED\n");
+		}
+		else{ //true
+			super.printStr("b2 || b2 ==> PASS\n");
+		}
 	}
 }
