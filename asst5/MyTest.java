@@ -5,6 +5,11 @@ class Main extends Lib{
 		int b = a + 2; //b = 11
 		int c = b - 2; //c = 9
 		
+		String test = "alskdjflkas";
+		if(test instanceof String){
+			
+		}
+		
 		int d = 1;
 		super.printInt(d);
 		super.printStr("\n");

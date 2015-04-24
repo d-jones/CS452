@@ -78,6 +78,44 @@ public class CG3Visitor extends ASTvisitor {
 	
 	/*
 	 * (non-Javadoc)
+	 * @see visitor.ASTvisitor#visitArrayLookup(syntaxtree.ArrayLookup)
+	 */
+	@Override
+	public Object visitArrayLookup(ArrayLookup a){
+		a.arrExp.accept(this);
+		a.idxExp.accept(this);
+		code.emit(a, "lw $t0, 8($sp)");
+		code.emit(a, "beq $t0, $zero, nullPtrException");
+		code.emit(a, "lw $t1, -4($t0)");
+		code.emit(a, "lw $t2, ($sp)");
+		code.emit(a, "bgeu $t2, $t1, arrayIndexOutOfBounds");
+		code.emit(a, "sll $t2, $t2, 2");
+		code.emit(a, "addu $t2, $t2, $t0");
+		code.emit(a, "lw $t0, ($t2)");
+		
+		//Type arrType = ((IdentifierExp)a.arrExp).link.type;
+		
+		
+		//System.out.println(arrType);
+		if(a.type instanceof IntegerType){
+			code.emit(a, "sw $t0, 4($sp)");
+			code.emit(a, "sw $s5, 8($sp)");
+			code.emit(a, "addu $sp, $sp, 4");
+			stackHeight -= 4;
+		}
+		else if(a.type instanceof Object || a.type instanceof ArrayType
+			|| a.type instanceof BooleanType){
+				code.emit(a, "sw $t0, 8($sp)");
+				code.emit(a, "addu $sp, $sp, 8");
+				stackHeight -= 8;
+			}
+		
+		return null;
+	}
+	
+	
+	/*
+	 * (non-Javadoc)
 	 * @see visitor.ASTvisitor#visitAssign(syntaxtree.Assign)
 	 */
 	@Override
@@ -104,6 +142,39 @@ public class CG3Visitor extends ASTvisitor {
 				code.emit(a, "addu $sp, $sp, 4");
 				stackHeight -= 4;
 			}	
+		}
+		//ARRAY LOOKUP
+		else if(a.lhs instanceof ArrayLookup){
+			ArrayLookup arr = (ArrayLookup)a.lhs;
+			arr.arrExp.accept(this);
+			arr.idxExp.accept(this);
+			a.rhs.accept(this);
+			code.emit(a, "lw $t0, ($sp)");
+			
+			if(a.rhs.type instanceof IntegerType){
+				code.emit(a, "lw $t1, 16($sp)");
+				code.emit(a, "beq $t1, $zero, nullPtrException");
+				code.emit(a, "lw $t2, 8($sp)");
+				code.emit(a, "lw $t3, -4($t1)");
+				code.emit(a, "bgeu $t2, $t3, arrayIndexOutOfBounds");
+				code.emit(a, "sll $t2, $t2, 2");
+				code.emit(a, "addu $t2, $t2, $t1");
+				code.emit(a, "sw $t0, ($t2)");
+				code.emit(a, "addu $sp, $sp, 20");
+				stackHeight -= 20;
+			}
+			else{
+				code.emit(a, "lw $t1, 12($sp)");
+				code.emit(a, "beq $t1, $zero, nullPtrException");
+				code.emit(a, "lw $t2, 4($sp)");
+				code.emit(a, "lw $t3, -4($t1)");
+				code.emit(a, "bgeu $t2, $t3, arrayIndexOutOfBounds");
+				code.emit(a, "sll $t2, $t2, 2");
+				code.emit(a, "addu $t2, $t2, $t1");
+				code.emit(a, "sw $t0, ($t2)");
+				code.emit(a, "addu $sp, $sp, 16");
+				stackHeight -= 16;
+			}
 		}
 		
 		return null;
@@ -329,23 +400,22 @@ public class CG3Visitor extends ASTvisitor {
 		return null;
 	}
 	
-
-	/*
+/*	
+	
 	 * (non-Javadoc)
-	 * @see visitor.InhVisitor#visitIntegerLiteral(syntaxtree.IntegerLiteral)
-	 */
+	 * @see visitor.ASTvisitor#visitInstanceOf(syntaxtree.InstanceOf)
+	 
 	@Override
-	public Object visitIntegerLiteral(IntegerLiteral intLit){
-		code.emit(intLit, "subu $sp, $sp, 8");
-		stackHeight += 8;
-		code.emit(intLit,  "sw $s5, 4($sp)");
-		code.emit(intLit, "li $t0, " + intLit.val);
-		code.emit(intLit, "sw $t0, ($sp)");
+	public Object visitInstanceOf(InstanceOf in){
+		in.exp.accept(this);
+		code.emit(in, "la $t0, CLASS_" + in.checkType.toString2());
+		code.emit(in, "la $t1, CLASS_END_" + in.checkType.toString2());
+		code.emit(in, "jal instanceOf");
 		
 		return null;
-	}
+	}*/
 	
-	
+
 	/*
 	 * (non-Javadoc)
 	 * @see visitor.ASTvisitor#visitInstVarAccess(syntaxtree.InstVarAccess)
@@ -367,6 +437,21 @@ public class CG3Visitor extends ASTvisitor {
 		else if(!(iva.varDec.type instanceof VoidType)){
 			code.emit(iva, "sw $t0, ($sp)");
 		}
+		
+		return null;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * @see visitor.InhVisitor#visitIntegerLiteral(syntaxtree.IntegerLiteral)
+	 */
+	@Override
+	public Object visitIntegerLiteral(IntegerLiteral intLit){
+		code.emit(intLit, "subu $sp, $sp, 8");
+		stackHeight += 8;
+		code.emit(intLit,  "sw $s5, 4($sp)");
+		code.emit(intLit, "li $t0, " + intLit.val);
+		code.emit(intLit, "sw $t0, ($sp)");
 		
 		return null;
 	}
@@ -491,7 +576,7 @@ public class CG3Visitor extends ASTvisitor {
 		code.emit(no, "li $s7, " + NNN);
 		code.emit(no, "jal newObject");
 		stackHeight += 4;
-		code.emit(no, "la $t0, CLASS_" + no.objType.link.name);
+		code.emit(no, "la $t0, CLASS_" + no.objType.name);
 		code.emit(no, "sw $t0, -12($s7)");*/
 		
 		

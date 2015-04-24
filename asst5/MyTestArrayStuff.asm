@@ -1,107 +1,416 @@
- .data # Program at 1.1 	 
-  .byte 65 # StringLiteral at 6.18	
-  .byte 114 # StringLiteral at 6.18   
-  .byte 114 # StringLiteral at 6.18   
-  .byte 97 # StringLiteral at 6.18	
-  .byte 121 # StringLiteral at 6.18		
-  .byte 32 # StringLiteral at 6.18 		
-  .byte 108 # StringLiteral at 6.18  
-  .byte 101 # StringLiteral at 6.18 		
-  .byte 110 # StringLiteral at 6.18	 
-  .byte 103 # StringLiteral at 6.18		 
-  .byte 116 # StringLiteral at 6.18		 
-  .byte 104 # StringLiteral at 6.18		
-  .byte 58 # StringLiteral at 6.18  	
-  .byte 32 # StringLiteral at 6.18 	
-  .byte 0 # StringLiteral at 6.18	
-  .byte 0 # StringLiteral at 6.18 	 
-  .word CLASS_String # StringLiteral at 6.18	  
-  .word 5 # StringLiteral at 6.18	  
-  .word -14 # StringLiteral at 6.18 		
-strLit_17: # StringLiteral at 6.18 
-  .byte 10 # StringLiteral at 8.18 	 
-  .byte 0 # StringLiteral at 8.18		
+ .data # Program at 1.1 
+  .byte 65 # StringLiteral at 8.18			
+  .byte 114 # StringLiteral at 8.18 	 
+  .byte 114 # StringLiteral at 8.18 	 
+  .byte 97 # StringLiteral at 8.18	 	
+  .byte 121 # StringLiteral at 8.18 		
+  .byte 32 # StringLiteral at 8.18	  
+  .byte 108 # StringLiteral at 8.18	
+  .byte 101 # StringLiteral at 8.18  	
+  .byte 110 # StringLiteral at 8.18 	 
+  .byte 103 # StringLiteral at 8.18	  
+  .byte 116 # StringLiteral at 8.18  
+  .byte 104 # StringLiteral at 8.18		
+  .byte 58 # StringLiteral at 8.18  
+  .byte 32 # StringLiteral at 8.18			
+  .byte 0 # StringLiteral at 8.18		 
   .byte 0 # StringLiteral at 8.18	
-  .byte 0 # StringLiteral at 8.18  	
-  .word CLASS_String # StringLiteral at 8.18 		
-  .word 2 # StringLiteral at 8.18 
-  .word -1 # StringLiteral at 8.18		 
-strLit_26: # StringLiteral at 8.18			
-CLASS_Object: # Program at 1.1	 	
-CLASS_String: # Program at 1.1		
-.text # Program at 1.1	 
-.global main # Program at 1.1 	
-main: # Program at 1.1  
-jal vm_init # Program at 1.1	 
-subu $sp, $sp, 4 # NewObject at 0.0  	
-sw $zero, ($sp) # NewObject at 0.0 	 
-jal fcn_30_main # Call at 0.0		
-li $v0, 10 # Program at 1.1   
-syscall # Program at 1.1	 
-.globl fcn_30_main # MethodDeclVoid at 2.14 	 
-fcn_30_main: # MethodDeclVoid at 2.14  	
-subu $sp, $sp, 8 # MethodDeclVoid at 2.14   
-sw $ra, 4($sp) # MethodDeclVoid at 2.14	  
-sw $s2, ($sp) # MethodDeclVoid at 2.14 
-lw $s2, 4($sp) # MethodDeclVoid at 2.14	 
-subu $sp, $sp, 8 # IntegerLiteral at 3.25 	
-sw $s5, 4($sp) # IntegerLiteral at 3.25		
-li $t0, 2 # IntegerLiteral at 3.25	  
-sw $t0, ($sp) # IntegerLiteral at 3.25 	
-lw $s7, ($sp) # NewArray at 3.17			
-addu $sp, $sp, 8 # NewArray at 3.17	  
-li $s6, 0 # NewArray at 3.17	
-jal newObject # NewArray at 3.17			
-lw $t0, 0($sp) # IdentifierExp at 4.3 		
-subu $sp, $sp, 4 # IdentifierExp at 4.3 	
-sw $t0, ($sp) # IdentifierExp at 4.3	
-subu $sp, $sp, 8 # IntegerLiteral at 4.9	
-sw $s5, 4($sp) # IntegerLiteral at 4.9 		
-li $t0, 0 # IntegerLiteral at 4.9  	
-sw $t0, ($sp) # IntegerLiteral at 4.9   
-subu $sp, $sp, 8 # IntegerLiteral at 4.14	 
-sw $s5, 4($sp) # IntegerLiteral at 4.14	  
-li $t0, 1 # IntegerLiteral at 4.14	 	
-sw $t0, ($sp) # IntegerLiteral at 4.14 	
-lw $t0, 20($sp) # IdentifierExp at 5.3	 	
-subu $sp, $sp, 4 # IdentifierExp at 5.3   
-sw $t0, ($sp) # IdentifierExp at 5.3		
-subu $sp, $sp, 8 # IntegerLiteral at 5.9   
-sw $s5, 4($sp) # IntegerLiteral at 5.9 	 
-li $t0, 1 # IntegerLiteral at 5.9	  
-sw $t0, ($sp) # IntegerLiteral at 5.9 		
-subu $sp, $sp, 8 # IntegerLiteral at 5.14 
-sw $s5, 4($sp) # IntegerLiteral at 5.14 
-li $t0, 2 # IntegerLiteral at 5.14	
-sw $t0, ($sp) # IntegerLiteral at 5.14   
-subu $sp, $sp, 4 # Super at 6.9			
-sw $s2, ($sp) # Super at 6.9 		
-subu $sp, $sp, 4 # StringLiteral at 6.18		
-la $t0, strLit_17 # StringLiteral at 6.18	
-sw $t0, ($sp) # StringLiteral at 6.18 	 
-jal printStr # Call at 6.9  	
-subu $sp, $sp, 4 # Super at 7.9		
-sw $s2, ($sp) # Super at 7.9	
-lw $t0, 44($sp) # IdentifierExp at 7.18 
-subu $sp, $sp, 4 # IdentifierExp at 7.18 		
-sw $t0, ($sp) # IdentifierExp at 7.18	  
-lw $t0, ($sp) # ArrayLength at 7.23 
-beq $t0, $zero, nullPtrException # ArrayLength at 7.23 		
-lw $t0, -4($t0) # ArrayLength at 7.23		
-sw $s5, ($sp) # ArrayLength at 7.23		 
-subu $sp, $sp, 4 # ArrayLength at 7.23 
-sw $t0, ($sp) # ArrayLength at 7.23			
-jal printInt # Call at 7.9		 
-subu $sp, $sp, 4 # Super at 8.9		
-sw $s2, ($sp) # Super at 8.9	  
-subu $sp, $sp, 4 # StringLiteral at 8.18			
-la $t0, strLit_26 # StringLiteral at 8.18 	 
-sw $t0, ($sp) # StringLiteral at 8.18 	
-jal printStr # Call at 8.9  
-lw $ra, 48($sp) # MethodDeclVoid at 2.14		 
+  .word CLASS_String # StringLiteral at 8.18  	
+  .word 5 # StringLiteral at 8.18			
+  .word -14 # StringLiteral at 8.18  
+strLit_27: # StringLiteral at 8.18  
+  .byte 10 # StringLiteral at 10.18	 	
+  .byte 0 # StringLiteral at 10.18 		
+  .byte 0 # StringLiteral at 10.18 	
+  .byte 0 # StringLiteral at 10.18	  
+  .word CLASS_String # StringLiteral at 10.18 	 
+  .word 2 # StringLiteral at 10.18 
+  .word -1 # StringLiteral at 10.18 
+strLit_36: # StringLiteral at 10.18		
+  .byte 97 # StringLiteral at 14.18  	
+  .byte 114 # StringLiteral at 14.18		
+  .byte 114 # StringLiteral at 14.18	  
+  .byte 97 # StringLiteral at 14.18  	
+  .byte 121 # StringLiteral at 14.18  	
+  .byte 91 # StringLiteral at 14.18		
+  .byte 50 # StringLiteral at 14.18	
+  .byte 93 # StringLiteral at 14.18	
+  .byte 58 # StringLiteral at 14.18  
+  .byte 32 # StringLiteral at 14.18	  
+  .byte 0 # StringLiteral at 14.18	 
+  .byte 0 # StringLiteral at 14.18  
+  .word CLASS_String # StringLiteral at 14.18	
+  .word 4 # StringLiteral at 14.18	  
+  .word -10 # StringLiteral at 14.18		 
+strLit_48: # StringLiteral at 14.18	
+  .byte 10 # StringLiteral at 16.18			
+  .byte 0 # StringLiteral at 16.18  
+  .byte 0 # StringLiteral at 16.18	 	
+  .byte 0 # StringLiteral at 16.18	 	
+  .word CLASS_String # StringLiteral at 16.18	
+  .word 2 # StringLiteral at 16.18	  
+  .word -1 # StringLiteral at 16.18 	 
+strLit_56: # StringLiteral at 16.18 
+  .byte 116 # StringLiteral at 19.13  	
+  .byte 101 # StringLiteral at 19.13 	
+  .byte 115 # StringLiteral at 19.13		 
+  .byte 116 # StringLiteral at 19.13	
+  .word CLASS_String # StringLiteral at 19.13  
+  .word 2 # StringLiteral at 19.13	 	
+  .word -4 # StringLiteral at 19.13 	 
+strLit_70: # StringLiteral at 19.13	  
+  .byte 10 # StringLiteral at 21.18	
+  .byte 10 # StringLiteral at 21.18 		
+  .byte 10 # StringLiteral at 21.18 		
+  .byte 0 # StringLiteral at 21.18	  
+  .word CLASS_String # StringLiteral at 21.18   
+  .word 2 # StringLiteral at 21.18		
+  .word -3 # StringLiteral at 21.18 		
+strLit_78: # StringLiteral at 21.18		
+  .byte 97 # StringLiteral at 26.19	  
+  .byte 114 # StringLiteral at 26.19   
+  .byte 114 # StringLiteral at 26.19   
+  .byte 97 # StringLiteral at 26.19			
+  .byte 121 # StringLiteral at 26.19   
+  .byte 91 # StringLiteral at 26.19	  
+  .byte 105 # StringLiteral at 26.19			
+  .byte 93 # StringLiteral at 26.19	 
+  .byte 32 # StringLiteral at 26.19	 
+  .byte 61 # StringLiteral at 26.19	
+  .byte 32 # StringLiteral at 26.19	 	
+  .byte 0 # StringLiteral at 26.19	 
+  .word CLASS_String # StringLiteral at 26.19	 	
+  .word 4 # StringLiteral at 26.19 		
+  .word -11 # StringLiteral at 26.19	
+strLit_94: # StringLiteral at 26.19		
+  .byte 10 # StringLiteral at 28.19			
+  .byte 0 # StringLiteral at 28.19			
+  .byte 0 # StringLiteral at 28.19 
+  .byte 0 # StringLiteral at 28.19 	 
+  .word CLASS_String # StringLiteral at 28.19  	
+  .word 2 # StringLiteral at 28.19	 	
+  .word -1 # StringLiteral at 28.19 	
+strLit_102: # StringLiteral at 28.19		
+CLASS_Object: # Program at 1.1  	
+CLASS_String: # Program at 1.1			
+.text # Program at 1.1 
+.global main # Program at 1.1	  
+main: # Program at 1.1		
+jal vm_init # Program at 1.1 		
+subu $sp, $sp, 4 # NewObject at 0.0 
+sw $zero, ($sp) # NewObject at 0.0		
+jal fcn_113_main # Call at 0.0		 
+li $v0, 10 # Program at 1.1			
+syscall # Program at 1.1	  
+.globl fcn_113_main # MethodDeclVoid at 2.14 	
+fcn_113_main: # MethodDeclVoid at 2.14  	
+subu $sp, $sp, 8 # MethodDeclVoid at 2.14			
+sw $ra, 4($sp) # MethodDeclVoid at 2.14		 
+sw $s2, ($sp) # MethodDeclVoid at 2.14 		
 lw $s2, 4($sp) # MethodDeclVoid at 2.14		
-addu $sp, $sp, 56 # MethodDeclVoid at 2.14   
-jr $ra # MethodDeclVoid at 2.14   
+subu $sp, $sp, 8 # IntegerLiteral at 3.25  	
+sw $s5, 4($sp) # IntegerLiteral at 3.25   
+li $t0, 4 # IntegerLiteral at 3.25	 	
+sw $t0, ($sp) # IntegerLiteral at 3.25  
+lw $s7, ($sp) # NewArray at 3.17  	
+addu $sp, $sp, 8 # NewArray at 3.17	  
+li $s6, 0 # NewArray at 3.17	  
+jal newObject # NewArray at 3.17  	
+lw $t0, 0($sp) # IdentifierExp at 4.3  	
+subu $sp, $sp, 4 # IdentifierExp at 4.3			
+sw $t0, ($sp) # IdentifierExp at 4.3			
+subu $sp, $sp, 8 # IntegerLiteral at 4.9 		
+sw $s5, 4($sp) # IntegerLiteral at 4.9  	
+li $t0, 0 # IntegerLiteral at 4.9   
+sw $t0, ($sp) # IntegerLiteral at 4.9	  
+subu $sp, $sp, 8 # IntegerLiteral at 4.14			
+sw $s5, 4($sp) # IntegerLiteral at 4.14		
+li $t0, 1 # IntegerLiteral at 4.14  
+sw $t0, ($sp) # IntegerLiteral at 4.14	
+lw $t0, ($sp) # Assign at 4.12		
+lw $t1, 16($sp) # Assign at 4.12			
+beq $t1, $zero, nullPtrException # Assign at 4.12	 	
+lw $t2, 8($sp) # Assign at 4.12		 
+lw $t3, -4($t1) # Assign at 4.12   
+bgeu $t2, $t3, arrayIndexOutOfBounds # Assign at 4.12  
+sll $t2, $t2, 2 # Assign at 4.12   
+addu $t2, $t2, $t1 # Assign at 4.12		
+sw $t0, ($t2) # Assign at 4.12		
+addu $sp, $sp, 20 # Assign at 4.12 		
+lw $t0, 0($sp) # IdentifierExp at 5.3 	
+subu $sp, $sp, 4 # IdentifierExp at 5.3  
+sw $t0, ($sp) # IdentifierExp at 5.3	 
+subu $sp, $sp, 8 # IntegerLiteral at 5.9  
+sw $s5, 4($sp) # IntegerLiteral at 5.9  
+li $t0, 1 # IntegerLiteral at 5.9	 	
+sw $t0, ($sp) # IntegerLiteral at 5.9	 	
+subu $sp, $sp, 8 # IntegerLiteral at 5.14   
+sw $s5, 4($sp) # IntegerLiteral at 5.14			
+li $t0, 2 # IntegerLiteral at 5.14  	
+sw $t0, ($sp) # IntegerLiteral at 5.14  	
+lw $t0, ($sp) # Assign at 5.12	 	
+lw $t1, 16($sp) # Assign at 5.12 	 
+beq $t1, $zero, nullPtrException # Assign at 5.12 
+lw $t2, 8($sp) # Assign at 5.12	 	
+lw $t3, -4($t1) # Assign at 5.12 
+bgeu $t2, $t3, arrayIndexOutOfBounds # Assign at 5.12	 
+sll $t2, $t2, 2 # Assign at 5.12		 
+addu $t2, $t2, $t1 # Assign at 5.12	  
+sw $t0, ($t2) # Assign at 5.12	
+addu $sp, $sp, 20 # Assign at 5.12 	 
+lw $t0, 0($sp) # IdentifierExp at 6.3	 
+subu $sp, $sp, 4 # IdentifierExp at 6.3		 
+sw $t0, ($sp) # IdentifierExp at 6.3  	
+subu $sp, $sp, 8 # IntegerLiteral at 6.9	 	
+sw $s5, 4($sp) # IntegerLiteral at 6.9 	 
+li $t0, 2 # IntegerLiteral at 6.9	
+sw $t0, ($sp) # IntegerLiteral at 6.9 		
+subu $sp, $sp, 8 # IntegerLiteral at 6.14	  
+sw $s5, 4($sp) # IntegerLiteral at 6.14		 
+li $t0, 7 # IntegerLiteral at 6.14	 	
+sw $t0, ($sp) # IntegerLiteral at 6.14		
+lw $t0, ($sp) # Assign at 6.12 
+lw $t1, 16($sp) # Assign at 6.12		
+beq $t1, $zero, nullPtrException # Assign at 6.12	  
+lw $t2, 8($sp) # Assign at 6.12	
+lw $t3, -4($t1) # Assign at 6.12	 	
+bgeu $t2, $t3, arrayIndexOutOfBounds # Assign at 6.12 
+sll $t2, $t2, 2 # Assign at 6.12			
+addu $t2, $t2, $t1 # Assign at 6.12 	
+sw $t0, ($t2) # Assign at 6.12   
+addu $sp, $sp, 20 # Assign at 6.12			
+lw $t0, 0($sp) # IdentifierExp at 7.3   
+subu $sp, $sp, 4 # IdentifierExp at 7.3	 
+sw $t0, ($sp) # IdentifierExp at 7.3		
+subu $sp, $sp, 8 # IntegerLiteral at 7.9		
+sw $s5, 4($sp) # IntegerLiteral at 7.9		 
+li $t0, 3 # IntegerLiteral at 7.9	 
+sw $t0, ($sp) # IntegerLiteral at 7.9 
+subu $sp, $sp, 8 # IntegerLiteral at 7.14   
+sw $s5, 4($sp) # IntegerLiteral at 7.14 	 
+li $t0, 9 # IntegerLiteral at 7.14	 	
+sw $t0, ($sp) # IntegerLiteral at 7.14	 
+lw $t0, ($sp) # Assign at 7.12   
+lw $t1, 16($sp) # Assign at 7.12	 	
+beq $t1, $zero, nullPtrException # Assign at 7.12 
+lw $t2, 8($sp) # Assign at 7.12			
+lw $t3, -4($t1) # Assign at 7.12 		
+bgeu $t2, $t3, arrayIndexOutOfBounds # Assign at 7.12			
+sll $t2, $t2, 2 # Assign at 7.12	
+addu $t2, $t2, $t1 # Assign at 7.12  
+sw $t0, ($t2) # Assign at 7.12	  
+addu $sp, $sp, 20 # Assign at 7.12 	
+subu $sp, $sp, 4 # Super at 8.9  
+sw $s2, ($sp) # Super at 8.9	 
+subu $sp, $sp, 4 # StringLiteral at 8.18 	
+la $t0, strLit_27 # StringLiteral at 8.18  	
+sw $t0, ($sp) # StringLiteral at 8.18   
+jal printStr # Call at 8.9 	 
+subu $sp, $sp, 4 # Super at 9.9 		
+sw $s2, ($sp) # Super at 9.9   
+lw $t0, 4($sp) # IdentifierExp at 9.18 		
+subu $sp, $sp, 4 # IdentifierExp at 9.18 		
+sw $t0, ($sp) # IdentifierExp at 9.18 		
+lw $t0, ($sp) # ArrayLength at 9.23   
+beq $t0, $zero, nullPtrException # ArrayLength at 9.23 		
+lw $t0, -4($t0) # ArrayLength at 9.23   
+sw $s5, ($sp) # ArrayLength at 9.23 
+subu $sp, $sp, 4 # ArrayLength at 9.23		 
+sw $t0, ($sp) # ArrayLength at 9.23	
+jal printInt # Call at 9.9			
+subu $sp, $sp, 4 # Super at 10.9 
+sw $s2, ($sp) # Super at 10.9 
+subu $sp, $sp, 4 # StringLiteral at 10.18			
+la $t0, strLit_36 # StringLiteral at 10.18	 	
+sw $t0, ($sp) # StringLiteral at 10.18	
+jal printStr # Call at 10.9 	
+subu $sp, $sp, 8 # IntegerLiteral at 12.11		
+sw $s5, 4($sp) # IntegerLiteral at 12.11 		
+li $t0, 0 # IntegerLiteral at 12.11	 
+sw $t0, ($sp) # IntegerLiteral at 12.11	
+lw $t0, 8($sp) # IdentifierExp at 13.7  	
+subu $sp, $sp, 4 # IdentifierExp at 13.7   
+sw $t0, ($sp) # IdentifierExp at 13.7		
+subu $sp, $sp, 8 # IntegerLiteral at 13.13 	 
+sw $s5, 4($sp) # IntegerLiteral at 13.13  	
+li $t0, 2 # IntegerLiteral at 13.13	 
+sw $t0, ($sp) # IntegerLiteral at 13.13	 
+lw $t0, 8($sp) # ArrayLookup at 13.12	
+beq $t0, $zero, nullPtrException # ArrayLookup at 13.12  	
+lw $t1, -4($t0) # ArrayLookup at 13.12		 
+lw $t2, ($sp) # ArrayLookup at 13.12	 	
+bgeu $t2, $t1, arrayIndexOutOfBounds # ArrayLookup at 13.12 		
+sll $t2, $t2, 2 # ArrayLookup at 13.12  	
+addu $t2, $t2, $t0 # ArrayLookup at 13.12	  
+lw $t0, ($t2) # ArrayLookup at 13.12	  
+sw $t0, 4($sp) # ArrayLookup at 13.12	 	
+sw $s5, 8($sp) # ArrayLookup at 13.12  
+addu $sp, $sp, 4 # ArrayLookup at 13.12		
+lw $t0, ($sp) # Assign at 13.5  	
+sw $t0, 8($sp) # Assign at 13.5		
+addu $sp, $sp, 8 # Assign at 13.5 
+subu $sp, $sp, 4 # Super at 14.9 	 
+sw $s2, ($sp) # Super at 14.9 
+subu $sp, $sp, 4 # StringLiteral at 14.18	
+la $t0, strLit_48 # StringLiteral at 14.18 	 
+sw $t0, ($sp) # StringLiteral at 14.18	  
+jal printStr # Call at 14.9	 
+subu $sp, $sp, 4 # Super at 15.9			
+sw $s2, ($sp) # Super at 15.9	  
+lw $t0, 4($sp) # IdentifierExp at 15.18  	
+subu $sp, $sp, 8 # IdentifierExp at 15.18	 	
+sw $s5, 4($sp) # IdentifierExp at 15.18			
+sw $t0, ($sp) # IdentifierExp at 15.18	 	
+jal printInt # Call at 15.9	  
+subu $sp, $sp, 4 # Super at 16.9 
+sw $s2, ($sp) # Super at 16.9	  
+subu $sp, $sp, 4 # StringLiteral at 16.18 	
+la $t0, strLit_56 # StringLiteral at 16.18  
+sw $t0, ($sp) # StringLiteral at 16.18  
+jal printStr # Call at 16.9	 
+subu $sp, $sp, 8 # IntegerLiteral at 18.30	  
+sw $s5, 4($sp) # IntegerLiteral at 18.30  
+li $t0, 1 # IntegerLiteral at 18.30		
+sw $t0, ($sp) # IntegerLiteral at 18.30 
+lw $s7, ($sp) # NewArray at 18.19   
+addu $sp, $sp, 8 # NewArray at 18.19	
+li $s6, 0 # NewArray at 18.19		
+jal newObject # NewArray at 18.19	 	
+lw $t0, 0($sp) # IdentifierExp at 19.3	 	
+subu $sp, $sp, 4 # IdentifierExp at 19.3 		
+sw $t0, ($sp) # IdentifierExp at 19.3 	 
+subu $sp, $sp, 8 # IntegerLiteral at 19.8 		
+sw $s5, 4($sp) # IntegerLiteral at 19.8		
+li $t0, 0 # IntegerLiteral at 19.8	 	
+sw $t0, ($sp) # IntegerLiteral at 19.8  	
+subu $sp, $sp, 4 # StringLiteral at 19.13	 
+la $t0, strLit_70 # StringLiteral at 19.13 		
+sw $t0, ($sp) # StringLiteral at 19.13	
+lw $t0, ($sp) # Assign at 19.11	
+lw $t1, 12($sp) # Assign at 19.11   
+beq $t1, $zero, nullPtrException # Assign at 19.11		
+lw $t2, 4($sp) # Assign at 19.11	
+lw $t3, -4($t1) # Assign at 19.11  	
+bgeu $t2, $t3, arrayIndexOutOfBounds # Assign at 19.11	 	
+sll $t2, $t2, 2 # Assign at 19.11  
+addu $t2, $t2, $t1 # Assign at 19.11  
+sw $t0, ($t2) # Assign at 19.11	
+addu $sp, $sp, 16 # Assign at 19.11	  
+subu $sp, $sp, 4 # Super at 20.9	 	
+sw $s2, ($sp) # Super at 20.9			
+lw $t0, 4($sp) # IdentifierExp at 20.18  
+subu $sp, $sp, 4 # IdentifierExp at 20.18 		
+sw $t0, ($sp) # IdentifierExp at 20.18 	 
+subu $sp, $sp, 8 # IntegerLiteral at 20.23  
+sw $s5, 4($sp) # IntegerLiteral at 20.23		 
+li $t0, 0 # IntegerLiteral at 20.23 	 
+sw $t0, ($sp) # IntegerLiteral at 20.23	 
+lw $t0, 8($sp) # ArrayLookup at 20.22		
+beq $t0, $zero, nullPtrException # ArrayLookup at 20.22   
+lw $t1, -4($t0) # ArrayLookup at 20.22	
+lw $t2, ($sp) # ArrayLookup at 20.22	  
+bgeu $t2, $t1, arrayIndexOutOfBounds # ArrayLookup at 20.22  
+sll $t2, $t2, 2 # ArrayLookup at 20.22			
+addu $t2, $t2, $t0 # ArrayLookup at 20.22	 	
+lw $t0, ($t2) # ArrayLookup at 20.22	
+sw $t0, 8($sp) # ArrayLookup at 20.22  
+addu $sp, $sp, 8 # ArrayLookup at 20.22 	
+jal printStr # Call at 20.9	 	
+subu $sp, $sp, 4 # Super at 21.9  
+sw $s2, ($sp) # Super at 21.9	 	
+subu $sp, $sp, 4 # StringLiteral at 21.18	
+la $t0, strLit_78 # StringLiteral at 21.18 	
+sw $t0, ($sp) # StringLiteral at 21.18	 
+jal printStr # Call at 21.9  
+subu $sp, $sp, 8 # IntegerLiteral at 23.11	 
+sw $s5, 4($sp) # IntegerLiteral at 23.11 		
+li $t0, 0 # IntegerLiteral at 23.11 	 
+sw $t0, ($sp) # IntegerLiteral at 23.11	
+j while_enter_112 # While at 24.3 		
+while_top_112: # While at 24.3 	
+lw $t0, 20($sp) # IdentifierExp at 25.8	 
+subu $sp, $sp, 4 # IdentifierExp at 25.8			
+sw $t0, ($sp) # IdentifierExp at 25.8  	
+lw $t0, 4($sp) # IdentifierExp at 25.14		
+subu $sp, $sp, 8 # IdentifierExp at 25.14		 
+sw $s5, 4($sp) # IdentifierExp at 25.14		 
+sw $t0, ($sp) # IdentifierExp at 25.14 
+lw $t0, 8($sp) # ArrayLookup at 25.13 		
+beq $t0, $zero, nullPtrException # ArrayLookup at 25.13	  
+lw $t1, -4($t0) # ArrayLookup at 25.13	 	
+lw $t2, ($sp) # ArrayLookup at 25.13	 	
+bgeu $t2, $t1, arrayIndexOutOfBounds # ArrayLookup at 25.13	 	
+sll $t2, $t2, 2 # ArrayLookup at 25.13		
+addu $t2, $t2, $t0 # ArrayLookup at 25.13			
+lw $t0, ($t2) # ArrayLookup at 25.13 
+sw $t0, 4($sp) # ArrayLookup at 25.13			
+sw $s5, 8($sp) # ArrayLookup at 25.13  	
+addu $sp, $sp, 4 # ArrayLookup at 25.13		
+lw $t0, ($sp) # Assign at 25.6	 
+sw $t0, 20($sp) # Assign at 25.6			
+addu $sp, $sp, 8 # Assign at 25.6			
+subu $sp, $sp, 4 # Super at 26.10		
+sw $s2, ($sp) # Super at 26.10	 
+subu $sp, $sp, 4 # StringLiteral at 26.19		
+la $t0, strLit_94 # StringLiteral at 26.19		 
+sw $t0, ($sp) # StringLiteral at 26.19			
+jal printStr # Call at 26.10		
+subu $sp, $sp, 4 # Super at 27.10			
+sw $s2, ($sp) # Super at 27.10		 
+lw $t0, 16($sp) # IdentifierExp at 27.19  	
+subu $sp, $sp, 8 # IdentifierExp at 27.19	  
+sw $s5, 4($sp) # IdentifierExp at 27.19 		
+sw $t0, ($sp) # IdentifierExp at 27.19 
+jal printInt # Call at 27.10 		
+subu $sp, $sp, 4 # Super at 28.10 	
+sw $s2, ($sp) # Super at 28.10  
+subu $sp, $sp, 4 # StringLiteral at 28.19 	
+la $t0, strLit_102 # StringLiteral at 28.19		 
+sw $t0, ($sp) # StringLiteral at 28.19	  
+jal printStr # Call at 28.10	 
+lw $t0, 0($sp) # IdentifierExp at 29.4 	 
+subu $sp, $sp, 8 # IdentifierExp at 29.4 		
+sw $s5, 4($sp) # IdentifierExp at 29.4	 
+sw $t0, ($sp) # IdentifierExp at 29.4 	
+subu $sp, $sp, 8 # IntegerLiteral at 29.5	
+sw $s5, 4($sp) # IntegerLiteral at 29.5			
+li $t0, 1 # IntegerLiteral at 29.5  
+sw $t0, ($sp) # IntegerLiteral at 29.5 	
+lw $t0, ($sp) # Plus at 29.5			
+lw $t1, 8($sp) # Plus at 29.5	  
+addu $t0, $t0, $t1 # Plus at 29.5		 
+addu $sp, $sp, 8 # Plus at 29.5	  
+sw $t0, ($sp) # Plus at 29.5  
+lw $t0, ($sp) # Assign at 29.4		
+sw $t0, 8($sp) # Assign at 29.4	 
+addu $sp, $sp, 8 # Assign at 29.4 
+while_enter_112: # While at 24.3   
+lw $t0, 0($sp) # IdentifierExp at 24.9 	 
+subu $sp, $sp, 8 # IdentifierExp at 24.9			
+sw $s5, 4($sp) # IdentifierExp at 24.9 	
+sw $t0, ($sp) # IdentifierExp at 24.9 
+lw $t0, 28($sp) # IdentifierExp at 24.13	  
+subu $sp, $sp, 4 # IdentifierExp at 24.13 
+sw $t0, ($sp) # IdentifierExp at 24.13  	
+lw $t0, ($sp) # ArrayLength at 24.18   
+beq $t0, $zero, nullPtrException # ArrayLength at 24.18	
+lw $t0, -4($t0) # ArrayLength at 24.18			
+sw $s5, ($sp) # ArrayLength at 24.18			
+subu $sp, $sp, 4 # ArrayLength at 24.18 	 
+sw $t0, ($sp) # ArrayLength at 24.18		
+lw $t0, ($sp) # LessThan at 24.11		
+lw $t1, 8($sp) # LessThan at 24.11		
+slt $t0, $t1, $t0 # LessThan at 24.11  	
+addu $sp, $sp, 12 # LessThan at 24.11		 
+sw $t0, ($sp) # LessThan at 24.11	  
+lw $t0, ($sp) # While at 24.3 
+addu $sp, $sp, 4 # While at 24.3	 	
+bne $t0, $zero, while_top_112 # While at 24.3 
+while_exit_112: # While at 24.3	  
+lw $ra, 28($sp) # MethodDeclVoid at 2.14   
+lw $s2, 4($sp) # MethodDeclVoid at 2.14	
+addu $sp, $sp, 36 # MethodDeclVoid at 2.14 		
+jr $ra # MethodDeclVoid at 2.14	  
 ###############################################################
 # MiniJava/UP library for MIPS/Spim -- version that assumes
 #    one-word boolean on stack
