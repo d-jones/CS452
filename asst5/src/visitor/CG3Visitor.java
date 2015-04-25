@@ -176,6 +176,34 @@ public class CG3Visitor extends ASTvisitor {
 				stackHeight -= 16;
 			}
 		}
+		//INSTANCE VAR ACCESS
+		else if(a.lhs instanceof InstVarAccess){
+			InstVarAccess iva = (InstVarAccess)a.lhs;
+			iva.exp.accept(this);
+			a.rhs.accept(this);
+			code.emit(a, "lw $t0, ($sp)");
+			int SSS;
+			if(a.lhs.type instanceof IntegerType){
+				SSS = 8;
+			}
+			else{
+				SSS = 4;
+			}
+			code.emit(a,  "lw $t1, " + SSS + "($sp)");
+			code.emit(a, "beq $t1, $zero, nullPtrException");
+			int NNN = iva.varDec.offset;
+			code.emit(a, "sw $t0, " + NNN + "($t1)");
+			
+			if(a.lhs.type instanceof IntegerType){
+				code.emit(a, "addu $sp, $sp, 12");
+				stackHeight -= 12;
+			}
+			else if(a.lhs.type instanceof Object || a.lhs.type instanceof ArrayType || 
+					a.lhs.type instanceof BooleanType){
+				code.emit(a, "addu $sp, $sp, 8");
+				stackHeight -= 8;
+			}
+		}
 		
 		return null;
 	}
@@ -222,15 +250,29 @@ public class CG3Visitor extends ASTvisitor {
 	public Object visitCall(Call c){
 		int sHeight = stackHeight;
 		c.obj.accept(this);
-		//c.parms.accept(this); 
-		for(Exp e : c.parms){
+		c.parms.accept(this); 
+		/*for(Exp e : c.parms){
 			e.accept(this);
+		}*/
+		
+		//calling a super method
+		if(c.obj instanceof Super){
+			if(c.methodLink.pos < 0){
+				code.emit(c, "jal " + c.methName); //c.methodLink.name?
+			}
+			else if(c.methodLink.pos > 0){
+				code.emit(c, "jal fcn_" + c.methodLink.uniqueId + "_" + c.methName);
+			}
 		}
-		if(c.methodLink.pos < 0){
-			code.emit(c, "jal " + c.methName); //c.methodLink.name?
-		}
-		else if(c.methodLink.pos > 0){
-			code.emit(c, "jal fcn_" + c.methodLink.uniqueId + "_" + c.methName);
+		//not a super method
+		else{
+			int MMM = c.methodLink.thisPtrOffset - 4;
+			int NNN = 4*c.methodLink.vtableOffset;
+			code.emit(c, "lw $t0, " + MMM + "($sp)");
+			code.emit(c, "beq $t0, $zero, nullPtrException");
+			code.emit(c, "lw $t0, -12($t0)");
+			code.emit(c, "lw $t0, " + NNN + "($t0)");
+			code.emit(c, "jalr $t0");
 		}
 		
 		if(c.type instanceof IntegerType){
@@ -242,6 +284,22 @@ public class CG3Visitor extends ASTvisitor {
 		else{
 			stackHeight = sHeight + 4;
 		}
+		
+		return null;
+	}
+	
+	
+	/*
+	 * (non-Javadoc)
+	 * @see visitor.ASTvisitor#visitCast(syntaxtree.Cast)
+	 */
+	@Override
+	public Object visitCast(Cast c){
+		c.exp.accept(this);
+		
+		code.emit(c, "la $t0, CLASS_" + c.castType);
+		code.emit(c, "la $t1, CLASS_END_" + c.castType);
+		code.emit(c, "jal checkCast");
 		
 		return null;
 	}
@@ -351,24 +409,26 @@ public class CG3Visitor extends ASTvisitor {
 	@Override
 	public Object visitIdentifierExp(IdentifierExp iExp){
 		//the variable is a LocalVarDecl
-		if(iExp.link instanceof LocalVarDecl){
-			int sDepth = stackHeight + iExp.link.offset;
-			code.emit(iExp, "lw $t0, " + sDepth + "($sp)");
-		}
-		//the variable is an InstVarDecl
-		else{
+		Type expType = iExp.link.type;
+		if(iExp.link instanceof InstVarDecl){
 			int NNN = iExp.link.offset;
 			code.emit(iExp, "lw $t0, " + NNN + "($s2)");
 		}
+		//the variable is an InstVarDecl
+		else{
+			int sDepth = stackHeight + iExp.link.offset;
+			code.emit(iExp, "lw $t0, " + sDepth + "($sp)");
+		}
 		
 		//the variable is an integer
-		if(iExp.link.type instanceof IntegerType){
+		if(expType instanceof IntegerType){
 			code.emit(iExp, "subu $sp, $sp, 8");
 			stackHeight += 8;
 			code.emit(iExp,  "sw $s5, 4($sp)");
 			code.emit(iExp,  "sw $t0, ($sp)");
 		}
-		else if(!(iExp.link.type instanceof VoidType)){
+		else if(expType instanceof Object || expType instanceof ArrayType || 
+				expType instanceof BooleanType){
 			code.emit(iExp, "subu $sp, $sp, 4");
 			stackHeight += 4;
 			code.emit(iExp,  "sw $t0, ($sp)");
@@ -400,11 +460,11 @@ public class CG3Visitor extends ASTvisitor {
 		return null;
 	}
 	
-/*	
 	
+	/*	
 	 * (non-Javadoc)
 	 * @see visitor.ASTvisitor#visitInstanceOf(syntaxtree.InstanceOf)
-	 
+	 **/
 	@Override
 	public Object visitInstanceOf(InstanceOf in){
 		in.exp.accept(this);
@@ -413,7 +473,7 @@ public class CG3Visitor extends ASTvisitor {
 		code.emit(in, "jal instanceOf");
 		
 		return null;
-	}*/
+	}
 	
 
 	/*
@@ -432,9 +492,10 @@ public class CG3Visitor extends ASTvisitor {
 			code.emit(iva, "subu $sp, $sp, 4"); //is this supposed to be 8???
 			stackHeight += 4; //Is this the correct placement???????????
 			code.emit(iva, "sw $s5, 4($sp)");
-			code.emit(iva, "$t0, ($sp)");
+			code.emit(iva, "sw $t0, ($sp)");
 		}
-		else if(!(iva.varDec.type instanceof VoidType)){
+		else if(iva.varDec.type instanceof Object || iva.varDec.type instanceof ArrayType
+				|| iva.varDec.type instanceof BooleanType){
 			code.emit(iva, "sw $t0, ($sp)");
 		}
 		
@@ -496,6 +557,61 @@ public class CG3Visitor extends ASTvisitor {
 	
 	/*
 	 * (non-Javadoc)
+	 * @see visitor.ASTvisitor#visitMethodDeclNonVoid(syntaxtree.MethodDeclNonVoid)
+	 */
+	@Override
+	public Object visitMethodDeclNonVoid(MethodDeclNonVoid m){
+		code.emit(m, ".globl fcn_" + m.uniqueId + "_" + m.name); 	//.globl fcn_999_methodName
+		code.emit(m, "fcn_" + m.uniqueId + "_" + m.name + ":"); 			//fcn_999_methodName
+		code.emit(m,  "subu $sp, $sp, 8"); 								//subu $sp, $sp, 8
+		code.emit(m, "sw $ra, 4($sp)"); 									//sw $41, 4($sp)
+		code.emit(m, "sw $s2, ($sp)");									//sw $s2, ($sp)
+		stackHeight = 4;
+		int NNN = 4 + m.thisPtrOffset;									//
+		code.emit(m, "lw $s2, " + NNN + "($sp)");						//lw $s2, NNN($sp)
+		m.stmts.accept(this);
+		m.rtnExp.accept(this);
+		int JJJ = stackHeight;												//the depth of the return address?
+		int KKK = NNN;														//saved this-pointer?
+		code.emit(m, "lw $ra, " + JJJ + "($sp)");
+		code.emit(m, "lw $s2, " + KKK + "($sp)");
+		
+		int parmsSpace = 0;
+		for(VarDecl var : m.formals){
+			if(var.type instanceof IntegerType){
+				parmsSpace += 8;
+			}
+			else{
+				parmsSpace += 4;
+			}
+		}
+		
+		int MMM;
+		int YYY = stackHeight + m.thisPtrOffset;
+		
+		if(m.rtnType instanceof IntegerType){
+			YYY -= 4;
+			int ZZZ = YYY + 4;
+			code.emit(m, "lw $t0, ($sp)");
+			code.emit(m, "sw $t0, " + YYY + "($sp)");
+			code.emit(m, "sw $s5, " + ZZZ + "($sp)");
+			
+			MMM = stackHeight + parmsSpace;
+		}
+		else{
+			code.emit(m, "lw $t0, ($sp)");
+			code.emit(m, "sw $t0, " + YYY + "($sp)");
+			MMM = stackHeight + parmsSpace + 4;
+		}
+		
+		code.emit(m, "addu $sp, $sp, " + MMM);
+		code.emit(m, "jr $ra");
+		return null;
+	}
+	
+	
+	/*
+	 * (non-Javadoc)
 	 * @see visitor.InhVisitor#visitMethodDeclVoid(syntaxtree.MethodDeclVoid)
 	 */
 	@Override
@@ -513,10 +629,20 @@ public class CG3Visitor extends ASTvisitor {
 		int KKK = NNN;														//saved this-pointer?
 		code.emit(meth, "lw $ra, " + JJJ + "($sp)");
 		code.emit(meth, "lw $s2, " + KKK + "($sp)");
-		int MMM = stackHeight + 4 + 4;
+		
+		int parmsSpace = 0;
+		for(VarDecl var : meth.formals){
+			if(var.type instanceof IntegerType){
+				parmsSpace += 8;
+			}
+			else{
+				parmsSpace += 4;
+			}
+		}
+		
+		int MMM = stackHeight + 4  + parmsSpace+ 4;
 		code.emit(meth, "addu $sp, $sp, " + MMM);
 		code.emit(meth, "jr $ra");
-		
 		return null;
 	}
 	
@@ -570,19 +696,19 @@ public class CG3Visitor extends ASTvisitor {
 	 */
 	@Override
 	public Object visitNewObject(NewObject no){
-/*		int NNN = no.objType.link.numObjInstVars;
+		int NNN = no.objType.link.numObjInstVars;
 		int MMM = no.objType.link.numDataInstVars + 1;
 		code.emit(no, "li $s6, " + MMM);
 		code.emit(no, "li $s7, " + NNN);
 		code.emit(no, "jal newObject");
 		stackHeight += 4;
 		code.emit(no, "la $t0, CLASS_" + no.objType.name);
-		code.emit(no, "sw $t0, -12($s7)");*/
+		code.emit(no, "sw $t0, -12($s7)");
 		
 		
-		code.emit(no, "subu $sp, $sp, 4");
+	/*	code.emit(no, "subu $sp, $sp, 4");
 		stackHeight += 4;
-		code.emit(no, "sw $zero, ($sp)");
+		code.emit(no, "sw $zero, ($sp)");*/
 		
 		return null;
 	}
@@ -598,6 +724,20 @@ public class CG3Visitor extends ASTvisitor {
 		code.emit(n, "lw $t0, ($sp)");
 		code.emit(n, "xor $t0, $t0, 1");
 		code.emit(n, "sw $t0, ($sp)");
+		
+		return null;
+	}
+	
+	
+	/*
+	 * (non-Javadoc)
+	 * @see visitor.InhVisitor#visitNull(syntaxtree.Null)
+	 */
+	@Override
+	public Object visitNull(Null n){
+		code.emit(n, "subu $sp, $sp, 4");
+		stackHeight += 4;
+		code.emit(n, "sw $zero, ($sp)");
 		
 		return null;
 	}
@@ -647,8 +787,8 @@ public class CG3Visitor extends ASTvisitor {
 	@Override
 	public Object visitProgram(Program prog){
 		//prog.mainStatement.accept(this);
-		code.emit(prog, "CLASS_Object:");
-		code.emit(prog, "CLASS_String:");
+		//code.emit(prog, "CLASS_Object:");
+		//code.emit(prog, "CLASS_String:");
 		
 		code.emit(prog,  ".text");
 		code.emit(prog, ".global main");
