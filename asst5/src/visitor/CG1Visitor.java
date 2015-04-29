@@ -51,6 +51,7 @@ public class CG1Visitor extends ASTvisitor {
 	 */
 	private ClassDecl findObjectClass(ClassDecl c){
 		if(c != null){
+System.out.println("c.name: " + c.name);
 			if(c.superLink == null){
 				return c;
 			}
@@ -84,18 +85,20 @@ public class CG1Visitor extends ASTvisitor {
 		if(cd == null){
 			return 0;
 		}
-		
 		HashSet<String> names = new HashSet<String>();
 		
 		ClassDecl traverseClass = cd;
-		
+System.out.println("traverseClass: " + traverseClass.name);		
 		while(traverseClass != null){
+System.out.println("traverseClass is NOT null");
+System.out.println("methodTable.keySet.size(): " + traverseClass.methodTable.size());
 			for(String s : traverseClass.methodTable.keySet()){
+System.out.println("s: " + s);
 				names.add(s);
 			}
 			traverseClass = traverseClass.superLink;
 		}
-		
+//System.out.println("cd.name: " + cd.name + "\n\tnames.size(): " + names.size());
 		return names.size();
 	}
 	
@@ -109,20 +112,20 @@ public class CG1Visitor extends ASTvisitor {
 			currentMethodTable.setSize(m.vtableOffset);
 		}
 
-		if(m.pos >= 0){
-			if(currentMethodTable.contains(m.vtableOffset)){
-				currentMethodTable.set(m.vtableOffset, "fcn_" + m.uniqueId + "_" + m.name);
-			}
-			else{
-				currentMethodTable.add(m.vtableOffset, "fcn_" + m.uniqueId + "_" + m.name);
-			}
-		}
-		else{
+		if(m.pos < 0){
 			if(currentMethodTable.contains(m.vtableOffset)){
 				currentMethodTable.set(m.vtableOffset, m.name);
 			}
 			else{
 				currentMethodTable.add(m.vtableOffset, m.name);
+			}
+		}
+		else{
+			if(currentMethodTable.contains(m.vtableOffset)){
+				currentMethodTable.set(m.vtableOffset, "fcn_" + m.uniqueId + "_" + m.name);
+			}
+			else{
+				currentMethodTable.add(m.vtableOffset, "fcn_" + m.uniqueId + "_" + m.name);
 			}
 		}
 	}
@@ -136,8 +139,8 @@ public class CG1Visitor extends ASTvisitor {
 	  */
 	@Override
 	public Object visitClassDecl(ClassDecl c){
-		currentMethodTable = superclassMethodTables.lastElement();
-		currentMethodOffset = 1 + numMethods(c.superLink);
+		currentMethodTable = new Vector<String>(superclassMethodTables.peek());
+		currentMethodOffset = 1 + numMethods(c.superLink); //c.superLink before
 		
 		//set the currentDataInstVarOffset & 
 		//currentObjInstVarOffset
@@ -152,9 +155,9 @@ public class CG1Visitor extends ASTvisitor {
 		
 		//do the subnode traversal
 		super.visitClassDecl(c);
-		ClassDecl objClassDecl = findObjectClass(c);
-		objClassDecl.numDataInstVars = (-16 - currentDataInstVarOffset)/4;
-		objClassDecl.numObjInstVars = currentObjInstVarOffset / 4;
+		//ClassDecl objClassDecl = findObjectClass(c);
+		c.numDataInstVars = (-16 - currentDataInstVarOffset)/4;
+		c.numObjInstVars = currentObjInstVarOffset/4;
 		code.emit(c, "CLASS_" + c.name + ":");
 		
 		if(c.superLink == null){
@@ -283,7 +286,6 @@ public class CG1Visitor extends ASTvisitor {
 				num += 1;
 			}
 		}
-		
 		return num;
 	}
 }
