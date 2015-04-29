@@ -51,7 +51,7 @@ public class CG1Visitor extends ASTvisitor {
 	 */
 	private ClassDecl findObjectClass(ClassDecl c){
 		if(c != null){
-System.out.println("c.name: " + c.name);
+//System.out.println("c.name: " + c.name);
 			if(c.superLink == null){
 				return c;
 			}
@@ -88,12 +88,12 @@ System.out.println("c.name: " + c.name);
 		HashSet<String> names = new HashSet<String>();
 		
 		ClassDecl traverseClass = cd;
-System.out.println("traverseClass: " + traverseClass.name);		
+//System.out.println("traverseClass: " + traverseClass.name);		
 		while(traverseClass != null){
-System.out.println("traverseClass is NOT null");
-System.out.println("methodTable.keySet.size(): " + traverseClass.methodTable.size());
+//System.out.println("traverseClass is NOT null");
+//System.out.println("methodTable.keySet.size(): " + traverseClass.methodTable.size());
 			for(String s : traverseClass.methodTable.keySet()){
-System.out.println("s: " + s);
+//System.out.println("s: " + s);
 				names.add(s);
 			}
 			traverseClass = traverseClass.superLink;
@@ -113,19 +113,19 @@ System.out.println("s: " + s);
 		}
 
 		if(m.pos < 0){
-			if(currentMethodTable.contains(m.vtableOffset)){
+			if(m.superMethod != null){
 				currentMethodTable.set(m.vtableOffset, m.name);
 			}
 			else{
-				currentMethodTable.add(m.vtableOffset, m.name);
+				currentMethodTable.add(m.name);
 			}
 		}
 		else{
-			if(currentMethodTable.contains(m.vtableOffset)){
+			if(m.superMethod != null){
 				currentMethodTable.set(m.vtableOffset, "fcn_" + m.uniqueId + "_" + m.name);
 			}
 			else{
-				currentMethodTable.add(m.vtableOffset, "fcn_" + m.uniqueId + "_" + m.name);
+				currentMethodTable.add("fcn_" + m.uniqueId + "_" + m.name);
 			}
 		}
 	}
