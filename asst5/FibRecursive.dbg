@@ -1,304 +1,380 @@
-.data # Program at 5.1		 
-3132:CLASS_Object: # ClassDecl at 0.0 
-.word 0 # ClassDecl at 0.0 	 
-3136:CLASS_Lib: # ClassDecl at 0.0  	
-.word CLASS_Object # ClassDecl at 0.0	  
-.word readLine # ClassDecl at 0.0 	 
-.word readInt # ClassDecl at 0.0  	
-.word readChar # ClassDecl at 0.0	 	
-.word printStr # ClassDecl at 0.0		 
-.word printBool # ClassDecl at 0.0 		
-.word printInt # ClassDecl at 0.0	  
-.word intToString # ClassDecl at 0.0	 	
-.word intToChar # ClassDecl at 0.0		
-3172:CLASS_END_Lib: # ClassDecl at 0.0 		
-3172:CLASS_String: # ClassDecl at 0.0  	
+.data # Program at 5.1   
+3132:CLASS_Object: # ClassDecl at 0.0  	
+.word 0 # ClassDecl at 0.0			
+3136:CLASS_Lib: # ClassDecl at 0.0 	
 .word CLASS_Object # ClassDecl at 0.0   
-.word concat # ClassDecl at 0.0   
-.word substring # ClassDecl at 0.0	  
-.word length # ClassDecl at 0.0	 	
-.word charAt # ClassDecl at 0.0  	
-.word compareTo # ClassDecl at 0.0 	
-.word readLine # ClassDecl at 0.0	  
-.word readInt # ClassDecl at 0.0	 
-.word readChar # ClassDecl at 0.0 	 
+.word readLine # ClassDecl at 0.0	 	
+.word readInt # ClassDecl at 0.0 
+.word readChar # ClassDecl at 0.0  	
 .word printStr # ClassDecl at 0.0		 
-.word printBool # ClassDecl at 0.0 	 
-.word printInt # ClassDecl at 0.0			
-.word intToString # ClassDecl at 0.0   
-.word intToChar # ClassDecl at 0.0	  
-3228:CLASS_END_String: # ClassDecl at 0.0 	 
-3228:CLASS_RunMain: # ClassDecl at 0.0		
-.word CLASS_Object # ClassDecl at 0.0	  
-.word concat # ClassDecl at 0.0 	
-.word substring # ClassDecl at 0.0   
-.word length # ClassDecl at 0.0		 
-.word charAt # ClassDecl at 0.0			
-.word compareTo # ClassDecl at 0.0 
-.word readLine # ClassDecl at 0.0 	 
-.word readInt # ClassDecl at 0.0		
-.word readChar # ClassDecl at 0.0		
-.word printStr # ClassDecl at 0.0		
-.word printBool # ClassDecl at 0.0   
-.word printInt # ClassDecl at 0.0		 
-.word intToString # ClassDecl at 0.0		
-.word intToChar # ClassDecl at 0.0	 	
-3284:CLASS_END_RunMain: # ClassDecl at 0.0 	 
-3284:CLASS_Main: # ClassDecl at 5.7		 
-.word CLASS_Object # ClassDecl at 5.7	  
-.word fcn_32_main # ClassDecl at 5.7 
-.word fcn_59_fib # ClassDecl at 5.7	  
-.word concat # ClassDecl at 5.7  
-.word substring # ClassDecl at 5.7   
-.word length # ClassDecl at 5.7  	
-.word charAt # ClassDecl at 5.7			
-.word compareTo # ClassDecl at 5.7		
-.word readLine # ClassDecl at 5.7 
-.word readInt # ClassDecl at 5.7	 
-.word readChar # ClassDecl at 5.7		
-.word printStr # ClassDecl at 5.7   
-.word printBool # ClassDecl at 5.7  	
-.word printInt # ClassDecl at 5.7		
-.word intToString # ClassDecl at 5.7	  
-.word intToChar # ClassDecl at 5.7 	 
-3348:CLASS_END_Main: # ClassDecl at 5.7   
-3348:CLASS_END_Object: # ClassDecl at 0.0 		
- .data # Program at 5.1			
-  .byte 84 # StringLiteral at 20.15   
-  .byte 104 # StringLiteral at 20.15	
-  .byte 101 # StringLiteral at 20.15   
-  .byte 32 # StringLiteral at 20.15 	
-  .byte 102 # StringLiteral at 20.15			
-  .byte 105 # StringLiteral at 20.15 
-  .byte 98 # StringLiteral at 20.15 	
-  .byte 111 # StringLiteral at 20.15		 
+.word printBool # ClassDecl at 0.0  	
+.word printInt # ClassDecl at 0.0 	
+.word intToString # ClassDecl at 0.0			
+.word intToChar # ClassDecl at 0.0  
+3172:CLASS_END_Lib: # ClassDecl at 0.0	  
+3172:CLASS_String: # ClassDecl at 0.0  
+.word CLASS_Object # ClassDecl at 0.0 	 
+.word concat # ClassDecl at 0.0			
+.word substring # ClassDecl at 0.0	 
+.word length # ClassDecl at 0.0  	
+.word charAt # ClassDecl at 0.0	 	
+.word compareTo # ClassDecl at 0.0	
+3196:CLASS_END_String: # ClassDecl at 0.0 
+3196:CLASS_RunMain: # ClassDecl at 0.0 	
+.word CLASS_Object # ClassDecl at 0.0 	 
+3200:CLASS_END_RunMain: # ClassDecl at 0.0 		
+3200:CLASS_Main: # ClassDecl at 5.7	 	
+.word CLASS_Object # ClassDecl at 5.7 	 
+.word fcn_32_main # ClassDecl at 5.7	  
+.word fcn_59_fib # ClassDecl at 5.7  
+3212:CLASS_END_Main: # ClassDecl at 5.7 
+3212:CLASS_END_Object: # ClassDecl at 0.0  
+ .data # Program at 5.1		 
+  .byte 84 # StringLiteral at 20.15	 
+  .byte 104 # StringLiteral at 20.15 
+  .byte 101 # StringLiteral at 20.15	 
+  .byte 32 # StringLiteral at 20.15		
+  .byte 102 # StringLiteral at 20.15	  
+  .byte 105 # StringLiteral at 20.15	  
+  .byte 98 # StringLiteral at 20.15	 
+  .byte 111 # StringLiteral at 20.15			
   .byte 110 # StringLiteral at 20.15  	
-  .byte 97 # StringLiteral at 20.15		
-  .byte 99 # StringLiteral at 20.15 	
-  .byte 99 # StringLiteral at 20.15 		
-  .byte 105 # StringLiteral at 20.15 	 
-  .byte 32 # StringLiteral at 20.15		 
-  .byte 110 # StringLiteral at 20.15	 
-  .byte 117 # StringLiteral at 20.15 	
-  .byte 109 # StringLiteral at 20.15		 
-  .byte 98 # StringLiteral at 20.15	
-  .byte 101 # StringLiteral at 20.15 
-  .byte 114 # StringLiteral at 20.15  
-  .byte 32 # StringLiteral at 20.15   
-  .byte 111 # StringLiteral at 20.15		 
-  .byte 102 # StringLiteral at 20.15  
-  .byte 32 # StringLiteral at 20.15 	 
+  .byte 97 # StringLiteral at 20.15  
+  .byte 99 # StringLiteral at 20.15  
+  .byte 99 # StringLiteral at 20.15 
+  .byte 105 # StringLiteral at 20.15		
+  .byte 32 # StringLiteral at 20.15			
+  .byte 110 # StringLiteral at 20.15		
+  .byte 117 # StringLiteral at 20.15	 
+  .byte 109 # StringLiteral at 20.15	 
+  .byte 98 # StringLiteral at 20.15   
+  .byte 101 # StringLiteral at 20.15  	
+  .byte 114 # StringLiteral at 20.15		 
+  .byte 32 # StringLiteral at 20.15	 
+  .byte 111 # StringLiteral at 20.15	
+  .byte 102 # StringLiteral at 20.15	 
+  .byte 32 # StringLiteral at 20.15 	
   .word CLASS_String # StringLiteral at 20.15 	 
-  .word 7 # StringLiteral at 20.15	 
-  .word -24 # StringLiteral at 20.15	 
-3384:strLit_13: # StringLiteral at 20.15	
-  .byte 32 # StringLiteral at 22.15  
-  .byte 105 # StringLiteral at 22.15  
+  .word 7 # StringLiteral at 20.15	
+  .word -24 # StringLiteral at 20.15 	 
+3248:strLit_13: # StringLiteral at 20.15   
+  .byte 32 # StringLiteral at 22.15		 
+  .byte 105 # StringLiteral at 22.15 		
   .byte 115 # StringLiteral at 22.15	 
-  .byte 32 # StringLiteral at 22.15 
-  .word CLASS_String # StringLiteral at 22.15 		
-  .word 2 # StringLiteral at 22.15	 
-  .word -4 # StringLiteral at 22.15   
-3400:strLit_21: # StringLiteral at 22.15 		
-  .byte 46 # StringLiteral at 24.15		
-  .byte 10 # StringLiteral at 24.15			
-  .byte 0 # StringLiteral at 24.15 
-  .byte 0 # StringLiteral at 24.15 	 
-  .word CLASS_String # StringLiteral at 24.15  
-  .word 2 # StringLiteral at 24.15	 
-  .word -2 # StringLiteral at 24.15 
-3416:strLit_29: # StringLiteral at 24.15  
-.text # Program at 5.1   
-.global main # Program at 5.1			
-0:main: # Program at 5.1   
-0#jal vm_init # Program at 5.1 	
-4#li $s6, 1 # NewObject at 0.0 	 
-8#li $s7, 0 # NewObject at 0.0		 
-12#jal newObject # NewObject at 0.0		
-16#la $t0, CLASS_Main # NewObject at 0.0			
-20#sw $t0, -12($s7) # NewObject at 0.0  	
-24#lw $t0, 0($sp) # Call at 0.0	 
-28#beq $t0, $zero, nullPtrException # Call at 0.0		
-32#lw $t0, -12($t0) # Call at 0.0 
-36#lw $t0, 4($t0) # Call at 0.0  
-40#jalr $t0 # Call at 0.0		 
-44#li $v0, 10 # Program at 5.1	 
-48#syscall # Program at 5.1	 	
-.globl fcn_32_main # MethodDeclVoid at 8.17 		
-52:fcn_32_main: # MethodDeclVoid at 8.17 	
-52#subu $sp, $sp, 8 # MethodDeclVoid at 8.17	 	
-56#sw $ra, 4($sp) # MethodDeclVoid at 8.17 		
-60#sw $s2, ($sp) # MethodDeclVoid at 8.17	 
-64#lw $s2, 8($sp) # MethodDeclVoid at 8.17   
-68#li $s6, 1 # NewObject at 11.12 		
-72#li $s7, 0 # NewObject at 11.12 		
-76#jal newObject # NewObject at 11.12		
-80#la $t0, CLASS_Lib # NewObject at 11.12  
-84#sw $t0, -12($s7) # NewObject at 11.12 	
-88#subu $sp, $sp, 8 # IntegerLiteral at 14.12	 	
-92#sw $s5, 4($sp) # IntegerLiteral at 14.12 		
-96#li $t0, 14 # IntegerLiteral at 14.12  
-100#sw $t0, ($sp) # IntegerLiteral at 14.12	 
-104#subu $sp, $sp, 4 # This at 17.15 
-108#sw $s2, ($sp) # This at 17.15	
-112#lw $t0, 4($sp) # IdentifierExp at 17.19		
-116#subu $sp, $sp, 8 # IdentifierExp at 17.19   
-120#sw $s5, 4($sp) # IdentifierExp at 17.19		 
-124#sw $t0, ($sp) # IdentifierExp at 17.19 
-128#lw $t0, 8($sp) # Call at 17.15		 
-132#beq $t0, $zero, nullPtrException # Call at 17.15			
-136#lw $t0, -12($t0) # Call at 17.15			
-140#lw $t0, 8($t0) # Call at 17.15			
-144#jalr $t0 # Call at 17.15	 
-148#lw $t0, 16($sp) # IdentifierExp at 20.2 		
-152#subu $sp, $sp, 4 # IdentifierExp at 20.2	 
-156#sw $t0, ($sp) # IdentifierExp at 20.2 	 
-160#subu $sp, $sp, 4 # StringLiteral at 20.15	
-164#la $t0, strLit_13 # StringLiteral at 20.15		
-168#sw $t0, ($sp) # StringLiteral at 20.15	 	
-172#lw $t0, 4($sp) # Call at 20.6 		
-176#beq $t0, $zero, nullPtrException # Call at 20.6	  
-180#lw $t0, -12($t0) # Call at 20.6	 	
-184#lw $t0, 16($t0) # Call at 20.6  
-188#jalr $t0 # Call at 20.6			
-192#lw $t0, 16($sp) # IdentifierExp at 21.2		 
-196#subu $sp, $sp, 4 # IdentifierExp at 21.2   
-200#sw $t0, ($sp) # IdentifierExp at 21.2 
-204#lw $t0, 12($sp) # IdentifierExp at 21.15		
-208#subu $sp, $sp, 8 # IdentifierExp at 21.15			
-212#sw $s5, 4($sp) # IdentifierExp at 21.15	  
-216#sw $t0, ($sp) # IdentifierExp at 21.15   
-220#lw $t0, 8($sp) # Call at 21.6	  
-224#beq $t0, $zero, nullPtrException # Call at 21.6 	 
-228#lw $t0, -12($t0) # Call at 21.6	 
-232#lw $t0, 24($t0) # Call at 21.6	
-236#jalr $t0 # Call at 21.6			
-240#lw $t0, 16($sp) # IdentifierExp at 22.2   
-244#subu $sp, $sp, 4 # IdentifierExp at 22.2	
-248#sw $t0, ($sp) # IdentifierExp at 22.2			
-252#subu $sp, $sp, 4 # StringLiteral at 22.15 
-256#la $t0, strLit_21 # StringLiteral at 22.15	 	
-260#sw $t0, ($sp) # StringLiteral at 22.15   
-264#lw $t0, 4($sp) # Call at 22.6	 	
-268#beq $t0, $zero, nullPtrException # Call at 22.6 	 
-272#lw $t0, -12($t0) # Call at 22.6		 
-276#lw $t0, 16($t0) # Call at 22.6 	
-280#jalr $t0 # Call at 22.6	
-284#lw $t0, 16($sp) # IdentifierExp at 23.2 	 
-288#subu $sp, $sp, 4 # IdentifierExp at 23.2		
-292#sw $t0, ($sp) # IdentifierExp at 23.2 
-296#lw $t0, 4($sp) # IdentifierExp at 23.15 	 
-300#subu $sp, $sp, 8 # IdentifierExp at 23.15 	 
-304#sw $s5, 4($sp) # IdentifierExp at 23.15  	
-308#sw $t0, ($sp) # IdentifierExp at 23.15		
-312#lw $t0, 8($sp) # Call at 23.6		 
-316#beq $t0, $zero, nullPtrException # Call at 23.6	
-320#lw $t0, -12($t0) # Call at 23.6  	
-324#lw $t0, 24($t0) # Call at 23.6  
-328#jalr $t0 # Call at 23.6   
-332#lw $t0, 16($sp) # IdentifierExp at 24.2 
-336#subu $sp, $sp, 4 # IdentifierExp at 24.2 		
-340#sw $t0, ($sp) # IdentifierExp at 24.2			
-344#subu $sp, $sp, 4 # StringLiteral at 24.15 	 
-348#la $t0, strLit_29 # StringLiteral at 24.15  	
-352#sw $t0, ($sp) # StringLiteral at 24.15	
-356#lw $t0, 4($sp) # Call at 24.6		
-360#beq $t0, $zero, nullPtrException # Call at 24.6 		
-364#lw $t0, -12($t0) # Call at 24.6  
-368#lw $t0, 16($t0) # Call at 24.6	  
-372#jalr $t0 # Call at 24.6  
-376#lw $ra, 24($sp) # MethodDeclVoid at 8.17  	
-380#lw $s2, 8($sp) # MethodDeclVoid at 8.17 	
-384#addu $sp, $sp, 32 # MethodDeclVoid at 8.17	
-388#jr $ra # MethodDeclVoid at 8.17	
-.globl fcn_59_fib # MethodDeclNonVoid at 29.16 		
-392:fcn_59_fib: # MethodDeclNonVoid at 29.16  
-392#subu $sp, $sp, 8 # MethodDeclNonVoid at 29.16	 
-396#sw $ra, 4($sp) # MethodDeclNonVoid at 29.16		 
-400#sw $s2, ($sp) # MethodDeclNonVoid at 29.16 	 
-404#lw $s2, 16($sp) # MethodDeclNonVoid at 29.16 
-408#lw $t0, 8($sp) # IdentifierExp at 31.15	 	
-412#subu $sp, $sp, 8 # IdentifierExp at 31.15 	
-416#sw $s5, 4($sp) # IdentifierExp at 31.15	 
-420#sw $t0, ($sp) # IdentifierExp at 31.15 
-424#lw $t0, 16($sp) # IdentifierExp at 32.6 
-428#subu $sp, $sp, 8 # IdentifierExp at 32.6	 	
-432#sw $s5, 4($sp) # IdentifierExp at 32.6 
-436#sw $t0, ($sp) # IdentifierExp at 32.6		 
-440#subu $sp, $sp, 8 # IntegerLiteral at 32.10	
-444#sw $s5, 4($sp) # IntegerLiteral at 32.10	
-448#li $t0, 1 # IntegerLiteral at 32.10 	 
-452#sw $t0, ($sp) # IntegerLiteral at 32.10	 
-456#lw $t0, ($sp) # GreaterThan at 32.8	 
-460#lw $t1, 8($sp) # GreaterThan at 32.8   
-464#sgt $t0, $t1, $t0 # GreaterThan at 32.8 	
-468#addu $sp, $sp, 12 # GreaterThan at 32.8		 
-472#sw $t0, ($sp) # GreaterThan at 32.8	 	
-476#lw $t0, ($sp) # If at 32.2 		
-480#addu $sp, $sp, 4 # If at 32.2		
-484#beq $t0, $zero, if_else_57 # If at 32.2		
-488#subu $sp, $sp, 4 # This at 34.15 
-492#sw $s2, ($sp) # This at 34.15	 	
-496#lw $t0, 20($sp) # IdentifierExp at 34.19		 
-500#subu $sp, $sp, 8 # IdentifierExp at 34.19  	
-504#sw $s5, 4($sp) # IdentifierExp at 34.19	
-508#sw $t0, ($sp) # IdentifierExp at 34.19			
-512#subu $sp, $sp, 8 # IntegerLiteral at 34.21	  
-516#sw $s5, 4($sp) # IntegerLiteral at 34.21 
-520#li $t0, 1 # IntegerLiteral at 34.21 	 
-524#sw $t0, ($sp) # IntegerLiteral at 34.21	
-528#lw $t0, ($sp) # Minus at 34.20	 
-532#lw $t1, 8($sp) # Minus at 34.20		 
-536#subu $t0, $t1, $t0 # Minus at 34.20 	
-540#addu $sp, $sp, 8 # Minus at 34.20			
-544#sw $t0, ($sp) # Minus at 34.20  
-548#lw $t0, 8($sp) # Call at 34.15	
-552#beq $t0, $zero, nullPtrException # Call at 34.15 
-556#lw $t0, -12($t0) # Call at 34.15	 	
-560#lw $t0, 8($t0) # Call at 34.15		 
-564#jalr $t0 # Call at 34.15 
-568#subu $sp, $sp, 4 # This at 34.26   
-572#sw $s2, ($sp) # This at 34.26 
-576#lw $t0, 28($sp) # IdentifierExp at 34.30		 
-580#subu $sp, $sp, 8 # IdentifierExp at 34.30		 
-584#sw $s5, 4($sp) # IdentifierExp at 34.30 	
-588#sw $t0, ($sp) # IdentifierExp at 34.30  
-592#subu $sp, $sp, 8 # IntegerLiteral at 34.32	  
-596#sw $s5, 4($sp) # IntegerLiteral at 34.32 
-600#li $t0, 2 # IntegerLiteral at 34.32 	
-604#sw $t0, ($sp) # IntegerLiteral at 34.32	  
-608#lw $t0, ($sp) # Minus at 34.31	
-612#lw $t1, 8($sp) # Minus at 34.31	 	
-616#subu $t0, $t1, $t0 # Minus at 34.31 
-620#addu $sp, $sp, 8 # Minus at 34.31   
-624#sw $t0, ($sp) # Minus at 34.31	  
-628#lw $t0, 8($sp) # Call at 34.26 		
-632#beq $t0, $zero, nullPtrException # Call at 34.26	 
-636#lw $t0, -12($t0) # Call at 34.26	 	
-640#lw $t0, 8($t0) # Call at 34.26 
-644#jalr $t0 # Call at 34.26			
-648#lw $t0, ($sp) # Plus at 34.24 	 
-652#lw $t1, 8($sp) # Plus at 34.24		 
-656#addu $t0, $t0, $t1 # Plus at 34.24 
-660#addu $sp, $sp, 8 # Plus at 34.24 	 
-664#sw $t0, ($sp) # Plus at 34.24	  
-668#lw $t0, ($sp) # Assign at 34.13	
-672#sw $t0, 8($sp) # Assign at 34.13		
-676#addu $sp, $sp, 8 # Assign at 34.13   
-680#j if_done_57 # If at 32.2			
-684:if_else_57: # If at 32.2	  
-684:if_done_57: # If at 32.2 		
-684#lw $t0, 0($sp) # IdentifierExp at 36.9 	
-688#subu $sp, $sp, 8 # IdentifierExp at 36.9 	 
-692#sw $s5, 4($sp) # IdentifierExp at 36.9  
-696#sw $t0, ($sp) # IdentifierExp at 36.9 		
-700#lw $ra, 20($sp) # MethodDeclNonVoid at 29.16 	 
-704#lw $s2, 16($sp) # MethodDeclNonVoid at 29.16	
-708#lw $t0, ($sp) # MethodDeclNonVoid at 29.16	
-712#sw $t0, 28($sp) # MethodDeclNonVoid at 29.16   
-716#sw $s5, 32($sp) # MethodDeclNonVoid at 29.16 	 
-720#addu $sp, $sp, 28 # MethodDeclNonVoid at 29.16  
-724#jr $ra # MethodDeclNonVoid at 29.16			
+  .byte 32 # StringLiteral at 22.15		
+  .word CLASS_String # StringLiteral at 22.15 
+  .word 2 # StringLiteral at 22.15	
+  .word -4 # StringLiteral at 22.15 
+3264:strLit_21: # StringLiteral at 22.15	  
+  .byte 46 # StringLiteral at 24.15 
+  .byte 10 # StringLiteral at 24.15 	
+  .byte 0 # StringLiteral at 24.15		 
+  .byte 0 # StringLiteral at 24.15   
+  .word CLASS_String # StringLiteral at 24.15  	
+  .word 2 # StringLiteral at 24.15 
+  .word -2 # StringLiteral at 24.15  	
+3280:strLit_29: # StringLiteral at 24.15  	
+  # ENTER NODE # Program at 5.1		 
+  .text # Program at 5.1	 	
+  .globl main # Program at 5.1 		
+0:  main: # Program at 5.1 		
+0#  jal vm_init # Program at 5.1	 	
+    # ENTER NODE # ExpStatement at 0.0 		
+      # ENTER NODE # Call at 0.0  
+        # ENTER NODE # NewObject at 0.0 	 
+4#        li $s6, 1 # NewObject at 0.0  
+8#        li $s7, 0 # NewObject at 0.0 	
+12#        jal newObject # NewObject at 0.0 
+16#        la $t0, CLASS_Main # NewObject at 0.0		
+20#        sw $t0, -12($s7) # NewObject at 0.0  	
+        # EXIT NODE # NewObject at 0.0  	
+24#      lw $t0, 0($sp) # Call at 0.0 	
+28#      beq $t0, $zero, nullPtrException # Call at 0.0   
+32#      lw $t0, -12($t0) # Call at 0.0 		
+36#      lw $t0, 4($t0) # Call at 0.0  	
+40#      jalr $t0 # Call at 0.0   
+      # EXIT NODE # Call at 0.0	 	
+    # EXIT NODE # ExpStatement at 0.0 		
+44#  li $v0, 10 # Program at 5.1	
+48#  syscall # Program at 5.1	 	
+    # ENTER NODE # MethodDeclVoid at 8.17		
+    .globl fcn_32_main # MethodDeclVoid at 8.17  	
+52:    fcn_32_main: # MethodDeclVoid at 8.17		
+52#    subu $sp, $sp, 8 # MethodDeclVoid at 8.17		
+56#    sw $ra, 4($sp) # MethodDeclVoid at 8.17 	
+60#    sw $s2, ($sp) # MethodDeclVoid at 8.17		 
+64#    lw $s2, 8($sp) # MethodDeclVoid at 8.17		 
+      # ENTER NODE # LocalVarDecl at 11.6		 
+        # ENTER NODE # NewObject at 11.12	  
+68#        li $s6, 1 # NewObject at 11.12			
+72#        li $s7, 0 # NewObject at 11.12		
+76#        jal newObject # NewObject at 11.12 
+80#        la $t0, CLASS_Lib # NewObject at 11.12   
+84#        sw $t0, -12($s7) # NewObject at 11.12 	
+        # EXIT NODE # NewObject at 11.12 		
+      # EXIT NODE # LocalVarDecl at 11.6			
+      # ENTER NODE # LocalVarDecl at 14.6	 
+        # ENTER NODE # IntegerLiteral at 14.12 	
+88#        subu $sp, $sp, 8 # IntegerLiteral at 14.12 
+92#        sw $s5, 4($sp) # IntegerLiteral at 14.12			
+96#        li $t0, 14 # IntegerLiteral at 14.12   
+100#        sw $t0, ($sp) # IntegerLiteral at 14.12 	
+        # EXIT NODE # IntegerLiteral at 14.12 	 
+      # EXIT NODE # LocalVarDecl at 14.6	  
+      # ENTER NODE # LocalVarDecl at 17.6  
+        # ENTER NODE # Call at 17.15			
+          # ENTER NODE # This at 17.15  	
+104#          subu $sp, $sp, 4 # This at 17.15 
+108#          sw $s2, ($sp) # This at 17.15	
+          # EXIT NODE # This at 17.15  
+          # ENTER NODE # IdentifierExp at 17.19			
+112#          lw $t0, 4($sp) # IdentifierExp at 17.19	 
+116#          subu $sp, $sp, 8 # IdentifierExp at 17.19 
+120#          sw $s5, 4($sp) # IdentifierExp at 17.19			
+124#          sw $t0, ($sp) # IdentifierExp at 17.19		
+          # EXIT NODE # IdentifierExp at 17.19	
+128#        lw $t0, 8($sp) # Call at 17.15 
+132#        beq $t0, $zero, nullPtrException # Call at 17.15	  
+136#        lw $t0, -12($t0) # Call at 17.15 
+140#        lw $t0, 8($t0) # Call at 17.15  	
+144#        jalr $t0 # Call at 17.15  	
+        # EXIT NODE # Call at 17.15 
+      # EXIT NODE # LocalVarDecl at 17.6		
+      # ENTER NODE # ExpStatement at 20.6  	
+        # ENTER NODE # Call at 20.6  
+          # ENTER NODE # IdentifierExp at 20.2  
+148#          lw $t0, 16($sp) # IdentifierExp at 20.2			
+152#          subu $sp, $sp, 4 # IdentifierExp at 20.2 		
+156#          sw $t0, ($sp) # IdentifierExp at 20.2	 
+          # EXIT NODE # IdentifierExp at 20.2   
+          # ENTER NODE # StringLiteral at 20.15 	
+160#          subu $sp, $sp, 4 # StringLiteral at 20.15   
+164#          la $t0, strLit_13 # StringLiteral at 20.15	 
+168#          sw $t0, ($sp) # StringLiteral at 20.15   
+          # EXIT NODE # StringLiteral at 20.15	  
+172#        lw $t0, 4($sp) # Call at 20.6 	 
+176#        beq $t0, $zero, nullPtrException # Call at 20.6  	
+180#        lw $t0, -12($t0) # Call at 20.6	
+184#        lw $t0, 16($t0) # Call at 20.6 	 
+188#        jalr $t0 # Call at 20.6 	 
+        # EXIT NODE # Call at 20.6  	
+      # EXIT NODE # ExpStatement at 20.6		 
+      # ENTER NODE # ExpStatement at 21.6 		
+        # ENTER NODE # Call at 21.6   
+          # ENTER NODE # IdentifierExp at 21.2 
+192#          lw $t0, 16($sp) # IdentifierExp at 21.2  	
+196#          subu $sp, $sp, 4 # IdentifierExp at 21.2		 
+200#          sw $t0, ($sp) # IdentifierExp at 21.2	 	
+          # EXIT NODE # IdentifierExp at 21.2  	
+          # ENTER NODE # IdentifierExp at 21.15 	
+204#          lw $t0, 12($sp) # IdentifierExp at 21.15		
+208#          subu $sp, $sp, 8 # IdentifierExp at 21.15			
+212#          sw $s5, 4($sp) # IdentifierExp at 21.15	
+216#          sw $t0, ($sp) # IdentifierExp at 21.15 		
+          # EXIT NODE # IdentifierExp at 21.15   
+220#        lw $t0, 8($sp) # Call at 21.6	
+224#        beq $t0, $zero, nullPtrException # Call at 21.6	  
+228#        lw $t0, -12($t0) # Call at 21.6  
+232#        lw $t0, 24($t0) # Call at 21.6   
+236#        jalr $t0 # Call at 21.6   
+        # EXIT NODE # Call at 21.6  	
+      # EXIT NODE # ExpStatement at 21.6  	
+      # ENTER NODE # ExpStatement at 22.6		
+        # ENTER NODE # Call at 22.6			
+          # ENTER NODE # IdentifierExp at 22.2	 	
+240#          lw $t0, 16($sp) # IdentifierExp at 22.2   
+244#          subu $sp, $sp, 4 # IdentifierExp at 22.2 	
+248#          sw $t0, ($sp) # IdentifierExp at 22.2  
+          # EXIT NODE # IdentifierExp at 22.2 	
+          # ENTER NODE # StringLiteral at 22.15  	
+252#          subu $sp, $sp, 4 # StringLiteral at 22.15			
+256#          la $t0, strLit_21 # StringLiteral at 22.15			
+260#          sw $t0, ($sp) # StringLiteral at 22.15  
+          # EXIT NODE # StringLiteral at 22.15	 	
+264#        lw $t0, 4($sp) # Call at 22.6	
+268#        beq $t0, $zero, nullPtrException # Call at 22.6 	
+272#        lw $t0, -12($t0) # Call at 22.6 	
+276#        lw $t0, 16($t0) # Call at 22.6 	
+280#        jalr $t0 # Call at 22.6 
+        # EXIT NODE # Call at 22.6		
+      # EXIT NODE # ExpStatement at 22.6 	
+      # ENTER NODE # ExpStatement at 23.6			
+        # ENTER NODE # Call at 23.6	  
+          # ENTER NODE # IdentifierExp at 23.2	 	
+284#          lw $t0, 16($sp) # IdentifierExp at 23.2	 
+288#          subu $sp, $sp, 4 # IdentifierExp at 23.2			
+292#          sw $t0, ($sp) # IdentifierExp at 23.2	 
+          # EXIT NODE # IdentifierExp at 23.2		
+          # ENTER NODE # IdentifierExp at 23.15	  
+296#          lw $t0, 4($sp) # IdentifierExp at 23.15	 
+300#          subu $sp, $sp, 8 # IdentifierExp at 23.15		
+304#          sw $s5, 4($sp) # IdentifierExp at 23.15	 
+308#          sw $t0, ($sp) # IdentifierExp at 23.15		 
+          # EXIT NODE # IdentifierExp at 23.15	 	
+312#        lw $t0, 8($sp) # Call at 23.6			
+316#        beq $t0, $zero, nullPtrException # Call at 23.6	 
+320#        lw $t0, -12($t0) # Call at 23.6		 
+324#        lw $t0, 24($t0) # Call at 23.6 		
+328#        jalr $t0 # Call at 23.6	
+        # EXIT NODE # Call at 23.6 	 
+      # EXIT NODE # ExpStatement at 23.6	 	
+      # ENTER NODE # ExpStatement at 24.6 
+        # ENTER NODE # Call at 24.6 	 
+          # ENTER NODE # IdentifierExp at 24.2	
+332#          lw $t0, 16($sp) # IdentifierExp at 24.2 
+336#          subu $sp, $sp, 4 # IdentifierExp at 24.2		
+340#          sw $t0, ($sp) # IdentifierExp at 24.2		 
+          # EXIT NODE # IdentifierExp at 24.2 	 
+          # ENTER NODE # StringLiteral at 24.15  	
+344#          subu $sp, $sp, 4 # StringLiteral at 24.15		 
+348#          la $t0, strLit_29 # StringLiteral at 24.15	
+352#          sw $t0, ($sp) # StringLiteral at 24.15	 
+          # EXIT NODE # StringLiteral at 24.15 
+356#        lw $t0, 4($sp) # Call at 24.6	 	
+360#        beq $t0, $zero, nullPtrException # Call at 24.6  	
+364#        lw $t0, -12($t0) # Call at 24.6	 	
+368#        lw $t0, 16($t0) # Call at 24.6			
+372#        jalr $t0 # Call at 24.6		 
+        # EXIT NODE # Call at 24.6	  
+      # EXIT NODE # ExpStatement at 24.6  	
+376#    lw $ra, 24($sp) # MethodDeclVoid at 8.17	
+380#    lw $s2, 20($sp) # MethodDeclVoid at 8.17		 
+384#    addu $sp, $sp, 32 # MethodDeclVoid at 8.17		
+388#    jr $ra # MethodDeclVoid at 8.17 	
+    # EXIT NODE # MethodDeclVoid at 8.17 	
+    # ENTER NODE # MethodDeclNonVoid at 29.16  
+    .globl fcn_59_fib # MethodDeclNonVoid at 29.16   
+392:    fcn_59_fib: # MethodDeclNonVoid at 29.16 
+392#    subu $sp, $sp, 8 # MethodDeclNonVoid at 29.16			
+396#    sw $ra, 4($sp) # MethodDeclNonVoid at 29.16   
+400#    sw $s2, ($sp) # MethodDeclNonVoid at 29.16 
+404#    lw $s2, 16($sp) # MethodDeclNonVoid at 29.16		 
+      # ENTER NODE # LocalVarDecl at 31.6	 	
+        # ENTER NODE # IdentifierExp at 31.15   
+408#        lw $t0, 8($sp) # IdentifierExp at 31.15	 	
+412#        subu $sp, $sp, 8 # IdentifierExp at 31.15   
+416#        sw $s5, 4($sp) # IdentifierExp at 31.15 	 
+420#        sw $t0, ($sp) # IdentifierExp at 31.15  
+        # EXIT NODE # IdentifierExp at 31.15	  
+      # EXIT NODE # LocalVarDecl at 31.6 	 
+      # ENTER NODE # If at 32.2 	 
+        # ENTER NODE # GreaterThan at 32.8		
+          # ENTER NODE # IdentifierExp at 32.6 	
+424#          lw $t0, 16($sp) # IdentifierExp at 32.6		 
+428#          subu $sp, $sp, 8 # IdentifierExp at 32.6		 
+432#          sw $s5, 4($sp) # IdentifierExp at 32.6			
+436#          sw $t0, ($sp) # IdentifierExp at 32.6 	
+          # EXIT NODE # IdentifierExp at 32.6		 
+          # ENTER NODE # IntegerLiteral at 32.10	  
+440#          subu $sp, $sp, 8 # IntegerLiteral at 32.10	
+444#          sw $s5, 4($sp) # IntegerLiteral at 32.10	 	
+448#          li $t0, 1 # IntegerLiteral at 32.10 
+452#          sw $t0, ($sp) # IntegerLiteral at 32.10		 
+          # EXIT NODE # IntegerLiteral at 32.10 		
+456#        lw $t0, ($sp) # GreaterThan at 32.8			
+460#        lw $t1, 8($sp) # GreaterThan at 32.8 	 
+464#        sgt $t0, $t1, $t0 # GreaterThan at 32.8		
+468#        addu $sp, $sp, 12 # GreaterThan at 32.8 		
+472#        sw $t0, ($sp) # GreaterThan at 32.8 		
+        # EXIT NODE # GreaterThan at 32.8			
+476#      lw $t0, ($sp) # If at 32.2 	
+480#      addu $sp, $sp, 4 # If at 32.2	 
+484#      beq $t0, $zero, if_else_57 # If at 32.2 	
+        # ENTER NODE # Block at 32.13 	
+          # ENTER NODE # Assign at 34.13		 
+            # ENTER NODE # Plus at 34.24 	 
+              # ENTER NODE # Call at 34.15  	
+                # ENTER NODE # This at 34.15			
+488#                subu $sp, $sp, 4 # This at 34.15 
+492#                sw $s2, ($sp) # This at 34.15   
+                # EXIT NODE # This at 34.15 
+                # ENTER NODE # Minus at 34.20	 	
+                  # ENTER NODE # IdentifierExp at 34.19 	 
+496#                  lw $t0, 20($sp) # IdentifierExp at 34.19  
+500#                  subu $sp, $sp, 8 # IdentifierExp at 34.19	 	
+504#                  sw $s5, 4($sp) # IdentifierExp at 34.19		
+508#                  sw $t0, ($sp) # IdentifierExp at 34.19	  
+                  # EXIT NODE # IdentifierExp at 34.19		 
+                  # ENTER NODE # IntegerLiteral at 34.21 
+512#                  subu $sp, $sp, 8 # IntegerLiteral at 34.21 	 
+516#                  sw $s5, 4($sp) # IntegerLiteral at 34.21			
+520#                  li $t0, 1 # IntegerLiteral at 34.21 
+524#                  sw $t0, ($sp) # IntegerLiteral at 34.21	  
+                  # EXIT NODE # IntegerLiteral at 34.21			
+528#                lw $t0, ($sp) # Minus at 34.20		 
+532#                lw $t1, 8($sp) # Minus at 34.20	  
+536#                subu $t0, $t1, $t0 # Minus at 34.20			
+540#                addu $sp, $sp, 8 # Minus at 34.20  	
+544#                sw $t0, ($sp) # Minus at 34.20	  
+                  # ENTER NODE # Minus at 34.20	  
+548#                  lw $t0, 8($sp) # Call at 34.15 	 
+552#                  beq $t0, $zero, nullPtrException # Call at 34.15 
+556#                  lw $t0, -12($t0) # Call at 34.15  
+560#                  lw $t0, 8($t0) # Call at 34.15 
+564#                  jalr $t0 # Call at 34.15	 	
+                  # EXIT NODE # Call at 34.15 	 
+                  # ENTER NODE # Call at 34.26   
+                    # ENTER NODE # This at 34.26 	
+568#                    subu $sp, $sp, 4 # This at 34.26	
+572#                    sw $s2, ($sp) # This at 34.26  	
+                    # EXIT NODE # This at 34.26	 	
+                    # ENTER NODE # Minus at 34.31			
+                      # ENTER NODE # IdentifierExp at 34.30   
+576#                      lw $t0, 28($sp) # IdentifierExp at 34.30			
+580#                      subu $sp, $sp, 8 # IdentifierExp at 34.30 	 
+584#                      sw $s5, 4($sp) # IdentifierExp at 34.30	 	
+588#                      sw $t0, ($sp) # IdentifierExp at 34.30	
+                      # EXIT NODE # IdentifierExp at 34.30 	
+                      # ENTER NODE # IntegerLiteral at 34.32 		
+592#                      subu $sp, $sp, 8 # IntegerLiteral at 34.32 	
+596#                      sw $s5, 4($sp) # IntegerLiteral at 34.32 	 
+600#                      li $t0, 2 # IntegerLiteral at 34.32	
+604#                      sw $t0, ($sp) # IntegerLiteral at 34.32			
+                      # EXIT NODE # IntegerLiteral at 34.32			
+608#                    lw $t0, ($sp) # Minus at 34.31  	
+612#                    lw $t1, 8($sp) # Minus at 34.31		 
+616#                    subu $t0, $t1, $t0 # Minus at 34.31	 
+620#                    addu $sp, $sp, 8 # Minus at 34.31	  
+624#                    sw $t0, ($sp) # Minus at 34.31 		
+                      # ENTER NODE # Minus at 34.31 		
+628#                      lw $t0, 8($sp) # Call at 34.26	 
+632#                      beq $t0, $zero, nullPtrException # Call at 34.26  
+636#                      lw $t0, -12($t0) # Call at 34.26  
+640#                      lw $t0, 8($t0) # Call at 34.26	 
+644#                      jalr $t0 # Call at 34.26 	
+                      # EXIT NODE # Call at 34.26   
+648#                    lw $t0, ($sp) # Plus at 34.24			
+652#                    lw $t1, 8($sp) # Plus at 34.24		 
+656#                    addu $t0, $t0, $t1 # Plus at 34.24 		
+660#                    addu $sp, $sp, 8 # Plus at 34.24  	
+664#                    sw $t0, ($sp) # Plus at 34.24  
+                    # EXIT NODE # Plus at 34.24 	 
+668#                  lw $t0, ($sp) # Assign at 34.13 	 
+672#                  sw $t0, 8($sp) # Assign at 34.13		
+676#                  addu $sp, $sp, 8 # Assign at 34.13 
+                  # EXIT NODE # Assign at 34.13  
+                # EXIT NODE # Block at 32.13  	
+680#              j if_done_57 # If at 32.2			
+684:              if_else_57: # If at 32.2		
+                # ENTER NODE # Block at 36.2	
+                # EXIT NODE # Block at 36.2  
+684:              if_done_57: # If at 32.2 
+              # EXIT NODE # If at 32.2 
+              # ENTER NODE # IdentifierExp at 36.9	
+684#              lw $t0, 0($sp) # IdentifierExp at 36.9	 
+688#              subu $sp, $sp, 8 # IdentifierExp at 36.9 	 
+692#              sw $s5, 4($sp) # IdentifierExp at 36.9  
+696#              sw $t0, ($sp) # IdentifierExp at 36.9		 
+              # EXIT NODE # IdentifierExp at 36.9 
+700#            lw $ra, 20($sp) # MethodDeclNonVoid at 29.16	  
+704#            lw $s2, 16($sp) # MethodDeclNonVoid at 29.16	 	
+708#            lw $t0, ($sp) # MethodDeclNonVoid at 29.16	  
+712#            sw $t0, 28($sp) # MethodDeclNonVoid at 29.16		
+716#            sw $s5, 32($sp) # MethodDeclNonVoid at 29.16   
+720#            addu $sp, $sp, 28 # MethodDeclNonVoid at 29.16   
+724#            jr $ra # MethodDeclNonVoid at 29.16		
+              # ENTER NODE # MethodDeclNonVoid at 29.16	 
+              # EXIT NODE # Program at 5.1 	
 ###############################################################
 # MiniJava/UP library for MIPS/Spim -- version that assumes
 #    one-word boolean on stack
@@ -1365,20 +1441,20 @@
 2288#	move $t7,$s4
 2292#	la $t6,seg1_start
 2293##...lui $t6,16
-2297##...addiu $t6,$t6,3724
+2297##...addiu $t6,$t6,3588
 2300#	la $s3,seg0_start
 2304#	la $s4,seg0_end
 2305##...lui $s4,16
-2309##...addiu $s4,$s4,3724
+2309##...addiu $s4,$s4,3588
 2312#	sw $zero,cur_seg
 2316#	bne $t0,$zero,skipGc1
 2320#	la $t6,seg0_start
 2324#	la $s3,seg1_start
 2325##...lui $s3,16
-2329##...addiu $s3,$s3,3724
+2329##...addiu $s3,$s3,3588
 2332#	la $s4,seg1_end
 2333##...lui $s4,32
-2337##...addiu $s4,$s4,3724
+2337##...addiu $s4,$s4,3588
 2340#	sw $s5,cur_seg
 2344:  skipGc1:
 2344#	li $t5,-2
@@ -1575,7 +1651,7 @@
 2540#	beq $t1,$zero,gcSkip4
 2544#	la $t0,seg1_start
 2545##...lui $t0,16
-2549##...addiu $t0,$t0,3724
+2549##...addiu $t0,$t0,3588
 
 	##################################
 	# TEMPORARY HACK TO EXERCISE GC
@@ -1827,7 +1903,7 @@
 2856#"next-avail-heap"	move $s3,$s3#**"next-avail-heap"  #--FOR MEMORY TAGGING
 2860#	la $s4,seg0_end
 2861##...lui $s4,16
-2865##...addiu $s4,$s4,3724
+2865##...addiu $s4,$s4,3588
 2868#"end-heap"	move $s4,$s4#**"end-heap"  #--FOR MEMORY TAGGING
 	
 	# return
@@ -2027,53 +2103,53 @@
 	.data
 	.align 2
 
-3416:cur_seg:
+3280:cur_seg:
 	.word 0
 
-3420:lastCharRead:
+3284:lastCharRead:
 	.word -2 # -2 => no buffered character
 
-3424:heapMemoryMsg:
+3288:heapMemoryMsg:
 	.asciiz "ERROR: out of heap memory\n"
-3451:divByZeroMsg:
+3315:divByZeroMsg:
 	.asciiz "ERROR: divide by zero\n"
-3474:strIndexOutOfBoundsMsg:
+3338:strIndexOutOfBoundsMsg:
 	.asciiz "ERROR: string index out of bounds\n"
-3509:arrayIndexOutOfBoundsMsg:
+3373:arrayIndexOutOfBoundsMsg:
 	.asciiz "ERROR: array index out of bounds\n"
-3543:arraySizeOutOfBoundsMsg:
+3407:arraySizeOutOfBoundsMsg:
 	.asciiz "ERROR: array size out of bounds\n"
-3576:nullPtrExceptionMsg:
+3440:nullPtrExceptionMsg:
 	.asciiz "ERROR: null-pointer exception\n"
-3607:badIntegerFormatMsg:
+3471:badIntegerFormatMsg:
 	.asciiz "ERROR: attempt to read badly formatted integer\n"
-3655:castExceptionMsg:
+3519:castExceptionMsg:
 	.asciiz "ERROR: illegal cast\n"
-3676:gcMsg: 
+3540:gcMsg: 
       .asciiz "\nGC!\n"
 
-3682:nullStr:
+3546:nullStr:
 	.asciiz "null"
-3687:trueString:
+3551:trueString:
 	.asciiz "true"
-3692:falseString:
+3556:falseString:
 	.asciiz "false"
-3698:exitString:
+3562:exitString:
 	.asciiz "Program terminated.\n"
 	
 	.align 2
-3720:stack_bottom:
+3584:stack_bottom:
 	.word 0
 
 #heapFudge: # temporary fudge amount to exercise GC
 #	.word 0
 
-3724:seg0_start:
+3588:seg0_start:
 	.space 0x100000
-1052300:seg0_end:
-1052300:seg1_start:
+1052164:seg0_end:
+1052164:seg1_start:
 	.space 0x100000
-2100876:seg1_end:
+2100740:seg1_end:
 
 
 

@@ -1,530 +1,837 @@
-.data # Program at 3.1   
-CLASS_Object: # ClassDecl at 0.0	 
-.word 0 # ClassDecl at 0.0			
-CLASS_Lib: # ClassDecl at 0.0 	
-.word CLASS_Object # ClassDecl at 0.0			
-.word readLine # ClassDecl at 0.0		
-.word readInt # ClassDecl at 0.0 	 
-.word readChar # ClassDecl at 0.0 
-.word printStr # ClassDecl at 0.0 
-.word printBool # ClassDecl at 0.0	 	
-.word printInt # ClassDecl at 0.0	 
-.word intToString # ClassDecl at 0.0		
-.word intToChar # ClassDecl at 0.0	
-CLASS_Toast: # ClassDecl at 28.7	 	
-.word CLASS_Lib # ClassDecl at 28.7		 
-.word readLine # ClassDecl at 28.7		
-.word readInt # ClassDecl at 28.7	 	
-.word readChar # ClassDecl at 28.7 	
-.word printStr # ClassDecl at 28.7			
-.word printBool # ClassDecl at 28.7	
-.word printInt # ClassDecl at 28.7	  
-.word intToString # ClassDecl at 28.7  	
-.word intToChar # ClassDecl at 28.7	 	
-.word fcn_99_run # ClassDecl at 28.7 
-CLASS_Jam: # ClassDecl at 9.7 	 
-.word CLASS_Toast # ClassDecl at 9.7  
-.word readLine # ClassDecl at 9.7  	
-.word readInt # ClassDecl at 9.7 	 
-.word readChar # ClassDecl at 9.7 	
-.word printStr # ClassDecl at 9.7 
-.word printBool # ClassDecl at 9.7		 
-.word printInt # ClassDecl at 9.7 
-.word intToString # ClassDecl at 9.7  	
-.word intToChar # ClassDecl at 9.7   
-.word fcn_99_run # ClassDecl at 9.7  	
-.word fcn_70_test # ClassDecl at 9.7	
-CLASS_END_Jam: # ClassDecl at 9.7  
-CLASS_END_Toast: # ClassDecl at 28.7	
-CLASS_END_Lib: # ClassDecl at 0.0	 	
-CLASS_String: # ClassDecl at 0.0 
+.data # Program at 5.1			
+CLASS_Object: # ClassDecl at 0.0	 	
+.word 0 # ClassDecl at 0.0 	 
+CLASS_Lib: # ClassDecl at 0.0  
 .word CLASS_Object # ClassDecl at 0.0 
-.word concat # ClassDecl at 0.0		
-.word substring # ClassDecl at 0.0   
+.word readLine # ClassDecl at 0.0	
+.word readInt # ClassDecl at 0.0		 
+.word readChar # ClassDecl at 0.0	 
+.word printStr # ClassDecl at 0.0	 	
+.word printBool # ClassDecl at 0.0  
+.word printInt # ClassDecl at 0.0	 	
+.word intToString # ClassDecl at 0.0		
+.word intToChar # ClassDecl at 0.0	 
+CLASS_Seive: # ClassDecl at 12.7   
+.word CLASS_Lib # ClassDecl at 12.7 	
+.word readLine # ClassDecl at 12.7	
+.word readInt # ClassDecl at 12.7		 
+.word readChar # ClassDecl at 12.7   
+.word printStr # ClassDecl at 12.7   
+.word printBool # ClassDecl at 12.7   
+.word printInt # ClassDecl at 12.7 		
+.word intToString # ClassDecl at 12.7	 
+.word intToChar # ClassDecl at 12.7		
+.word fcn_148_exec # ClassDecl at 12.7	 	
+CLASS_END_Seive: # ClassDecl at 12.7			
+CLASS_END_Lib: # ClassDecl at 0.0	
+CLASS_String: # ClassDecl at 0.0		
+.word CLASS_Object # ClassDecl at 0.0	 	
+.word concat # ClassDecl at 0.0	
+.word substring # ClassDecl at 0.0		 
 .word length # ClassDecl at 0.0 	
-.word charAt # ClassDecl at 0.0 	
-.word compareTo # ClassDecl at 0.0	
-CLASS_END_String: # ClassDecl at 0.0	
-CLASS_RunMain: # ClassDecl at 0.0 		
-.word CLASS_Object # ClassDecl at 0.0			
-CLASS_END_RunMain: # ClassDecl at 0.0 
-CLASS_Main: # ClassDecl at 3.7	 	
-.word CLASS_Object # ClassDecl at 3.7  	
-.word fcn_4_main # ClassDecl at 3.7		 
-CLASS_END_Main: # ClassDecl at 3.7	
-CLASS_END_Object: # ClassDecl at 0.0	
- .data # Program at 3.1	 	
-  .byte 102 # StringLiteral at 14.13 
-  .byte 117 # StringLiteral at 14.13	
-  .byte 110 # StringLiteral at 14.13	 	
-  .byte 0 # StringLiteral at 14.13 
-  .word CLASS_String # StringLiteral at 14.13   
-  .word 2 # StringLiteral at 14.13 		
-  .word -3 # StringLiteral at 14.13			
-strLit_16: # StringLiteral at 14.13 	 
-  .byte 32 # StringLiteral at 20.22  
-  .byte 0 # StringLiteral at 20.22		 
-  .byte 0 # StringLiteral at 20.22		 
-  .byte 0 # StringLiteral at 20.22	 	
-  .word CLASS_String # StringLiteral at 20.22   
-  .word 2 # StringLiteral at 20.22  
-  .word -1 # StringLiteral at 20.22 	 
-strLit_48: # StringLiteral at 20.22  	
-  .byte 10 # StringLiteral at 22.18			
-  .byte 0 # StringLiteral at 22.18	  
-  .byte 0 # StringLiteral at 22.18   
-  .byte 0 # StringLiteral at 22.18 
-  .word CLASS_String # StringLiteral at 22.18  
-  .word 2 # StringLiteral at 22.18 	 
-  .word -1 # StringLiteral at 22.18 	 
-strLit_56: # StringLiteral at 22.18 
-  .byte 10 # StringLiteral at 36.23  	
-  .byte 0 # StringLiteral at 36.23   
-  .byte 0 # StringLiteral at 36.23 	 
-  .byte 0 # StringLiteral at 36.23		 
-  .word CLASS_String # StringLiteral at 36.23 		
-  .word 2 # StringLiteral at 36.23	  
-  .word -1 # StringLiteral at 36.23			
-strLit_96: # StringLiteral at 36.23			
-  # ENTER NODE # Program at 3.1	 
-  .text # Program at 3.1 
-  .globl main # Program at 3.1   
-  main: # Program at 3.1 		
-  jal vm_init # Program at 3.1			
-    # ENTER NODE # ExpStatement at 0.0	 
-      # ENTER NODE # Call at 0.0  
-        # ENTER NODE # NewObject at 0.0   
-        li $s6, 1 # NewObject at 0.0	 
-        li $s7, 0 # NewObject at 0.0  
-        jal newObject # NewObject at 0.0 		
-        la $t0, CLASS_Main # NewObject at 0.0 
-        sw $t0, -12($s7) # NewObject at 0.0		 
-        # EXIT NODE # NewObject at 0.0	  
-      lw $t0, 0($sp) # Call at 0.0		
-      beq $t0, $zero, nullPtrException # Call at 0.0	 
+.word charAt # ClassDecl at 0.0			
+.word compareTo # ClassDecl at 0.0	 
+CLASS_END_String: # ClassDecl at 0.0 		
+CLASS_RunMain: # ClassDecl at 0.0  
+.word CLASS_Object # ClassDecl at 0.0		 
+CLASS_END_RunMain: # ClassDecl at 0.0		
+CLASS_Main: # ClassDecl at 5.7		 
+.word CLASS_Object # ClassDecl at 5.7 
+.word fcn_4_main # ClassDecl at 5.7		
+CLASS_END_Main: # ClassDecl at 5.7		 
+CLASS_END_Object: # ClassDecl at 0.0  
+ .data # Program at 5.1 		
+  .byte 70 # StringLiteral at 18.11			
+  .byte 105 # StringLiteral at 18.11			
+  .byte 110 # StringLiteral at 18.11	
+  .byte 100 # StringLiteral at 18.11	 
+  .byte 32 # StringLiteral at 18.11		 
+  .byte 112 # StringLiteral at 18.11		
+  .byte 114 # StringLiteral at 18.11 	
+  .byte 105 # StringLiteral at 18.11 
+  .byte 109 # StringLiteral at 18.11   
+  .byte 101 # StringLiteral at 18.11			
+  .byte 115 # StringLiteral at 18.11  
+  .byte 32 # StringLiteral at 18.11 	 
+  .byte 116 # StringLiteral at 18.11 	
+  .byte 104 # StringLiteral at 18.11		 
+  .byte 114 # StringLiteral at 18.11	
+  .byte 111 # StringLiteral at 18.11 
+  .byte 117 # StringLiteral at 18.11   
+  .byte 103 # StringLiteral at 18.11	  
+  .byte 104 # StringLiteral at 18.11	 	
+  .byte 58 # StringLiteral at 18.11	  
+  .byte 32 # StringLiteral at 18.11 	
+  .byte 0 # StringLiteral at 18.11	  
+  .byte 0 # StringLiteral at 18.11	  
+  .byte 0 # StringLiteral at 18.11  
+  .word CLASS_String # StringLiteral at 18.11  	
+  .word 7 # StringLiteral at 18.11   
+  .word -21 # StringLiteral at 18.11 	
+strLit_6: # StringLiteral at 18.11		 
+  .byte 112 # StringLiteral at 48.11  
+  .byte 114 # StringLiteral at 48.11 	
+  .byte 105 # StringLiteral at 48.11 		
+  .byte 109 # StringLiteral at 48.11   
+  .byte 101 # StringLiteral at 48.11			
+  .byte 115 # StringLiteral at 48.11 
+  .byte 32 # StringLiteral at 48.11	
+  .byte 117 # StringLiteral at 48.11	 	
+  .byte 112 # StringLiteral at 48.11  
+  .byte 32 # StringLiteral at 48.11 	 
+  .byte 116 # StringLiteral at 48.11		 
+  .byte 104 # StringLiteral at 48.11 		
+  .byte 114 # StringLiteral at 48.11		 
+  .byte 111 # StringLiteral at 48.11			
+  .byte 117 # StringLiteral at 48.11		
+  .byte 103 # StringLiteral at 48.11  
+  .byte 104 # StringLiteral at 48.11	
+  .byte 32 # StringLiteral at 48.11 	
+  .byte 0 # StringLiteral at 48.11			
+  .byte 0 # StringLiteral at 48.11	  
+  .word CLASS_String # StringLiteral at 48.11 	
+  .word 6 # StringLiteral at 48.11	
+  .word -18 # StringLiteral at 48.11 		
+strLit_80: # StringLiteral at 48.11	
+  .byte 58 # StringLiteral at 50.11 	
+  .byte 10 # StringLiteral at 50.11	 	
+  .byte 0 # StringLiteral at 50.11  	
+  .byte 0 # StringLiteral at 50.11  
+  .word CLASS_String # StringLiteral at 50.11  	
+  .word 2 # StringLiteral at 50.11 		
+  .word -2 # StringLiteral at 50.11		
+strLit_88: # StringLiteral at 50.11	  
+  .byte 10 # StringLiteral at 61.16  	
+  .byte 0 # StringLiteral at 61.16	
+  .byte 0 # StringLiteral at 61.16  
+  .byte 0 # StringLiteral at 61.16	 
+  .word CLASS_String # StringLiteral at 61.16 		
+  .word 2 # StringLiteral at 61.16 		
+  .word -1 # StringLiteral at 61.16	
+strLit_123: # StringLiteral at 61.16	 
+  .byte 32 # StringLiteral at 66.16		 
+  .byte 0 # StringLiteral at 66.16	 	
+  .byte 0 # StringLiteral at 66.16 	 
+  .byte 0 # StringLiteral at 66.16			
+  .word CLASS_String # StringLiteral at 66.16	
+  .word 2 # StringLiteral at 66.16	 
+  .word -1 # StringLiteral at 66.16	 
+strLit_131: # StringLiteral at 66.16   
+  .byte 10 # StringLiteral at 72.11 
+  .byte 0 # StringLiteral at 72.11   
+  .byte 0 # StringLiteral at 72.11	 
+  .byte 0 # StringLiteral at 72.11	  
+  .word CLASS_String # StringLiteral at 72.11	  
+  .word 2 # StringLiteral at 72.11			
+  .word -1 # StringLiteral at 72.11	 
+strLit_144: # StringLiteral at 72.11	  
+  # ENTER NODE # Program at 5.1	
+  .text # Program at 5.1  	
+  .globl main # Program at 5.1   
+  main: # Program at 5.1  	
+  jal vm_init # Program at 5.1  	
+    # ENTER NODE # ExpStatement at 0.0  
+      # ENTER NODE # Call at 0.0			
+        # ENTER NODE # NewObject at 0.0	
+        li $s6, 1 # NewObject at 0.0 	 
+        li $s7, 0 # NewObject at 0.0 	
+        jal newObject # NewObject at 0.0  	
+        la $t0, CLASS_Main # NewObject at 0.0	 
+        sw $t0, -12($s7) # NewObject at 0.0	 
+        # EXIT NODE # NewObject at 0.0			
+      lw $t0, 0($sp) # Call at 0.0   
+      beq $t0, $zero, nullPtrException # Call at 0.0		 
       lw $t0, -12($t0) # Call at 0.0	 	
-      lw $t0, 4($t0) # Call at 0.0	  
+      lw $t0, 4($t0) # Call at 0.0	 	
       jalr $t0 # Call at 0.0  	
-      # EXIT NODE # Call at 0.0	  
-    # EXIT NODE # ExpStatement at 0.0   
-  li $v0, 10 # Program at 3.1	 	
-  syscall # Program at 3.1			
-    # ENTER NODE # MethodDeclVoid at 4.17	
-    .globl fcn_4_main # MethodDeclVoid at 4.17 	
-    fcn_4_main: # MethodDeclVoid at 4.17 		
-    subu $sp, $sp, 8 # MethodDeclVoid at 4.17  
-    sw $ra, 4($sp) # MethodDeclVoid at 4.17 
-    sw $s2, ($sp) # MethodDeclVoid at 4.17	  
-    lw $s2, 8($sp) # MethodDeclVoid at 4.17	
-      # ENTER NODE # ExpStatement at 5.19  	
-        # ENTER NODE # Call at 5.19	 
-          # ENTER NODE # NewObject at 5.9  
-          li $s6, 3 # NewObject at 5.9		 
-          li $s7, 1 # NewObject at 5.9 		
-          jal newObject # NewObject at 5.9		 
-          la $t0, CLASS_Jam # NewObject at 5.9   
-          sw $t0, -12($s7) # NewObject at 5.9 		
-          # EXIT NODE # NewObject at 5.9			
-        lw $t0, 0($sp) # Call at 5.19		
-        beq $t0, $zero, nullPtrException # Call at 5.19 	 
-        lw $t0, -12($t0) # Call at 5.19	  
-        lw $t0, 36($t0) # Call at 5.19	 	
-        jalr $t0 # Call at 5.19 	 
-        # EXIT NODE # Call at 5.19	
-      # EXIT NODE # ExpStatement at 5.19  	
-    lw $ra, 4($sp) # MethodDeclVoid at 4.17		 
-    lw $s2, 0($sp) # MethodDeclVoid at 4.17 	 
-    addu $sp, $sp, 12 # MethodDeclVoid at 4.17  
-    jr $ra # MethodDeclVoid at 4.17		 
-    # EXIT NODE # MethodDeclVoid at 4.17  
-    # ENTER NODE # MethodDeclVoid at 12.17  
-    .globl fcn_70_test # MethodDeclVoid at 12.17 		
-    fcn_70_test: # MethodDeclVoid at 12.17	 
-    subu $sp, $sp, 8 # MethodDeclVoid at 12.17	  
-    sw $ra, 4($sp) # MethodDeclVoid at 12.17	 
-    sw $s2, ($sp) # MethodDeclVoid at 12.17  	
-    lw $s2, 16($sp) # MethodDeclVoid at 12.17   
-      # ENTER NODE # Assign at 13.11  
-        # ENTER NODE # IntegerLiteral at 13.13	  
-        subu $sp, $sp, 8 # IntegerLiteral at 13.13		 
-        sw $s5, 4($sp) # IntegerLiteral at 13.13		
-        li $t0, 3 # IntegerLiteral at 13.13		 
-        sw $t0, ($sp) # IntegerLiteral at 13.13		
-        # EXIT NODE # IntegerLiteral at 13.13 	 
-      lw $t0, ($sp) # Assign at 13.11	 
-      sw $t0, -20($s2) # Assign at 13.11			
-      addu $sp, $sp, 8 # Assign at 13.11  	
-      # EXIT NODE # Assign at 13.11		 
-      # ENTER NODE # Assign at 14.11 
-        # ENTER NODE # StringLiteral at 14.13		
-        subu $sp, $sp, 4 # StringLiteral at 14.13 		
-        la $t0, strLit_16 # StringLiteral at 14.13	 	
-        sw $t0, ($sp) # StringLiteral at 14.13	 	
-        # EXIT NODE # StringLiteral at 14.13  	
-      lw $t0, ($sp) # Assign at 14.11		
-      sw $t0, 0($s2) # Assign at 14.11			
-      addu $sp, $sp, 4 # Assign at 14.11	 	
-      # EXIT NODE # Assign at 14.11  	
-      # ENTER NODE # Block at 15.9			
-        # ENTER NODE # LocalVarDecl at 15.18	  
-          # ENTER NODE # IntegerLiteral at 15.22   
-          subu $sp, $sp, 8 # IntegerLiteral at 15.22  	
-          sw $s5, 4($sp) # IntegerLiteral at 15.22	  
-          li $t0, 0 # IntegerLiteral at 15.22 	 
-          sw $t0, ($sp) # IntegerLiteral at 15.22	 
-          # EXIT NODE # IntegerLiteral at 15.22	 
-        # EXIT NODE # LocalVarDecl at 15.18		
-        # ENTER NODE # While at 15.9	 	
-        j while_enter_54 # While at 15.9  
-        while_top_54: # While at 15.9  
-          # ENTER NODE # Block at 15.9			
-            # ENTER NODE # Block at 15.37	  
-              # ENTER NODE # LocalVarDecl at 16.21 		
-                # ENTER NODE # True at 16.25 	
-                subu $sp, $sp, 4 # True at 16.25 		
-                li $t0, 1 # True at 16.25		
-                sw $t0, ($sp) # True at 16.25 	 
-                # EXIT NODE # True at 16.25		
-              # EXIT NODE # LocalVarDecl at 16.21		
-              # ENTER NODE # LocalVarDecl at 17.17	  
-                # ENTER NODE # IntegerLiteral at 17.21			
-                subu $sp, $sp, 8 # IntegerLiteral at 17.21   
-                sw $s5, 4($sp) # IntegerLiteral at 17.21 	
-                li $t0, 78 # IntegerLiteral at 17.21 
-                sw $t0, ($sp) # IntegerLiteral at 17.21	 	
-                # EXIT NODE # IntegerLiteral at 17.21		 
-              # EXIT NODE # LocalVarDecl at 17.17 	
-              # ENTER NODE # Assign at 18.15		
-                # ENTER NODE # And at 18.23			
-                  # ENTER NODE # GreaterThan at 18.19 
-                    # ENTER NODE # IdentifierExp at 18.17   
-                    lw $t0, 0($sp) # IdentifierExp at 18.17   
-                    subu $sp, $sp, 8 # IdentifierExp at 18.17	
-                    sw $s5, 4($sp) # IdentifierExp at 18.17	
-                    sw $t0, ($sp) # IdentifierExp at 18.17 	 
-                    # EXIT NODE # IdentifierExp at 18.17	
-                    # ENTER NODE # IntegerLiteral at 18.21	  
-                    subu $sp, $sp, 8 # IntegerLiteral at 18.21  	
-                    sw $s5, 4($sp) # IntegerLiteral at 18.21	 	
-                    li $t0, 0 # IntegerLiteral at 18.21 		
-                    sw $t0, ($sp) # IntegerLiteral at 18.21  	
-                    # EXIT NODE # IntegerLiteral at 18.21		
-                  lw $t0, ($sp) # GreaterThan at 18.19 		
-                  lw $t1, 8($sp) # GreaterThan at 18.19 		
-                  sgt $t0, $t1, $t0 # GreaterThan at 18.19 	
-                  addu $sp, $sp, 12 # GreaterThan at 18.19			
-                  sw $t0, ($sp) # GreaterThan at 18.19  	
-                  # EXIT NODE # GreaterThan at 18.19		
-                lw $t0, ($sp) # And at 18.23	 
-                beq $t0, $zero, skip_40 # And at 18.23 	
-                addu $sp, $sp, 4 # And at 18.23		 
-                  # ENTER NODE # IdentifierExp at 18.26 	
-                  lw $t0, 8($sp) # IdentifierExp at 18.26  	
-                  subu $sp, $sp, 4 # IdentifierExp at 18.26  
-                  sw $t0, ($sp) # IdentifierExp at 18.26 	 
-                  # EXIT NODE # IdentifierExp at 18.26  
-                skip_40: # And at 18.23			
-                # EXIT NODE # And at 18.23	 
-              lw $t0, ($sp) # Assign at 18.15  	
-              sw $t0, 12($sp) # Assign at 18.15 
-              addu $sp, $sp, 4 # Assign at 18.15	
-              # EXIT NODE # Assign at 18.15 		
-              # ENTER NODE # ExpStatement at 19.13			
-                # ENTER NODE # Call at 19.13	  
-                  # ENTER NODE # This at 19.13	
-                  subu $sp, $sp, 4 # This at 19.13		 
-                  sw $s2, ($sp) # This at 19.13	
-                  # EXIT NODE # This at 19.13  
-                  # ENTER NODE # Plus at 19.23  	
-                    # ENTER NODE # IdentifierExp at 19.22	  
-                    lw $t0, 16($sp) # IdentifierExp at 19.22	 	
-                    subu $sp, $sp, 8 # IdentifierExp at 19.22  
-                    sw $s5, 4($sp) # IdentifierExp at 19.22 	
-                    sw $t0, ($sp) # IdentifierExp at 19.22   
-                    # EXIT NODE # IdentifierExp at 19.22 		
-                    # ENTER NODE # IdentifierExp at 19.24 		
-                    lw $t0, 12($sp) # IdentifierExp at 19.24	  
-                    subu $sp, $sp, 8 # IdentifierExp at 19.24	 	
-                    sw $s5, 4($sp) # IdentifierExp at 19.24	
-                    sw $t0, ($sp) # IdentifierExp at 19.24		 
-                    # EXIT NODE # IdentifierExp at 19.24  
-                  lw $t0, ($sp) # Plus at 19.23		 
-                  lw $t1, 8($sp) # Plus at 19.23			
-                  addu $t0, $t0, $t1 # Plus at 19.23	
-                  addu $sp, $sp, 8 # Plus at 19.23	
-                  sw $t0, ($sp) # Plus at 19.23 		
-                  # EXIT NODE # Plus at 19.23 		
-                lw $t0, 8($sp) # Call at 19.13  	
-                beq $t0, $zero, nullPtrException # Call at 19.13  	
-                lw $t0, -12($t0) # Call at 19.13	 	
-                lw $t0, 24($t0) # Call at 19.13   
-                jalr $t0 # Call at 19.13	  
-                # EXIT NODE # Call at 19.13			
-              # EXIT NODE # ExpStatement at 19.13   
-              # ENTER NODE # ExpStatement at 20.13  	
-                # ENTER NODE # Call at 20.13		 
-                  # ENTER NODE # This at 20.13	
-                  subu $sp, $sp, 4 # This at 20.13  
-                  sw $s2, ($sp) # This at 20.13	
-                  # EXIT NODE # This at 20.13	 
-                  # ENTER NODE # StringLiteral at 20.22 
-                  subu $sp, $sp, 4 # StringLiteral at 20.22			
-                  la $t0, strLit_48 # StringLiteral at 20.22	  
-                  sw $t0, ($sp) # StringLiteral at 20.22   
-                  # EXIT NODE # StringLiteral at 20.22	 
-                lw $t0, 4($sp) # Call at 20.13 	 
-                beq $t0, $zero, nullPtrException # Call at 20.13 		
-                lw $t0, -12($t0) # Call at 20.13 		
-                lw $t0, 16($t0) # Call at 20.13		 
-                jalr $t0 # Call at 20.13			
-                # EXIT NODE # Call at 20.13  	
-              # EXIT NODE # ExpStatement at 20.13  
-            addu $sp, 12 # Block at 15.37  
-            # EXIT NODE # Block at 15.37		 
-            # ENTER NODE # Assign at 15.32 	 
-              # ENTER NODE # Plus at 15.33	 
-                # ENTER NODE # IdentifierExp at 15.32			
-                lw $t0, 0($sp) # IdentifierExp at 15.32 	 
-                subu $sp, $sp, 8 # IdentifierExp at 15.32		
-                sw $s5, 4($sp) # IdentifierExp at 15.32  
-                sw $t0, ($sp) # IdentifierExp at 15.32	 
-                # EXIT NODE # IdentifierExp at 15.32		 
-                # ENTER NODE # IntegerLiteral at 15.33	 	
-                subu $sp, $sp, 8 # IntegerLiteral at 15.33			
-                sw $s5, 4($sp) # IntegerLiteral at 15.33  
-                li $t0, 1 # IntegerLiteral at 15.33	 
-                sw $t0, ($sp) # IntegerLiteral at 15.33  	
-                # EXIT NODE # IntegerLiteral at 15.33		 
-              lw $t0, ($sp) # Plus at 15.33		
-              lw $t1, 8($sp) # Plus at 15.33 
-              addu $t0, $t0, $t1 # Plus at 15.33	
-              addu $sp, $sp, 8 # Plus at 15.33  	
-              sw $t0, ($sp) # Plus at 15.33  	
-              # EXIT NODE # Plus at 15.33		 
-            lw $t0, ($sp) # Assign at 15.32	 	
-            sw $t0, 8($sp) # Assign at 15.32   
-            addu $sp, $sp, 8 # Assign at 15.32 		
-            # EXIT NODE # Assign at 15.32 	 
-          # EXIT NODE # Block at 15.9 
-        while_enter_54: # While at 15.9   
-          # ENTER NODE # LessThan at 15.27			
-            # ENTER NODE # IdentifierExp at 15.25		 
-            lw $t0, 0($sp) # IdentifierExp at 15.25 	
-            subu $sp, $sp, 8 # IdentifierExp at 15.25   
-            sw $s5, 4($sp) # IdentifierExp at 15.25			
-            sw $t0, ($sp) # IdentifierExp at 15.25  	
-            # EXIT NODE # IdentifierExp at 15.25	 	
-            # ENTER NODE # IdentifierExp at 15.29		
-            lw $t0, 24($sp) # IdentifierExp at 15.29	 
-            subu $sp, $sp, 8 # IdentifierExp at 15.29	  
-            sw $s5, 4($sp) # IdentifierExp at 15.29 		
-            sw $t0, ($sp) # IdentifierExp at 15.29 
-            # EXIT NODE # IdentifierExp at 15.29	 	
-          lw $t0, ($sp) # LessThan at 15.27  
-          lw $t1, 8($sp) # LessThan at 15.27	 
-          slt $t0, $t1, $t0 # LessThan at 15.27 	
-          addu $sp, $sp, 12 # LessThan at 15.27   
-          sw $t0, ($sp) # LessThan at 15.27 
-          # EXIT NODE # LessThan at 15.27		
-        lw $t0, ($sp) # While at 15.9   
-        addu $sp, $sp, 4 # While at 15.9 	
-        bne $t0, $zero, while_top_54 # While at 15.9		
-        while_exit_54: # While at 15.9	 
-        # EXIT NODE # While at 15.9			
-      addu $sp, 8 # Block at 15.9	 	
-      # EXIT NODE # Block at 15.9	 	
-      # ENTER NODE # ExpStatement at 22.9 	 
-        # ENTER NODE # Call at 22.9 
-          # ENTER NODE # This at 22.9 	 
-          subu $sp, $sp, 4 # This at 22.9			
-          sw $s2, ($sp) # This at 22.9	 	
-          # EXIT NODE # This at 22.9			
-          # ENTER NODE # StringLiteral at 22.18 	
-          subu $sp, $sp, 4 # StringLiteral at 22.18			
-          la $t0, strLit_56 # StringLiteral at 22.18	 	
-          sw $t0, ($sp) # StringLiteral at 22.18			
-          # EXIT NODE # StringLiteral at 22.18  
-        lw $t0, 4($sp) # Call at 22.9  
-        beq $t0, $zero, nullPtrException # Call at 22.9	
-        lw $t0, -12($t0) # Call at 22.9		 
-        lw $t0, 16($t0) # Call at 22.9   
-        jalr $t0 # Call at 22.9	
-        # EXIT NODE # Call at 22.9		 
-      # EXIT NODE # ExpStatement at 22.9	
-      # ENTER NODE # Assign at 23.9 	
-        # ENTER NODE # Plus at 23.10		 
-          # ENTER NODE # IdentifierExp at 23.9   
-          lw $t0, -20($s2) # IdentifierExp at 23.9		
-          subu $sp, $sp, 8 # IdentifierExp at 23.9	  
-          sw $s5, 4($sp) # IdentifierExp at 23.9 	
-          sw $t0, ($sp) # IdentifierExp at 23.9	
-          # EXIT NODE # IdentifierExp at 23.9 
+      # EXIT NODE # Call at 0.0	
+    # EXIT NODE # ExpStatement at 0.0 	
+  li $v0, 10 # Program at 5.1  	
+  syscall # Program at 5.1			
+    # ENTER NODE # MethodDeclVoid at 6.17		
+    .globl fcn_4_main # MethodDeclVoid at 6.17   
+    fcn_4_main: # MethodDeclVoid at 6.17 	
+    subu $sp, $sp, 8 # MethodDeclVoid at 6.17	 
+    sw $ra, 4($sp) # MethodDeclVoid at 6.17		
+    sw $s2, ($sp) # MethodDeclVoid at 6.17 		
+    lw $s2, 8($sp) # MethodDeclVoid at 6.17 
+      # ENTER NODE # ExpStatement at 7.14			
+        # ENTER NODE # Call at 7.14 
+          # ENTER NODE # NewObject at 7.2 	 
+          li $s6, 1 # NewObject at 7.2 
+          li $s7, 0 # NewObject at 7.2			
+          jal newObject # NewObject at 7.2  
+          la $t0, CLASS_Seive # NewObject at 7.2		 
+          sw $t0, -12($s7) # NewObject at 7.2	  
+          # EXIT NODE # NewObject at 7.2	 	
+        lw $t0, 0($sp) # Call at 7.14	
+        beq $t0, $zero, nullPtrException # Call at 7.14		
+        lw $t0, -12($t0) # Call at 7.14   
+        lw $t0, 36($t0) # Call at 7.14		
+        jalr $t0 # Call at 7.14	 
+        # EXIT NODE # Call at 7.14  	
+      # EXIT NODE # ExpStatement at 7.14 	 
+    lw $ra, 4($sp) # MethodDeclVoid at 6.17		
+    lw $s2, 0($sp) # MethodDeclVoid at 6.17  	
+    addu $sp, $sp, 12 # MethodDeclVoid at 6.17 		
+    jr $ra # MethodDeclVoid at 6.17 	
+    # EXIT NODE # MethodDeclVoid at 6.17 	
+    # ENTER NODE # MethodDeclVoid at 15.17	
+    .globl fcn_148_exec # MethodDeclVoid at 15.17	
+    fcn_148_exec: # MethodDeclVoid at 15.17 	 
+    subu $sp, $sp, 8 # MethodDeclVoid at 15.17 	 
+    sw $ra, 4($sp) # MethodDeclVoid at 15.17	
+    sw $s2, ($sp) # MethodDeclVoid at 15.17 	
+    lw $s2, 8($sp) # MethodDeclVoid at 15.17	  
+      # ENTER NODE # ExpStatement at 18.2		
+        # ENTER NODE # Call at 18.2		
+          # ENTER NODE # This at 18.2	  
+          subu $sp, $sp, 4 # This at 18.2	
+          sw $s2, ($sp) # This at 18.2  
+          # EXIT NODE # This at 18.2		
+          # ENTER NODE # StringLiteral at 18.11  	
+          subu $sp, $sp, 4 # StringLiteral at 18.11  	
+          la $t0, strLit_6 # StringLiteral at 18.11 	 
+          sw $t0, ($sp) # StringLiteral at 18.11  
+          # EXIT NODE # StringLiteral at 18.11	  
+        lw $t0, 4($sp) # Call at 18.2			
+        beq $t0, $zero, nullPtrException # Call at 18.2 	 
+        lw $t0, -12($t0) # Call at 18.2			
+        lw $t0, 16($t0) # Call at 18.2		 
+        jalr $t0 # Call at 18.2   
+        # EXIT NODE # Call at 18.2 	
+      # EXIT NODE # ExpStatement at 18.2	  
+      # ENTER NODE # LocalVarDecl at 19.6	 	
+        # ENTER NODE # Call at 19.12  
+          # ENTER NODE # This at 19.12		
+          subu $sp, $sp, 4 # This at 19.12	  
+          sw $s2, ($sp) # This at 19.12		 
+          # EXIT NODE # This at 19.12	 	
+        lw $t0, 0($sp) # Call at 19.12	 	
+        beq $t0, $zero, nullPtrException # Call at 19.12	
+        lw $t0, -12($t0) # Call at 19.12  
+        lw $t0, 8($t0) # Call at 19.12   
+        jalr $t0 # Call at 19.12 	 
+        # EXIT NODE # Call at 19.12		
+      # EXIT NODE # LocalVarDecl at 19.6   
+      # ENTER NODE # LocalVarDecl at 22.6 
+        # ENTER NODE # IdentifierExp at 22.10 	
+        lw $t0, 0($sp) # IdentifierExp at 22.10 
+        subu $sp, $sp, 8 # IdentifierExp at 22.10 
+        sw $s5, 4($sp) # IdentifierExp at 22.10 
+        sw $t0, ($sp) # IdentifierExp at 22.10	 	
+        # EXIT NODE # IdentifierExp at 22.10 	 
+      # EXIT NODE # LocalVarDecl at 22.6		
+      # ENTER NODE # If at 23.2			
+        # ENTER NODE # LessThan at 23.8	 	
+          # ENTER NODE # IdentifierExp at 23.6		 
+          lw $t0, 0($sp) # IdentifierExp at 23.6		 
+          subu $sp, $sp, 8 # IdentifierExp at 23.6 	
+          sw $s5, 4($sp) # IdentifierExp at 23.6  
+          sw $t0, ($sp) # IdentifierExp at 23.6 		
+          # EXIT NODE # IdentifierExp at 23.6  
           # ENTER NODE # IntegerLiteral at 23.10 
-          subu $sp, $sp, 8 # IntegerLiteral at 23.10   
-          sw $s5, 4($sp) # IntegerLiteral at 23.10			
-          li $t0, 1 # IntegerLiteral at 23.10			
-          sw $t0, ($sp) # IntegerLiteral at 23.10		 
-          # EXIT NODE # IntegerLiteral at 23.10 	 
-        lw $t0, ($sp) # Plus at 23.10	
-        lw $t1, 8($sp) # Plus at 23.10  
-        addu $t0, $t0, $t1 # Plus at 23.10 	 
-        addu $sp, $sp, 8 # Plus at 23.10		 
-        sw $t0, ($sp) # Plus at 23.10 	 
-        # EXIT NODE # Plus at 23.10			
-      lw $t0, ($sp) # Assign at 23.9 
-      sw $t0, -20($s2) # Assign at 23.9	 	
-      addu $sp, $sp, 8 # Assign at 23.9			
-      # EXIT NODE # Assign at 23.9  
-      # ENTER NODE # Assign at 24.9  	
-        # ENTER NODE # Plus at 24.10   
-          # ENTER NODE # IdentifierExp at 24.9		
-          lw $t0, -16($s2) # IdentifierExp at 24.9 	 
-          subu $sp, $sp, 8 # IdentifierExp at 24.9			
-          sw $s5, 4($sp) # IdentifierExp at 24.9	  
-          sw $t0, ($sp) # IdentifierExp at 24.9  
-          # EXIT NODE # IdentifierExp at 24.9 	 
-          # ENTER NODE # IntegerLiteral at 24.10		 
-          subu $sp, $sp, 8 # IntegerLiteral at 24.10  
-          sw $s5, 4($sp) # IntegerLiteral at 24.10   
-          li $t0, 1 # IntegerLiteral at 24.10	 	
-          sw $t0, ($sp) # IntegerLiteral at 24.10 		
-          # EXIT NODE # IntegerLiteral at 24.10 	 
-        lw $t0, ($sp) # Plus at 24.10		 
-        lw $t1, 8($sp) # Plus at 24.10 		
-        addu $t0, $t0, $t1 # Plus at 24.10  	
-        addu $sp, $sp, 8 # Plus at 24.10		 
-        sw $t0, ($sp) # Plus at 24.10 		
-        # EXIT NODE # Plus at 24.10	 
-      lw $t0, ($sp) # Assign at 24.9	 	
-      sw $t0, -16($s2) # Assign at 24.9 	
-      addu $sp, $sp, 8 # Assign at 24.9		
-      # EXIT NODE # Assign at 24.9 	 
-    lw $ra, 4($sp) # MethodDeclVoid at 12.17  
-    lw $s2, 0($sp) # MethodDeclVoid at 12.17		
-    addu $sp, $sp, 20 # MethodDeclVoid at 12.17 		
-    jr $ra # MethodDeclVoid at 12.17	 	
-    # EXIT NODE # MethodDeclVoid at 12.17  	
-    # ENTER NODE # MethodDeclVoid at 30.17  	
-    .globl fcn_99_run # MethodDeclVoid at 30.17		
-    fcn_99_run: # MethodDeclVoid at 30.17 	 
-    subu $sp, $sp, 8 # MethodDeclVoid at 30.17 
-    sw $ra, 4($sp) # MethodDeclVoid at 30.17 
-    sw $s2, ($sp) # MethodDeclVoid at 30.17   
-    lw $s2, 8($sp) # MethodDeclVoid at 30.17			
-      # ENTER NODE # LocalVarDecl at 31.13   
-        # ENTER NODE # NewObject at 31.17  	
-        li $s6, 3 # NewObject at 31.17  
-        li $s7, 1 # NewObject at 31.17 
-        jal newObject # NewObject at 31.17		 
-        la $t0, CLASS_Jam # NewObject at 31.17	  
-        sw $t0, -12($s7) # NewObject at 31.17	 	
-        # EXIT NODE # NewObject at 31.17   
-      # EXIT NODE # LocalVarDecl at 31.13			
-      # ENTER NODE # ExpStatement at 32.11  
-        # ENTER NODE # Call at 32.11		 
-          # ENTER NODE # IdentifierExp at 32.9 	
-          lw $t0, 0($sp) # IdentifierExp at 32.9	  
-          subu $sp, $sp, 4 # IdentifierExp at 32.9		 
-          sw $t0, ($sp) # IdentifierExp at 32.9	 	
-          # EXIT NODE # IdentifierExp at 32.9	  
-          # ENTER NODE # IntegerLiteral at 32.16			
-          subu $sp, $sp, 8 # IntegerLiteral at 32.16			
-          sw $s5, 4($sp) # IntegerLiteral at 32.16	  
-          li $t0, 33 # IntegerLiteral at 32.16  	
-          sw $t0, ($sp) # IntegerLiteral at 32.16   
-          # EXIT NODE # IntegerLiteral at 32.16   
-        lw $t0, 8($sp) # Call at 32.11 	
-        beq $t0, $zero, nullPtrException # Call at 32.11   
-        lw $t0, -12($t0) # Call at 32.11	
-        lw $t0, 40($t0) # Call at 32.11	
-        jalr $t0 # Call at 32.11		 
-        # EXIT NODE # Call at 32.11   
-      # EXIT NODE # ExpStatement at 32.11 		
-      # ENTER NODE # Assign at 33.11		
-        # ENTER NODE # InstVarAccess at 33.14		
-          # ENTER NODE # IdentifierExp at 33.13	 	
-          lw $t0, 0($sp) # IdentifierExp at 33.13		
-          subu $sp, $sp, 4 # IdentifierExp at 33.13 	 
-          sw $t0, ($sp) # IdentifierExp at 33.13  
-          # EXIT NODE # IdentifierExp at 33.13	 	
-        lw $t0, ($sp) # InstVarAccess at 33.14			
-        beq $t0, $zero, nullPtrException # InstVarAccess at 33.14			
-        lw $t0, -16($t0) # InstVarAccess at 33.14   
-        subu $sp, $sp, 4 # InstVarAccess at 33.14 
-        sw $s5, 4($sp) # InstVarAccess at 33.14		 
-        sw $t0, ($sp) # InstVarAccess at 33.14	 
-        # EXIT NODE # InstVarAccess at 33.14 
-      lw $t0, ($sp) # Assign at 33.11			
-      sw $t0, -16($s2) # Assign at 33.11		 
-      addu $sp, $sp, 8 # Assign at 33.11			
-      # EXIT NODE # Assign at 33.11	
-      # ENTER NODE # Assign at 34.9 	 
-        # ENTER NODE # Plus at 34.10	 	
-          # ENTER NODE # IdentifierExp at 34.9		
-          lw $t0, -16($s2) # IdentifierExp at 34.9 	 
-          subu $sp, $sp, 8 # IdentifierExp at 34.9	 	
-          sw $s5, 4($sp) # IdentifierExp at 34.9		
-          sw $t0, ($sp) # IdentifierExp at 34.9 	 
-          # EXIT NODE # IdentifierExp at 34.9  	
-          # ENTER NODE # IntegerLiteral at 34.10  
-          subu $sp, $sp, 8 # IntegerLiteral at 34.10			
-          sw $s5, 4($sp) # IntegerLiteral at 34.10 	 
-          li $t0, 1 # IntegerLiteral at 34.10  
-          sw $t0, ($sp) # IntegerLiteral at 34.10	
-          # EXIT NODE # IntegerLiteral at 34.10			
-        lw $t0, ($sp) # Plus at 34.10	
-        lw $t1, 8($sp) # Plus at 34.10			
-        addu $t0, $t0, $t1 # Plus at 34.10 
-        addu $sp, $sp, 8 # Plus at 34.10 	
-        sw $t0, ($sp) # Plus at 34.10	 
-        # EXIT NODE # Plus at 34.10	 
-      lw $t0, ($sp) # Assign at 34.9 	 
-      sw $t0, -16($s2) # Assign at 34.9 		
-      addu $sp, $sp, 8 # Assign at 34.9	  
-      # EXIT NODE # Assign at 34.9 
-      # ENTER NODE # ExpStatement at 35.14	  
-        # ENTER NODE # Call at 35.14		 
-          # ENTER NODE # This at 35.9		
-          subu $sp, $sp, 4 # This at 35.9	 	
-          sw $s2, ($sp) # This at 35.9 	
-          # EXIT NODE # This at 35.9	  
-          # ENTER NODE # IdentifierExp at 35.23 	
-          lw $t0, -16($s2) # IdentifierExp at 35.23 	
-          subu $sp, $sp, 8 # IdentifierExp at 35.23  
-          sw $s5, 4($sp) # IdentifierExp at 35.23	 
-          sw $t0, ($sp) # IdentifierExp at 35.23 	
-          # EXIT NODE # IdentifierExp at 35.23		 
-        lw $t0, 8($sp) # Call at 35.14 
-        beq $t0, $zero, nullPtrException # Call at 35.14	 	
-        lw $t0, -12($t0) # Call at 35.14 
-        lw $t0, 24($t0) # Call at 35.14	
-        jalr $t0 # Call at 35.14	 
-        # EXIT NODE # Call at 35.14			
-      # EXIT NODE # ExpStatement at 35.14 
-      # ENTER NODE # ExpStatement at 36.14 		
-        # ENTER NODE # Call at 36.14			
-          # ENTER NODE # This at 36.9	  
-          subu $sp, $sp, 4 # This at 36.9	 	
-          sw $s2, ($sp) # This at 36.9  
-          # EXIT NODE # This at 36.9 
-          # ENTER NODE # StringLiteral at 36.23	  
-          subu $sp, $sp, 4 # StringLiteral at 36.23	 
-          la $t0, strLit_96 # StringLiteral at 36.23	
-          sw $t0, ($sp) # StringLiteral at 36.23  	
-          # EXIT NODE # StringLiteral at 36.23		 
-        lw $t0, 4($sp) # Call at 36.14		
-        beq $t0, $zero, nullPtrException # Call at 36.14 	
-        lw $t0, -12($t0) # Call at 36.14 	 
-        lw $t0, 16($t0) # Call at 36.14		
-        jalr $t0 # Call at 36.14		
-        # EXIT NODE # Call at 36.14  	
-      # EXIT NODE # ExpStatement at 36.14		
-    lw $ra, 8($sp) # MethodDeclVoid at 30.17 	 
-    lw $s2, 4($sp) # MethodDeclVoid at 30.17 
-    addu $sp, $sp, 16 # MethodDeclVoid at 30.17   
-    jr $ra # MethodDeclVoid at 30.17 	 
-    # EXIT NODE # MethodDeclVoid at 30.17 
-  # EXIT NODE # Program at 3.1		 
+          subu $sp, $sp, 8 # IntegerLiteral at 23.10 	
+          sw $s5, 4($sp) # IntegerLiteral at 23.10  	
+          li $t0, 0 # IntegerLiteral at 23.10  
+          sw $t0, ($sp) # IntegerLiteral at 23.10 	
+          # EXIT NODE # IntegerLiteral at 23.10		 
+        lw $t0, ($sp) # LessThan at 23.8			
+        lw $t1, 8($sp) # LessThan at 23.8 
+        slt $t0, $t1, $t0 # LessThan at 23.8 
+        addu $sp, $sp, 12 # LessThan at 23.8 
+        sw $t0, ($sp) # LessThan at 23.8	 
+        # EXIT NODE # LessThan at 23.8 	
+      lw $t0, ($sp) # If at 23.2	
+      addu $sp, $sp, 4 # If at 23.2   
+      beq $t0, $zero, if_else_25 # If at 23.2	  
+        # ENTER NODE # Block at 23.13 	
+          # ENTER NODE # Assign at 24.8 
+            # ENTER NODE # IntegerLiteral at 24.10 
+            subu $sp, $sp, 8 # IntegerLiteral at 24.10  	
+            sw $s5, 4($sp) # IntegerLiteral at 24.10			
+            li $t0, 0 # IntegerLiteral at 24.10   
+            sw $t0, ($sp) # IntegerLiteral at 24.10		
+            # EXIT NODE # IntegerLiteral at 24.10  
+          lw $t0, ($sp) # Assign at 24.8 
+          sw $t0, 8($sp) # Assign at 24.8  	
+          addu $sp, $sp, 8 # Assign at 24.8		
+          # EXIT NODE # Assign at 24.8		
+        # EXIT NODE # Block at 23.13 	 
+      j if_done_25 # If at 23.2 	 
+      if_else_25: # If at 23.2 	
+        # ENTER NODE # Block at 32.2 	 
+        # EXIT NODE # Block at 32.2			
+      if_done_25: # If at 23.2  	
+      # EXIT NODE # If at 23.2	 	
+      # ENTER NODE # LocalVarDecl at 32.12	  
+        # ENTER NODE # NewArray at 32.20  
+          # ENTER NODE # Plus at 32.33		
+            # ENTER NODE # IdentifierExp at 32.32	
+            lw $t0, 0($sp) # IdentifierExp at 32.32	  
+            subu $sp, $sp, 8 # IdentifierExp at 32.32  
+            sw $s5, 4($sp) # IdentifierExp at 32.32	
+            sw $t0, ($sp) # IdentifierExp at 32.32 	 
+            # EXIT NODE # IdentifierExp at 32.32	  
+            # ENTER NODE # IntegerLiteral at 32.34	 
+            subu $sp, $sp, 8 # IntegerLiteral at 32.34		 
+            sw $s5, 4($sp) # IntegerLiteral at 32.34			
+            li $t0, 1 # IntegerLiteral at 32.34	  
+            sw $t0, ($sp) # IntegerLiteral at 32.34			
+            # EXIT NODE # IntegerLiteral at 32.34 	
+          lw $t0, ($sp) # Plus at 32.33 	 
+          lw $t1, 8($sp) # Plus at 32.33   
+          addu $t0, $t0, $t1 # Plus at 32.33 
+          addu $sp, $sp, 8 # Plus at 32.33  	
+          sw $t0, ($sp) # Plus at 32.33 	
+          # EXIT NODE # Plus at 32.33 	
+        lw $s7, ($sp) # NewArray at 32.20		
+        addu $sp, $sp, 8 # NewArray at 32.20	 
+        li $s6, 0 # NewArray at 32.20		 
+        jal newObject # NewArray at 32.20		 
+        # EXIT NODE # NewArray at 32.20		 
+      # EXIT NODE # LocalVarDecl at 32.12	 	
+      # ENTER NODE # Block at 35.2	  
+        # ENTER NODE # LocalVarDecl at 35.11	 
+          # ENTER NODE # IntegerLiteral at 35.15			
+          subu $sp, $sp, 8 # IntegerLiteral at 35.15 	
+          sw $s5, 4($sp) # IntegerLiteral at 35.15			
+          li $t0, 2 # IntegerLiteral at 35.15  
+          sw $t0, ($sp) # IntegerLiteral at 35.15	
+          # EXIT NODE # IntegerLiteral at 35.15 
+        # EXIT NODE # LocalVarDecl at 35.11 
+        # ENTER NODE # While at 35.2	 
+        j while_enter_78 # While at 35.2		 
+        while_top_78: # While at 35.2	 
+          # ENTER NODE # Block at 35.2	 	
+            # ENTER NODE # Block at 35.31   
+              # ENTER NODE # If at 36.6			
+                # ENTER NODE # Not at 36.10 		
+                  # ENTER NODE # ArrayLookup at 36.16	  
+                    # ENTER NODE # IdentifierExp at 36.11  
+                    lw $t0, 8($sp) # IdentifierExp at 36.11 	
+                    subu $sp, $sp, 4 # IdentifierExp at 36.11 	
+                    sw $t0, ($sp) # IdentifierExp at 36.11 		
+                    # EXIT NODE # IdentifierExp at 36.11	 
+                    # ENTER NODE # IdentifierExp at 36.17		 
+                    lw $t0, 4($sp) # IdentifierExp at 36.17 
+                    subu $sp, $sp, 8 # IdentifierExp at 36.17 		
+                    sw $s5, 4($sp) # IdentifierExp at 36.17 		
+                    sw $t0, ($sp) # IdentifierExp at 36.17			
+                    # EXIT NODE # IdentifierExp at 36.17 
+                  lw $t0, 8($sp) # ArrayLookup at 36.16  	
+                  beq $t0, $zero, nullPtrException # ArrayLookup at 36.16   
+                  lw $t1, -4($t0) # ArrayLookup at 36.16	  
+                  lw $t2, ($sp) # ArrayLookup at 36.16 	 
+                  bgeu $t2, $t1, arrayIndexOutOfBounds # ArrayLookup at 36.16			
+                  sll $t2, $t2, 2 # ArrayLookup at 36.16  	
+                  addu $t2, $t2, $t0 # ArrayLookup at 36.16   
+                  lw $t0, ($t2) # ArrayLookup at 36.16  
+                  sw $t0, 8($sp) # ArrayLookup at 36.16	 
+                  addu $sp, $sp, 8 # ArrayLookup at 36.16  
+                  # EXIT NODE # ArrayLookup at 36.16   
+                lw $t0, ($sp) # Not at 36.10  
+                xor $t0, $t0, 1 # Not at 36.10		 
+                sw $t0, ($sp) # Not at 36.10 	
+                # EXIT NODE # Not at 36.10		 
+              lw $t0, ($sp) # If at 36.6 
+              addu $sp, $sp, 4 # If at 36.6	  
+              beq $t0, $zero, if_else_75 # If at 36.6 
+                # ENTER NODE # Block at 36.21  
+                  # ENTER NODE # Block at 37.3	 	
+                    # ENTER NODE # LocalVarDecl at 37.12 	
+                      # ENTER NODE # Times at 37.17 	
+                        # ENTER NODE # IntegerLiteral at 37.16		 
+                        subu $sp, $sp, 8 # IntegerLiteral at 37.16	  
+                        sw $s5, 4($sp) # IntegerLiteral at 37.16		
+                        li $t0, 2 # IntegerLiteral at 37.16		 
+                        sw $t0, ($sp) # IntegerLiteral at 37.16	
+                        # EXIT NODE # IntegerLiteral at 37.16	 
+                        # ENTER NODE # IdentifierExp at 37.18 		
+                        lw $t0, 8($sp) # IdentifierExp at 37.18	
+                        subu $sp, $sp, 8 # IdentifierExp at 37.18	 
+                        sw $s5, 4($sp) # IdentifierExp at 37.18		 
+                        sw $t0, ($sp) # IdentifierExp at 37.18			
+                        # EXIT NODE # IdentifierExp at 37.18  	
+                      lw $t0, ($sp) # Times at 37.17  
+                      lw $t1, 8($sp) # Times at 37.17 
+                      mult $t0, $t1 # Times at 37.17	
+                      mflo $t0 # Times at 37.17 		
+                      addu $sp, $sp, 8 # Times at 37.17	  
+                      sw $t0, ($sp) # Times at 37.17 		
+                      # EXIT NODE # Times at 37.17 	
+                    # EXIT NODE # LocalVarDecl at 37.12 	 
+                    # ENTER NODE # While at 37.3			
+                    j while_enter_71 # While at 37.3	 
+                    while_top_71: # While at 37.3			
+                      # ENTER NODE # Block at 37.3 
+                        # ENTER NODE # Block at 37.39  	
+                          # ENTER NODE # Assign at 38.16	 	
+                            # ENTER NODE # IdentifierExp at 38.7		 
+                            lw $t0, 16($sp) # IdentifierExp at 38.7	 
+                            subu $sp, $sp, 4 # IdentifierExp at 38.7   
+                            sw $t0, ($sp) # IdentifierExp at 38.7			
+                            # EXIT NODE # IdentifierExp at 38.7  
+                            # ENTER NODE # IdentifierExp at 38.13 
+                            lw $t0, 4($sp) # IdentifierExp at 38.13   
+                            subu $sp, $sp, 8 # IdentifierExp at 38.13		 
+                            sw $s5, 4($sp) # IdentifierExp at 38.13	  
+                            sw $t0, ($sp) # IdentifierExp at 38.13 
+                            # EXIT NODE # IdentifierExp at 38.13 		
+                            # ENTER NODE # True at 38.18 	
+                            subu $sp, $sp, 4 # True at 38.18  
+                            li $t0, 1 # True at 38.18	 	
+                            sw $t0, ($sp) # True at 38.18		
+                            # EXIT NODE # True at 38.18  
+                          lw $t0, ($sp) # Assign at 38.16			
+                          lw $t1, 12($sp) # Assign at 38.16 	 
+                          beq $t1, $zero, nullPtrException # Assign at 38.16  	
+                          lw $t2, 4($sp) # Assign at 38.16 	
+                          lw $t3, -4($t1) # Assign at 38.16	
+                          bgeu $t2, $t3, arrayIndexOutOfBounds # Assign at 38.16 	
+                          sll $t2, $t2, 2 # Assign at 38.16 	
+                          addu $t2, $t2, $t1 # Assign at 38.16	
+                          sw $t0, ($t2) # Assign at 38.16		 
+                          addu $sp, $sp, 16 # Assign at 38.16 	 
+                          # EXIT NODE # Assign at 38.16	 	
+                        # EXIT NODE # Block at 37.39	 	
+                        # ENTER NODE # Assign at 37.30	
+                          # ENTER NODE # Plus at 37.34	  
+                            # ENTER NODE # IdentifierExp at 37.32   
+                            lw $t0, 0($sp) # IdentifierExp at 37.32  
+                            subu $sp, $sp, 8 # IdentifierExp at 37.32 
+                            sw $s5, 4($sp) # IdentifierExp at 37.32 
+                            sw $t0, ($sp) # IdentifierExp at 37.32 	 
+                            # EXIT NODE # IdentifierExp at 37.32	 
+                            # ENTER NODE # IdentifierExp at 37.36   
+                            lw $t0, 16($sp) # IdentifierExp at 37.36  
+                            subu $sp, $sp, 8 # IdentifierExp at 37.36		
+                            sw $s5, 4($sp) # IdentifierExp at 37.36	  
+                            sw $t0, ($sp) # IdentifierExp at 37.36		 
+                            # EXIT NODE # IdentifierExp at 37.36 		
+                          lw $t0, ($sp) # Plus at 37.34	  
+                          lw $t1, 8($sp) # Plus at 37.34	  
+                          addu $t0, $t0, $t1 # Plus at 37.34	 	
+                          addu $sp, $sp, 8 # Plus at 37.34 	
+                          sw $t0, ($sp) # Plus at 37.34			
+                          # EXIT NODE # Plus at 37.34   
+                        lw $t0, ($sp) # Assign at 37.30		
+                        sw $t0, 8($sp) # Assign at 37.30 	
+                        addu $sp, $sp, 8 # Assign at 37.30  
+                        # EXIT NODE # Assign at 37.30			
+                      # EXIT NODE # Block at 37.3	  
+                    while_enter_71: # While at 37.3		 
+                      # ENTER NODE # LessThan at 37.23	  
+                        # ENTER NODE # IdentifierExp at 37.21 
+                        lw $t0, 0($sp) # IdentifierExp at 37.21  
+                        subu $sp, $sp, 8 # IdentifierExp at 37.21	 	
+                        sw $s5, 4($sp) # IdentifierExp at 37.21	 	
+                        sw $t0, ($sp) # IdentifierExp at 37.21	  
+                        # EXIT NODE # IdentifierExp at 37.21			
+                        # ENTER NODE # IdentifierExp at 37.25			
+                        lw $t0, 28($sp) # IdentifierExp at 37.25			
+                        subu $sp, $sp, 8 # IdentifierExp at 37.25 	 
+                        sw $s5, 4($sp) # IdentifierExp at 37.25	  
+                        sw $t0, ($sp) # IdentifierExp at 37.25   
+                        # EXIT NODE # IdentifierExp at 37.25 	 
+                      lw $t0, ($sp) # LessThan at 37.23	
+                      lw $t1, 8($sp) # LessThan at 37.23   
+                      slt $t0, $t1, $t0 # LessThan at 37.23		 
+                      addu $sp, $sp, 12 # LessThan at 37.23		
+                      sw $t0, ($sp) # LessThan at 37.23 
+                      # EXIT NODE # LessThan at 37.23	
+                    lw $t0, ($sp) # While at 37.3 	
+                    addu $sp, $sp, 4 # While at 37.3	
+                    bne $t0, $zero, while_top_71 # While at 37.3 	 
+                    while_exit_71: # While at 37.3	 
+                    # EXIT NODE # While at 37.3 
+                  addu $sp, 8 # Block at 37.3	 	
+                  # EXIT NODE # Block at 37.3			
+                # EXIT NODE # Block at 36.21  	
+              j if_done_75 # If at 36.6	 	
+              if_else_75: # If at 36.6	  
+                # ENTER NODE # Block at 41.2 		
+                # EXIT NODE # Block at 41.2	 	
+              if_done_75: # If at 36.6	 
+              # EXIT NODE # If at 36.6 	 
+            # EXIT NODE # Block at 35.31		 
+            # ENTER NODE # Assign at 35.26	 
+              # ENTER NODE # Plus at 35.27 	 
+                # ENTER NODE # IdentifierExp at 35.26	
+                lw $t0, 0($sp) # IdentifierExp at 35.26 	
+                subu $sp, $sp, 8 # IdentifierExp at 35.26  	
+                sw $s5, 4($sp) # IdentifierExp at 35.26	 	
+                sw $t0, ($sp) # IdentifierExp at 35.26		
+                # EXIT NODE # IdentifierExp at 35.26	
+                # ENTER NODE # IntegerLiteral at 35.27	
+                subu $sp, $sp, 8 # IntegerLiteral at 35.27 	 
+                sw $s5, 4($sp) # IntegerLiteral at 35.27 	
+                li $t0, 1 # IntegerLiteral at 35.27 	
+                sw $t0, ($sp) # IntegerLiteral at 35.27   
+                # EXIT NODE # IntegerLiteral at 35.27  
+              lw $t0, ($sp) # Plus at 35.27			
+              lw $t1, 8($sp) # Plus at 35.27 
+              addu $t0, $t0, $t1 # Plus at 35.27	 
+              addu $sp, $sp, 8 # Plus at 35.27	  
+              sw $t0, ($sp) # Plus at 35.27	 	
+              # EXIT NODE # Plus at 35.27 	
+            lw $t0, ($sp) # Assign at 35.26 		
+            sw $t0, 8($sp) # Assign at 35.26  	
+            addu $sp, $sp, 8 # Assign at 35.26  	
+            # EXIT NODE # Assign at 35.26 		
+          # EXIT NODE # Block at 35.2	  
+        while_enter_78: # While at 35.2   
+          # ENTER NODE # Not at 35.20	 	
+            # ENTER NODE # GreaterThan at 35.20 	
+              # ENTER NODE # IdentifierExp at 35.18	 	
+              lw $t0, 0($sp) # IdentifierExp at 35.18	 	
+              subu $sp, $sp, 8 # IdentifierExp at 35.18	  
+              sw $s5, 4($sp) # IdentifierExp at 35.18	 	
+              sw $t0, ($sp) # IdentifierExp at 35.18 
+              # EXIT NODE # IdentifierExp at 35.18	 	
+              # ENTER NODE # IdentifierExp at 35.23   
+              lw $t0, 20($sp) # IdentifierExp at 35.23 		
+              subu $sp, $sp, 8 # IdentifierExp at 35.23 	 
+              sw $s5, 4($sp) # IdentifierExp at 35.23 	 
+              sw $t0, ($sp) # IdentifierExp at 35.23	
+              # EXIT NODE # IdentifierExp at 35.23 
+            lw $t0, ($sp) # GreaterThan at 35.20	
+            lw $t1, 8($sp) # GreaterThan at 35.20	 	
+            sgt $t0, $t1, $t0 # GreaterThan at 35.20	  
+            addu $sp, $sp, 12 # GreaterThan at 35.20 	
+            sw $t0, ($sp) # GreaterThan at 35.20  
+            # EXIT NODE # GreaterThan at 35.20 	
+          lw $t0, ($sp) # Not at 35.20	
+          xor $t0, $t0, 1 # Not at 35.20	  
+          sw $t0, ($sp) # Not at 35.20	 	
+          # EXIT NODE # Not at 35.20 
+        lw $t0, ($sp) # While at 35.2	
+        addu $sp, $sp, 4 # While at 35.2	 	
+        bne $t0, $zero, while_top_78 # While at 35.2   
+        while_exit_78: # While at 35.2 
+        # EXIT NODE # While at 35.2 	
+      addu $sp, 8 # Block at 35.2	 	
+      # EXIT NODE # Block at 35.2			
+      # ENTER NODE # ExpStatement at 48.2   
+        # ENTER NODE # Call at 48.2 	 
+          # ENTER NODE # This at 48.2 
+          subu $sp, $sp, 4 # This at 48.2	  
+          sw $s2, ($sp) # This at 48.2 	 
+          # EXIT NODE # This at 48.2	 
+          # ENTER NODE # StringLiteral at 48.11		
+          subu $sp, $sp, 4 # StringLiteral at 48.11		 
+          la $t0, strLit_80 # StringLiteral at 48.11  	
+          sw $t0, ($sp) # StringLiteral at 48.11	  
+          # EXIT NODE # StringLiteral at 48.11  	
+        lw $t0, 4($sp) # Call at 48.2 		
+        beq $t0, $zero, nullPtrException # Call at 48.2 	
+        lw $t0, -12($t0) # Call at 48.2  
+        lw $t0, 16($t0) # Call at 48.2 		
+        jalr $t0 # Call at 48.2		 
+        # EXIT NODE # Call at 48.2	  
+      # EXIT NODE # ExpStatement at 48.2	 
+      # ENTER NODE # ExpStatement at 49.2 	 
+        # ENTER NODE # Call at 49.2 		
+          # ENTER NODE # This at 49.2 	
+          subu $sp, $sp, 4 # This at 49.2	 	
+          sw $s2, ($sp) # This at 49.2	  
+          # EXIT NODE # This at 49.2   
+          # ENTER NODE # IdentifierExp at 49.11	 
+          lw $t0, 8($sp) # IdentifierExp at 49.11	
+          subu $sp, $sp, 8 # IdentifierExp at 49.11  
+          sw $s5, 4($sp) # IdentifierExp at 49.11 
+          sw $t0, ($sp) # IdentifierExp at 49.11		 
+          # EXIT NODE # IdentifierExp at 49.11	 	
+        lw $t0, 8($sp) # Call at 49.2	 
+        beq $t0, $zero, nullPtrException # Call at 49.2 
+        lw $t0, -12($t0) # Call at 49.2 	 
+        lw $t0, 24($t0) # Call at 49.2  	
+        jalr $t0 # Call at 49.2	
+        # EXIT NODE # Call at 49.2	
+      # EXIT NODE # ExpStatement at 49.2		 
+      # ENTER NODE # ExpStatement at 50.2 	
+        # ENTER NODE # Call at 50.2  
+          # ENTER NODE # This at 50.2	 	
+          subu $sp, $sp, 4 # This at 50.2	 
+          sw $s2, ($sp) # This at 50.2	  
+          # EXIT NODE # This at 50.2		 
+          # ENTER NODE # StringLiteral at 50.11			
+          subu $sp, $sp, 4 # StringLiteral at 50.11	 
+          la $t0, strLit_88 # StringLiteral at 50.11	
+          sw $t0, ($sp) # StringLiteral at 50.11	 	
+          # EXIT NODE # StringLiteral at 50.11  	
+        lw $t0, 4($sp) # Call at 50.2			
+        beq $t0, $zero, nullPtrException # Call at 50.2	  
+        lw $t0, -12($t0) # Call at 50.2 
+        lw $t0, 16($t0) # Call at 50.2			
+        jalr $t0 # Call at 50.2   
+        # EXIT NODE # Call at 50.2	 	
+      # EXIT NODE # ExpStatement at 50.2   
+      # ENTER NODE # LocalVarDecl at 53.6 	
+        # ENTER NODE # IntegerLiteral at 53.23	 	
+        subu $sp, $sp, 8 # IntegerLiteral at 53.23	  
+        sw $s5, 4($sp) # IntegerLiteral at 53.23	  
+        li $t0, 0 # IntegerLiteral at 53.23	 	
+        sw $t0, ($sp) # IntegerLiteral at 53.23	
+        # EXIT NODE # IntegerLiteral at 53.23	 
+      # EXIT NODE # LocalVarDecl at 53.6   
+      # ENTER NODE # Block at 54.2  	
+        # ENTER NODE # LocalVarDecl at 54.11  	
+          # ENTER NODE # IntegerLiteral at 54.15	 
+          subu $sp, $sp, 8 # IntegerLiteral at 54.15  
+          sw $s5, 4($sp) # IntegerLiteral at 54.15	
+          li $t0, 2 # IntegerLiteral at 54.15			
+          sw $t0, ($sp) # IntegerLiteral at 54.15	 
+          # EXIT NODE # IntegerLiteral at 54.15   
+        # EXIT NODE # LocalVarDecl at 54.11  
+        # ENTER NODE # While at 54.2 	 
+        j while_enter_142 # While at 54.2	 	
+        while_top_142: # While at 54.2  
+          # ENTER NODE # Block at 54.2 
+            # ENTER NODE # Block at 54.30 
+              # ENTER NODE # If at 55.6	  
+                # ENTER NODE # Not at 55.10	  
+                  # ENTER NODE # ArrayLookup at 55.16	  
+                    # ENTER NODE # IdentifierExp at 55.11  	
+                    lw $t0, 16($sp) # IdentifierExp at 55.11   
+                    subu $sp, $sp, 4 # IdentifierExp at 55.11		
+                    sw $t0, ($sp) # IdentifierExp at 55.11		 
+                    # EXIT NODE # IdentifierExp at 55.11			
+                    # ENTER NODE # IdentifierExp at 55.17   
+                    lw $t0, 4($sp) # IdentifierExp at 55.17   
+                    subu $sp, $sp, 8 # IdentifierExp at 55.17 		
+                    sw $s5, 4($sp) # IdentifierExp at 55.17 
+                    sw $t0, ($sp) # IdentifierExp at 55.17 
+                    # EXIT NODE # IdentifierExp at 55.17			
+                  lw $t0, 8($sp) # ArrayLookup at 55.16   
+                  beq $t0, $zero, nullPtrException # ArrayLookup at 55.16	
+                  lw $t1, -4($t0) # ArrayLookup at 55.16 	 
+                  lw $t2, ($sp) # ArrayLookup at 55.16	
+                  bgeu $t2, $t1, arrayIndexOutOfBounds # ArrayLookup at 55.16 
+                  sll $t2, $t2, 2 # ArrayLookup at 55.16	
+                  addu $t2, $t2, $t0 # ArrayLookup at 55.16			
+                  lw $t0, ($t2) # ArrayLookup at 55.16	  
+                  sw $t0, 8($sp) # ArrayLookup at 55.16   
+                  addu $sp, $sp, 8 # ArrayLookup at 55.16		
+                  # EXIT NODE # ArrayLookup at 55.16 
+                lw $t0, ($sp) # Not at 55.10	 
+                xor $t0, $t0, 1 # Not at 55.10		
+                sw $t0, ($sp) # Not at 55.10  
+                # EXIT NODE # Not at 55.10 		
+              lw $t0, ($sp) # If at 55.6 
+              addu $sp, $sp, 4 # If at 55.6  
+              beq $t0, $zero, if_else_139 # If at 55.6 
+                # ENTER NODE # Block at 55.21 	 
+                  # ENTER NODE # ExpStatement at 57.3	 
+                    # ENTER NODE # Call at 57.3  
+                      # ENTER NODE # This at 57.3 		
+                      subu $sp, $sp, 4 # This at 57.3	
+                      sw $s2, ($sp) # This at 57.3	 
+                      # EXIT NODE # This at 57.3 
+                      # ENTER NODE # IdentifierExp at 57.12		 
+                      lw $t0, 4($sp) # IdentifierExp at 57.12  	
+                      subu $sp, $sp, 8 # IdentifierExp at 57.12 	 
+                      sw $s5, 4($sp) # IdentifierExp at 57.12   
+                      sw $t0, ($sp) # IdentifierExp at 57.12   
+                      # EXIT NODE # IdentifierExp at 57.12		 
+                    lw $t0, 8($sp) # Call at 57.3 		
+                    beq $t0, $zero, nullPtrException # Call at 57.3  
+                    lw $t0, -12($t0) # Call at 57.3		 
+                    lw $t0, 24($t0) # Call at 57.3			
+                    jalr $t0 # Call at 57.3			
+                    # EXIT NODE # Call at 57.3		 
+                  # EXIT NODE # ExpStatement at 57.3		
+                  # ENTER NODE # Assign at 58.3	
+                    # ENTER NODE # Plus at 58.17	
+                      # ENTER NODE # IdentifierExp at 58.3 
+                      lw $t0, 8($sp) # IdentifierExp at 58.3 		
+                      subu $sp, $sp, 8 # IdentifierExp at 58.3 	 
+                      sw $s5, 4($sp) # IdentifierExp at 58.3  
+                      sw $t0, ($sp) # IdentifierExp at 58.3	 	
+                      # EXIT NODE # IdentifierExp at 58.3  
+                      # ENTER NODE # IntegerLiteral at 58.17  
+                      subu $sp, $sp, 8 # IntegerLiteral at 58.17 
+                      sw $s5, 4($sp) # IntegerLiteral at 58.17	 
+                      li $t0, 1 # IntegerLiteral at 58.17		
+                      sw $t0, ($sp) # IntegerLiteral at 58.17   
+                      # EXIT NODE # IntegerLiteral at 58.17 	 
+                    lw $t0, ($sp) # Plus at 58.17		 
+                    lw $t1, 8($sp) # Plus at 58.17			
+                    addu $t0, $t0, $t1 # Plus at 58.17	  
+                    addu $sp, $sp, 8 # Plus at 58.17	  
+                    sw $t0, ($sp) # Plus at 58.17	 	
+                    # EXIT NODE # Plus at 58.17 	
+                  lw $t0, ($sp) # Assign at 58.3		
+                  sw $t0, 16($sp) # Assign at 58.3  	
+                  addu $sp, $sp, 8 # Assign at 58.3  	
+                  # EXIT NODE # Assign at 58.3		 
+                  # ENTER NODE # If at 59.3		
+                    # ENTER NODE # Not at 59.22		 
+                      # ENTER NODE # LessThan at 59.22			
+                        # ENTER NODE # IdentifierExp at 59.7			
+                        lw $t0, 8($sp) # IdentifierExp at 59.7	  
+                        subu $sp, $sp, 8 # IdentifierExp at 59.7 
+                        sw $s5, 4($sp) # IdentifierExp at 59.7	 
+                        sw $t0, ($sp) # IdentifierExp at 59.7  	
+                        # EXIT NODE # IdentifierExp at 59.7		 
+                        # ENTER NODE # IntegerLiteral at 59.25 		
+                        subu $sp, $sp, 8 # IntegerLiteral at 59.25 
+                        sw $s5, 4($sp) # IntegerLiteral at 59.25 	
+                        li $t0, 20 # IntegerLiteral at 59.25  
+                        sw $t0, ($sp) # IntegerLiteral at 59.25	 
+                        # EXIT NODE # IntegerLiteral at 59.25			
+                      lw $t0, ($sp) # LessThan at 59.22	
+                      lw $t1, 8($sp) # LessThan at 59.22	 	
+                      slt $t0, $t1, $t0 # LessThan at 59.22 
+                      addu $sp, $sp, 12 # LessThan at 59.22 	
+                      sw $t0, ($sp) # LessThan at 59.22		
+                      # EXIT NODE # LessThan at 59.22 
+                    lw $t0, ($sp) # Not at 59.22	
+                    xor $t0, $t0, 1 # Not at 59.22	  
+                    sw $t0, ($sp) # Not at 59.22			
+                    # EXIT NODE # Not at 59.22 		
+                  lw $t0, ($sp) # If at 59.3	 
+                  addu $sp, $sp, 4 # If at 59.3   
+                  beq $t0, $zero, if_else_136 # If at 59.3		 
+                    # ENTER NODE # Block at 59.29			
+                      # ENTER NODE # ExpStatement at 61.7 	
+                        # ENTER NODE # Call at 61.7	 
+                          # ENTER NODE # This at 61.7	 
+                          subu $sp, $sp, 4 # This at 61.7	
+                          sw $s2, ($sp) # This at 61.7		 
+                          # EXIT NODE # This at 61.7 		
+                          # ENTER NODE # StringLiteral at 61.16  	
+                          subu $sp, $sp, 4 # StringLiteral at 61.16 	
+                          la $t0, strLit_123 # StringLiteral at 61.16  	
+                          sw $t0, ($sp) # StringLiteral at 61.16 		
+                          # EXIT NODE # StringLiteral at 61.16	 
+                        lw $t0, 4($sp) # Call at 61.7	 	
+                        beq $t0, $zero, nullPtrException # Call at 61.7 	 
+                        lw $t0, -12($t0) # Call at 61.7			
+                        lw $t0, 16($t0) # Call at 61.7  
+                        jalr $t0 # Call at 61.7		 
+                        # EXIT NODE # Call at 61.7 		
+                      # EXIT NODE # ExpStatement at 61.7		
+                      # ENTER NODE # Assign at 62.22	 
+                        # ENTER NODE # IntegerLiteral at 62.24 
+                        subu $sp, $sp, 8 # IntegerLiteral at 62.24  	
+                        sw $s5, 4($sp) # IntegerLiteral at 62.24			
+                        li $t0, 0 # IntegerLiteral at 62.24	  
+                        sw $t0, ($sp) # IntegerLiteral at 62.24			
+                        # EXIT NODE # IntegerLiteral at 62.24   
+                      lw $t0, ($sp) # Assign at 62.22 	 
+                      sw $t0, 16($sp) # Assign at 62.22	 
+                      addu $sp, $sp, 8 # Assign at 62.22	  
+                      # EXIT NODE # Assign at 62.22		 
+                    # EXIT NODE # Block at 59.29		
+                  j if_done_136 # If at 59.3 	 
+                  if_else_136: # If at 59.3		 
+                    # ENTER NODE # Block at 64.8   
+                      # ENTER NODE # ExpStatement at 66.7	 	
+                        # ENTER NODE # Call at 66.7 	 
+                          # ENTER NODE # This at 66.7  	
+                          subu $sp, $sp, 4 # This at 66.7   
+                          sw $s2, ($sp) # This at 66.7	  
+                          # EXIT NODE # This at 66.7	 
+                          # ENTER NODE # StringLiteral at 66.16	 	
+                          subu $sp, $sp, 4 # StringLiteral at 66.16			
+                          la $t0, strLit_131 # StringLiteral at 66.16			
+                          sw $t0, ($sp) # StringLiteral at 66.16  	
+                          # EXIT NODE # StringLiteral at 66.16 		
+                        lw $t0, 4($sp) # Call at 66.7  	
+                        beq $t0, $zero, nullPtrException # Call at 66.7 		
+                        lw $t0, -12($t0) # Call at 66.7	
+                        lw $t0, 16($t0) # Call at 66.7	 
+                        jalr $t0 # Call at 66.7 
+                        # EXIT NODE # Call at 66.7			
+                      # EXIT NODE # ExpStatement at 66.7 		
+                    # EXIT NODE # Block at 64.8	  
+                  if_done_136: # If at 59.3		 
+                  # EXIT NODE # If at 59.3	
+                # EXIT NODE # Block at 55.21		 
+              j if_done_139 # If at 55.6			
+              if_else_139: # If at 55.6  	
+                # ENTER NODE # Block at 69.2	
+                # EXIT NODE # Block at 69.2	  
+              if_done_139: # If at 55.6   
+              # EXIT NODE # If at 55.6 		
+            # EXIT NODE # Block at 54.30	
+            # ENTER NODE # Assign at 54.25	  
+              # ENTER NODE # Plus at 54.26  	
+                # ENTER NODE # IdentifierExp at 54.25   
+                lw $t0, 0($sp) # IdentifierExp at 54.25			
+                subu $sp, $sp, 8 # IdentifierExp at 54.25 	
+                sw $s5, 4($sp) # IdentifierExp at 54.25 	
+                sw $t0, ($sp) # IdentifierExp at 54.25	 
+                # EXIT NODE # IdentifierExp at 54.25 	 
+                # ENTER NODE # IntegerLiteral at 54.26 		
+                subu $sp, $sp, 8 # IntegerLiteral at 54.26  
+                sw $s5, 4($sp) # IntegerLiteral at 54.26	
+                li $t0, 1 # IntegerLiteral at 54.26 		
+                sw $t0, ($sp) # IntegerLiteral at 54.26	 	
+                # EXIT NODE # IntegerLiteral at 54.26  	
+              lw $t0, ($sp) # Plus at 54.26 		
+              lw $t1, 8($sp) # Plus at 54.26	 	
+              addu $t0, $t0, $t1 # Plus at 54.26  
+              addu $sp, $sp, 8 # Plus at 54.26 	 
+              sw $t0, ($sp) # Plus at 54.26   
+              # EXIT NODE # Plus at 54.26 
+            lw $t0, ($sp) # Assign at 54.25	 
+            sw $t0, 8($sp) # Assign at 54.25	 	
+            addu $sp, $sp, 8 # Assign at 54.25	 
+            # EXIT NODE # Assign at 54.25 
+          # EXIT NODE # Block at 54.2		 
+        while_enter_142: # While at 54.2	  
+          # ENTER NODE # LessThan at 54.20 
+            # ENTER NODE # IdentifierExp at 54.18   
+            lw $t0, 0($sp) # IdentifierExp at 54.18	 	
+            subu $sp, $sp, 8 # IdentifierExp at 54.18		
+            sw $s5, 4($sp) # IdentifierExp at 54.18	 
+            sw $t0, ($sp) # IdentifierExp at 54.18 
+            # EXIT NODE # IdentifierExp at 54.18 
+            # ENTER NODE # IdentifierExp at 54.22 
+            lw $t0, 28($sp) # IdentifierExp at 54.22	  
+            subu $sp, $sp, 8 # IdentifierExp at 54.22			
+            sw $s5, 4($sp) # IdentifierExp at 54.22 	
+            sw $t0, ($sp) # IdentifierExp at 54.22 	 
+            # EXIT NODE # IdentifierExp at 54.22 
+          lw $t0, ($sp) # LessThan at 54.20	
+          lw $t1, 8($sp) # LessThan at 54.20			
+          slt $t0, $t1, $t0 # LessThan at 54.20	
+          addu $sp, $sp, 12 # LessThan at 54.20	
+          sw $t0, ($sp) # LessThan at 54.20   
+          # EXIT NODE # LessThan at 54.20		 
+        lw $t0, ($sp) # While at 54.2 	 
+        addu $sp, $sp, 4 # While at 54.2		
+        bne $t0, $zero, while_top_142 # While at 54.2			
+        while_exit_142: # While at 54.2  	
+        # EXIT NODE # While at 54.2 	
+      addu $sp, 8 # Block at 54.2 	 
+      # EXIT NODE # Block at 54.2			
+      # ENTER NODE # ExpStatement at 72.2	  
+        # ENTER NODE # Call at 72.2		 
+          # ENTER NODE # This at 72.2 
+          subu $sp, $sp, 4 # This at 72.2		 
+          sw $s2, ($sp) # This at 72.2	 	
+          # EXIT NODE # This at 72.2	 
+          # ENTER NODE # StringLiteral at 72.11  
+          subu $sp, $sp, 4 # StringLiteral at 72.11			
+          la $t0, strLit_144 # StringLiteral at 72.11 	
+          sw $t0, ($sp) # StringLiteral at 72.11  
+          # EXIT NODE # StringLiteral at 72.11		
+        lw $t0, 4($sp) # Call at 72.2  	
+        beq $t0, $zero, nullPtrException # Call at 72.2	
+        lw $t0, -12($t0) # Call at 72.2 	 
+        lw $t0, 16($t0) # Call at 72.2		 
+        jalr $t0 # Call at 72.2		 
+        # EXIT NODE # Call at 72.2  	
+      # EXIT NODE # ExpStatement at 72.2  	
+    lw $ra, 32($sp) # MethodDeclVoid at 15.17			
+    lw $s2, 28($sp) # MethodDeclVoid at 15.17  
+    addu $sp, $sp, 40 # MethodDeclVoid at 15.17	  
+    jr $ra # MethodDeclVoid at 15.17		
+    # EXIT NODE # MethodDeclVoid at 15.17	  
+  # EXIT NODE # Program at 5.1 
 ###############################################################
 # MiniJava/UP library for MIPS/Spim -- version that assumes
 #    one-word boolean on stack
